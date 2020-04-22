@@ -3,11 +3,73 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" />
+
     <link rel="stylesheet" href="sass/style.scss" />
     <title>Document</title>
   </head>
   <body>
     <h1>Hej lisa & peter</h1>
+    <div class="form-container">
+      <form data-state="post">
+        <label>
+          First name
+          <input type="text" name="first_name" required />
+          <p>Please provide your first name</p>
+        </label>
+        <label>
+          Last name
+          <input type="text" name="last_name" required></input> 
+           <p>Please provide your last name</p>
+        </label>
+        <label>
+             Work Email
+            <input type="email" name="work_email" required></input>
+            <p>Please provide your work email</p>
+          </label>
+          <label>
+              Phone Number
+              <input type="number" name="phone_number"></input>
+              <p>Please provide your phone number</p>
+            </label>
+          <label>
+            Country
+            
+            <input type="text" name="country"></input>
+            <p>Please specify your Country</p>
+          </label>
+          <label>
+            Job title
+            <input type="text" name="job_title"></input>
+            <p>Please specify your job title</p>
+          </label>
+
+        <input class="submit" type="submit" value="Save" />
+      </form>
+    </div>
+    <div class="main-container">
+      <div id="cardlist">
+        <h1>Dette er her kun for at demonstrere at backended virker</h1>
+        <div class="container"></div>
+      </div>
+    </div>
+    <template>
+      <article class="article" data-id>
+        <header>        
+          <p class="first_name">Title</p>
+          <p class="last_name">Description</p>
+          <p class="work_email">Number</p>
+          <p class="phone_number">date</p>
+          <p class="country">date</p>
+          <p class="job_title">date</p>
+          <div class="buttons">
+            <button data-action="delete" class="delete" data-id><i class="fa-3x fa fa-trash"></i></button>
+          </div>
+        </header>
+        <!--   <button data-action="move-right" class="move">move right</button> -->
+      </article>
+    </template>
     <script src="main.js"></script>
   </body>
 </html>
+

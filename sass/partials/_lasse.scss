@@ -1,0 +1,43 @@
+.main-container {
+  margin-left: 20vw;
+}
+form {
+  margin: 0 auto;
+  border: 1.5px solid var(--color-1);
+  border-radius: 10px;
+  background: var(--color-3);
+  min-width: 350px;
+  max-width: 500px;
+
+  display: grid;
+  justify-content: center;
+}
+
+button[data-action="delete"] {
+  cursor: pointer;
+}
+
+button[data-action="delete"]:hover {
+  border: 2px solid red;
+}
+input,
+textarea,
+select,
+label {
+  width: 100%;
+}
+input {
+  border: 1px solid grey;
+  margin: 5px;
+}
+input + p {
+  display: none;
+}
+input.invalid + p {
+  display: block;
+}
+article {
+  border: 1px solid grey;
+  max-width: 600px;
+  padding: 1rem;
+}
