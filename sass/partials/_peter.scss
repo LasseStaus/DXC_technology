@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "GT-Walsheim-Pro-Bold";
+  src: url("/static/font/GT-Walsheim-Pro-Bold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GT-Walsheim-Pro-Regular";
+  src: url("/static/font/GT-Walsheim-Pro-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+#bc_site {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.boxes {
+  display: flex;
+  flex-wrap: no-wrap;
+  flex-direction: row;
+}
+
+.box1 h1 {
+  margin: 0 auto;
+  text-align: center;
+}
+.box2 h1 {
+  margin: 0 auto;
+  text-align: center;
+}
+.box3 h1 {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.box1 h2 {
+  text-align: center;
+}
+.box2 h2 {
+  text-align: center;
+}
+.box3 h2 {
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "GT-Walsheim-Pro-Bold";
+  padding: 20px;
+  padding-left: 0px;
+}
+
+p {
+  font-family: "GT-Walsheim-Pro-Regular";
+  padding: 20px;
+  padding-left: 0px;
+}
+
+@media only screen and (max-width: 500px) {
+  .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
