@@ -1,6 +1,7 @@
 export const endpoint = "https://frontendspring20-4521.restdb.io/rest/dxctechnology";
 export const apiKey = "5e956df0436377171a0c2302";
 let formIsValid;
+let data;
 
 export function setupForm() {
   const form = document.querySelector("form");
@@ -21,7 +22,6 @@ export function setupForm() {
   });
   document.querySelector(".submitted").addEventListener("click", (e) => {
     e.preventDefault();
-    const formElements = form.querySelectorAll("input");
     document.querySelector("#the_form").classList.remove("flex");
     document.querySelector("#the_form").classList.add("hide");
   });
@@ -110,17 +110,41 @@ function checkIfSubitted(formElements) {
     document.querySelector("#check_email").classList.add("invalid");
   } else {
     console.log("invalid");
-    if (checkMail.value == "") {
+    if (checkMail.length === 0) {
       console.log("0 chara");
       document.querySelector("#check_email").classList.add("invalid");
     } else {
-      if (
-        //INDSÆT VALIDERING, DER SKAL TJEKKE OM EMAILEN ER BRUGT FØR
-        0
-      ) {
-        document.querySelector("#the_form_check").classList.add("hide");
-        document.querySelector("#the_form_check").classList.remove("flex");
-      }
+      get();
     }
+  }
+}
+async function get() {
+  console.log("get");
+  let response = await fetch(endpoint, {
+    method: "get",
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+      "x-apikey": apiKey,
+      "cache-control": "no-cache",
+    },
+  });
+  data = await response.json();
+  data.forEach(checkData);
+}
+
+function checkData(data) {
+  console.log("checkData");
+  const email = document.querySelector("#check_email").value;
+  if (email == data.work_email) {
+    console.log("Already used");
+    console.log("input: " + email + " " + "bd: " + data.work_email);
+    document.querySelector("#the_form_check").classList.add("hide");
+    document.querySelector("#the_form_check").classList.remove("flex");
+  } else {
+    console.log("does not match");
+    document.querySelector("#check_email").classList.add("invalid");
+    window.addEventListener("keyup", function () {
+      document.querySelector("#check_email").classList.remove("invalid");
+    });
   }
 }

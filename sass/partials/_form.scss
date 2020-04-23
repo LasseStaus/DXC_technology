@@ -176,7 +176,8 @@ input:disabled {
 ////////////VALID///////////
 ////////*/
 
-input:valid:not(:focus):not(:placeholder-shown) {
+input:valid:not(:focus):not(:placeholder-shown),
+input.valid:not(:focus):not(:placeholder-shown) {
   background: url(/static/billeder/yes.png) no-repeat scroll 7px 7px;
   background-size: contain;
   background-size: 15px;
@@ -188,7 +189,8 @@ input:valid:not(:focus):not(:placeholder-shown) {
 ////////////INVALID///////////
 ////////*/
 
-input:invalid:not(:focus):not(:placeholder-shown) {
+input:invalid:not(:focus):not(:placeholder-shown),
+input.invalid:not(:focus):not(:placeholder-shown) {
   background: url(/static/billeder/no.png) no-repeat scroll 7px 7px;
   background-size: contain;
   background-size: 15px;
