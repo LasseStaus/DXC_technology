@@ -1,5 +1,6 @@
 export const endpoint = "https://frontendspring20-4521.restdb.io/rest/dxctechnology";
 export const apiKey = "5e956df0436377171a0c2302";
+let formIsValid;
 
 export function setupForm() {
   const form = document.querySelector("form");
@@ -9,13 +10,35 @@ export function setupForm() {
 
   form.setAttribute("novalidate", true);
   /* elements.date.value = 12; */
-  form.addEventListener("submit", (e) => {
+  document.querySelector(".save").addEventListener("click", (e) => {
     e.preventDefault();
     const formElements = form.querySelectorAll("input");
     formElements.forEach((el) => {
       el.classList.remove("invalid");
     });
 
+    checkIfValid(formElements);
+  });
+  document.querySelector(".submitted").addEventListener("click", (e) => {
+    e.preventDefault();
+    const formElements = form.querySelectorAll("input");
+    document.querySelector("#the_form").classList.remove("flex");
+    document.querySelector("#the_form").classList.add("hide");
+  });
+
+  document.querySelector(".go_back").addEventListener("click", (e) => {
+    e.preventDefault();
+    document.querySelector("#check_email").classList.remove("invalid");
+    document.querySelector("#the_form").classList.add("flex");
+    document.querySelector("#the_form").classList.remove("hide");
+  });
+  document.querySelector(".check_email").addEventListener("click", (e) => {
+    e.preventDefault();
+    const formElements = form.querySelectorAll("input");
+    checkIfSubitted(formElements);
+  });
+
+  function checkIfValid(formElements) {
     if (form.checkValidity()) {
       console.log(form.elements);
       if (form.dataset.state === "post") {
@@ -37,6 +60,10 @@ export function setupForm() {
         );
       }
       form.reset();
+      document.querySelector("#the_form").classList.remove("flex");
+      document.querySelector("#the_form").classList.add("hide");
+      document.querySelector("#the_form_check").classList.remove("flex");
+      document.querySelector("#the_form_check").classList.add("hide");
       //send to restdb/api
     } else {
       formElements.forEach((el) => {
@@ -46,7 +73,7 @@ export function setupForm() {
         }
       });
     }
-  });
+  }
 }
 function postCard(payLoad) {
   console.log("hej");
@@ -60,67 +87,40 @@ function postCard(payLoad) {
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
-      showCard(data);
+      //showCard(data);
     });
   console.log("submitted");
 }
 
-export function get() {
-  fetch(endpoint, {
-    method: "get",
-    headers: { accept: "application/json", "x-apikey": apiKey, "cache-control": "no-cache" },
-  })
-    .then((e) => e.json())
-    .then((data) => {
-      data.forEach(showCard);
-      console.log(data);
-    });
-  console.log("get");
-}
-const template = document.querySelector("template").content;
-const cardContainer = document.querySelector("#cardlist > .container");
-
-function showCard(card) {
-  console.log(card);
-
-  const clone = template.cloneNode(true);
-
-  clone.querySelector("article").dataset.id = card._id;
-  clone.querySelector(".first_name").textContent = card.first_name;
-  clone.querySelector(".last_name").textContent = card.last_name;
-  clone.querySelector(".work_email").textContent = card.work_email;
-  clone.querySelector(".phone_number").textContent = card.phone_number;
-  clone.querySelector(".country").textContent = card.country;
-  clone.querySelector(".job_title").textContent = card.job_title;
-
-  clone.querySelector(`[data-action="delete"]`).addEventListener("click", (e) => deleteCard(card._id));
-
-  cardContainer.appendChild(clone);
-  console.log("appended all + new clone");
-}
-
-function deleteCard(id) {
-  console.log("deleted this card", id);
-
-  fetch(`${endpoint}/${id}`, {
-    method: "delete",
-    headers: { "Content-Type": "application/json; charset=utf-8", "x-apikey": apiKey, "cache-control": "no-cache" },
-  })
-    .then((res) => res.json())
-    .then((data) => console.log(data));
-  document.querySelector(`article[data-id="${id}"]`).remove();
-}
-
-function putCard(payLoad, id) {
-  console.log("put function");
-  const postData = JSON.stringify(payLoad);
-  fetch(`${endpoint}/${id}`, {
-    method: "put",
-    headers: { "Content-Type": "application/json; charset=utf-8", "x-apikey": apiKey, "cache-control": "no-cache" },
-    body: postData,
-  })
-    .then((res) => res.json())
-    .then((data) => {
-      console.log(data);
-    });
+function checkIfSubitted(formElements) {
+  const checkMail = document.querySelector(".check_email");
+  const isValid = form.checkValidity();
+  console.log("checkIfSubitted");
+  form.setAttribute("novalidate", true);
+  console.log("checkIfSubitted");
+  if (checkMail.length === 0) {
+    console.log("0");
+    formIsValid = false;
+    document.querySelector("#check_email").classList.add("invalid");
+  } else {
+    formIsValid = true;
+  }
+  if (isValid && formIsValid) {
+    console.log("all good");
+    document.querySelector("#check_email").classList.add("invalid");
+  } else {
+    console.log("invalid");
+    if (checkMail.value == "") {
+      console.log("0 chara");
+      document.querySelector("#check_email").classList.add("invalid");
+    } else {
+      if (
+        //INDSÆT VALIDERING, DER SKAL TJEKKE OM EMAILEN ER BRUGT FØR
+        0
+      ) {
+        document.querySelector("#the_form_check").classList.add("hide");
+        document.querySelector("#the_form_check").classList.remove("flex");
+      }
+    }
+  }
 }

@@ -1,6 +1,14 @@
-/* .main-container {
-  margin-left: 20vw;
-} */
+/*////////
+////////////DEFAULT///////////
+////////*/
+
+input,
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 #the_form {
   height: 100vh;
   width: 100vw;
@@ -9,45 +17,238 @@
   top: 0;
   left: 0;
   z-index: 10000;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-8);
+  font-size: 1rem;
+}
+
+#the_form_check {
+  height: 100vh;
+  width: 100vw;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-8);
+  font-size: 1rem;
 }
 
 form {
-  margin: 0 auto;
-  border: 1.5px solid var(--color-1);
-  border-radius: 10px;
-  background: var(--color-3);
-  min-width: 350px;
-  max-width: 500px;
-
-  display: grid;
-  justify-content: center;
+  background: var(--color-2);
+  width: 100%;
+  padding: 2rem;
 }
 
+fieldset {
+  border: 0;
+}
+
+form span {
+  font-size: 0.8rem;
+  color: rgb(165, 165, 165);
+  padding: 0 0 0.3rem 0;
+}
+
+.personal,
+.company {
+  margin-top: 2rem;
+}
+fieldset div {
+  padding-top: 0.5rem;
+}
+label {
+  font-size: 0.9rem;
+  font-family: var(--font-7);
+}
+
+button {
+  width: 49%;
+}
 button[data-action="delete"] {
   cursor: pointer;
+  &:hover {
+    border: 2px solid red;
+  }
 }
 
-button[data-action="delete"]:hover {
-  border: 2px solid red;
+.invalid_text {
+  font-size: 0.8rem;
+  margin: 0;
+  padding: 0;
+  color: #a83a34;
+  display: inline;
 }
-input,
-textarea,
-select,
-label {
-  width: 100%;
+fieldset.personal > div:nth-child(1) > span,
+fieldset.personal > div:nth-child(1) > p,
+fieldset.personal > div:nth-child(2) > span,
+fieldset.personal > div:nth-child(2) > p {
+  transform: translateX(80px) translateY(-57px);
 }
-input {
-  border: 1px solid grey;
-  margin: 5px;
+
+fieldset.personal > div:nth-child(3) > span,
+fieldset.personal > div:nth-child(3) > p {
+  transform: translateX(107px) translateY(-57px);
 }
-input + p {
+fieldset.personal > div:nth-child(4) > span,
+fieldset.personal > div:nth-child(4) > p {
+  transform: translateX(63px) translateY(-56px);
+}
+fieldset.company > div:nth-child(1) > span,
+fieldset.company > div:nth-child(1) > p {
+  transform: translateX(84px) translateY(-57px);
+}
+fieldset.company > div:nth-child(2) > span,
+fieldset.company > div:nth-child(2) > p {
+  transform: translateX(62px) translateY(-56px);
+}
+
+form span,
+.invalid_text {
+  position: absolute;
+}
+
+.invalid_text {
   display: none;
 }
-input.invalid + p {
-  display: block;
+
+input.invalid + .invalid_text {
+  display: inline;
 }
-article {
-  border: 1px solid grey;
-  max-width: 600px;
-  padding: 1rem;
+
+input ~ span {
+  display: inline;
+}
+input.invalid ~ span {
+  display: none;
+}
+input {
+  width: 100%;
+  min-width: 100px;
+  padding: 0.6rem;
+  display: block;
+  border: 1px solid var(--color-1);
+  background-color: rgb(255, 251, 253);
+  margin: 0.2rem 0 0.2rem 0;
+}
+
+input::placeholder {
+  color: rgb(186, 186, 186);
+}
+
+.primary,
+.secondary {
+  height: 40px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  font-size: 0.7rem;
+  box-shadow: 1px 1px 5px rgba(75, 75, 75, 0.509);
+  cursor: pointer;
+}
+.secondary {
+  color: var(--color-2);
+  background-color: var(--color-1);
+}
+
+.primary {
+  background-color: var(--color-3);
+  color: var(--color-1);
+}
+
+/*////////
+////////////DISABLED///////////
+////////*/
+
+input:disabled,
+button:disabled {
+  filter: opacity(0.3) grayscale(0.6);
+}
+
+input:disabled {
+  background-color: rgb(252, 252, 252);
+}
+
+/*////////
+////////////VALID///////////
+////////*/
+
+input:valid:not(:focus):not(:placeholder-shown) {
+  background: url(/static/billeder/yes.png) no-repeat scroll 7px 7px;
+  background-size: contain;
+  background-size: 15px;
+  background-position: 98% 50%;
+  //border: 2px solid #458c67;
+}
+
+/*////////
+////////////INVALID///////////
+////////*/
+
+input:invalid:not(:focus):not(:placeholder-shown) {
+  background: url(/static/billeder/no.png) no-repeat scroll 7px 7px;
+  background-size: contain;
+  background-size: 15px;
+  background-position: 98% 50%;
+  //  border: 2px solid #c15c68;
+}
+
+input:focus,
+button:focus {
+  box-shadow: 0px 0px 4px var(--color-3);
+  border: 1px solid var(--color-3);
+  outline: var(--color-3);
+}
+
+/*////////
+////////////HOVER///////////
+////////*/
+
+input:hover:not(:focus):not(:disabled) {
+  box-shadow: 0px 0px 2px var(--color-1);
+  outline: var(--color-3);
+  border: 1px solid var(--color-3);
+}
+
+button:hover:not(:disabled) {
+  box-shadow: 1px 1px 5px var(--color-1);
+  // border: 1px solid var(--color-3);
+  opacity: 0.9;
+  transform: scale(1.01);
+}
+
+@media (min-width: 500px) {
+  form {
+    width: 80%;
+  }
+}
+@media (min-width: 700px) {
+  form {
+    width: 60%;
+  }
+}
+@media (min-width: 1000px) {
+  form {
+    width: 40%;
+  }
+}
+@media (min-width: 1400px) {
+  form {
+    width: 30%;
+  }
+}
+@media (min-width: 1800px) {
+  form {
+    width: 20%;
+  }
+}
+
+.hide {
+  display: none;
+}
+.flex {
+  display: flex;
 }
