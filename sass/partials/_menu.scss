@@ -28,6 +28,7 @@
   background-color: #fff;
   justify-content: flex-end;
   width: 100%;
+  height: 100px;
 }
 
 .wrap_mobile,
@@ -81,18 +82,22 @@
     border-bottom: 200px solid black;
     border-left: 200px solid transparent;
   }
+  .wrap_mobile {
+    height: 200px;
+  }
 }
 @media (min-width: 1000px) {
   .mobile {
     display: none;
   }
-  .desktop {
-    display: block;
-  }
 
   .desktop {
+    display: block;
     font-size: 4vw;
     font-weight: 600;
+  }
+  .wrap_desktop {
+    height: 300px;
   }
   .menu_kasse {
     height: 300px;
