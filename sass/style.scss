@@ -31,7 +31,7 @@ body {
 
 ::-webkit-scrollbar-track {
   background: #fff;
-  -webkit-box-shadow: #fff;
+  --webkit-box-shadow: #fff;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -39,9 +39,9 @@ body {
 }
 
 ::selection {
-  background: #ccc188;
+  background: #ffed00;
 }
 
 ::-moz-selection {
-  background: #ccc188;
+  background: #ffed00;
 }
