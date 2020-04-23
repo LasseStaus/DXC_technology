@@ -176,13 +176,13 @@ input:disabled {
 ////////////VALID///////////
 ////////*/
 
+input:valid:not(input#check_email),
 input:valid:not(:focus):not(:placeholder-shown),
 input.valid:not(:focus):not(:placeholder-shown) {
   background: url(/static/billeder/yes.png) no-repeat scroll 7px 7px;
   background-size: contain;
   background-size: 15px;
   background-position: 98% 50%;
-  //border: 2px solid #458c67;
 }
 
 /*////////
@@ -190,12 +190,11 @@ input.valid:not(:focus):not(:placeholder-shown) {
 ////////*/
 
 input:invalid:not(:focus):not(:placeholder-shown),
-input.invalid:not(:focus):not(:placeholder-shown) {
+input.invalid:not(:focus) {
   background: url(/static/billeder/no.png) no-repeat scroll 7px 7px;
   background-size: contain;
   background-size: 15px;
   background-position: 98% 50%;
-  //  border: 2px solid #c15c68;
 }
 
 input:focus,

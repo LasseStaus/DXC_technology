@@ -29,6 +29,7 @@ export function setupForm() {
   document.querySelector(".go_back").addEventListener("click", (e) => {
     e.preventDefault();
     document.querySelector("#check_email").classList.remove("invalid");
+    document.querySelector("#check_email").value = "";
     document.querySelector("#the_form").classList.add("flex");
     document.querySelector("#the_form").classList.remove("hide");
   });
