@@ -23,3 +23,25 @@ body {
 .hidden {
   visibility: hidden;
 }
+
+::-webkit-scrollbar {
+  width: 0.2rem;
+  height: 0;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+  -webkit-box-shadow: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000;
+}
+
+::selection {
+  background: #ccc188;
+}
+
+::-moz-selection {
+  background: #ccc188;
+}
