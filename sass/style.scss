@@ -1,10 +1,25 @@
 @use "partials/lisa";
+@use "partials/menu";
 @use "partials/peter";
 @use "partials/lasse";
 @use "partials/root";
+@use "partials/bc_site";
+@use "partials/key_site";
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100vw;
+}
+.hide {
+  display: none;
+}
+
+.hidden {
+  visibility: hidden;
 }

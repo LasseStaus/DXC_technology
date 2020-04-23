@@ -1,0 +1,125 @@
+.desktop {
+  display: none;
+}
+
+.mobile {
+  font-size: 6.5vw;
+  font-weight: 600;
+}
+
+.menu_kasse {
+  background-color: black;
+  width: 80%;
+  height: 100px;
+  color: white;
+  text-align: right;
+  display: flex;
+}
+.hjorne {
+  width: 0;
+  height: 0;
+  border-bottom: 100px solid black;
+  border-left: 100px solid transparent;
+}
+.wrap_mobile,
+.wrap_desktop {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: #fff;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.wrap_mobile,
+.menu_kasse {
+  align-items: center;
+}
+.menu_et {
+  padding: 1rem 0rem 1rem 2rem;
+  cursor: pointer;
+}
+
+.menu_to {
+  padding: 1rem 2rem 1rem 0rem;
+  cursor: pointer;
+  &:hover {
+    color: #ffed00;
+  }
+}
+.arrow_left,
+.arrow_right {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 25px solid #ffed00;
+  margin: 0 4rem;
+}
+.arrow_wrap {
+  display: flex;
+  flex-wrap: nowrap;
+}
+#BC_site .arrow_wrap {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+#key_site .arrow_wrap {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+
+.yellow {
+  background-color: #ffed00;
+}
+@media (min-width: 500px) {
+  .menu_kasse {
+    height: 200px;
+  }
+  .hjorne {
+    border-bottom: 200px solid black;
+    border-left: 200px solid transparent;
+  }
+}
+@media (min-width: 1000px) {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
+
+  .desktop {
+    font-size: 4vw;
+    font-weight: 600;
+  }
+  .menu_kasse {
+    height: 300px;
+  }
+
+  .hjorne {
+    border-bottom: 300px solid black;
+    border-left: 300px solid transparent;
+  }
+  .wrap_desktop {
+    align-items: center;
+  }
+
+  .menu_et {
+    padding: 1rem 0rem 1rem 4rem;
+    cursor: pointer;
+    &:hover {
+      color: #ffed00;
+    }
+  }
+  .menu_to {
+    padding: 1rem 4rem 1rem 0rem;
+  }
+  .arrow_left,
+  .arrow_right {
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 35px solid #ffed00;
+  }
+}

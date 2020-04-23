@@ -9,7 +9,60 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Hej lisa & peter</h1>
+    <header>   
+    <template>
+      <article class="article" data-id>
+           
+          <p class="first_name">Title</p>
+          <p class="last_name">Description</p>
+          <p class="work_email">Number</p>
+          <p class="phone_number">date</p>
+          <p class="country">date</p>
+          <p class="job_title">date</p>
+          <div class="buttons">
+            <button data-action="delete" class="delete" data-id><i class="fa-3x fa fa-trash"></i></button>
+          </div>
+        <!--   <button data-action="move-right" class="move">move right</button> -->
+      </article>
+    </template>
+
+
+    <nav class="desktop">
+      <div class="wrap_desktop">
+        <p class="menu_et">Is Business Central right for your business?</p>
+        <div class="hjorne"></div>
+        <div class="menu_kasse">
+          <p class="menu_to">Key areas of comparison</p>
+        </div>
+      </div>
+
+    </nav>
+    <nav class="mobile">
+      <div class="wrap_mobile">
+        <p class="menu_et">Business Central</p>
+        <div class="hjorne"></div>
+        <div class="menu_kasse">
+          <p class="menu_to">Key areas</p>
+        </div>
+      </div>
+    </nav>
+  </header>
+    <section id="bc_site" class="">
+      <div class="arrow_wrap">
+        <div class="arrow_left"></div>
+      </div>
+      <article><h1>Dette er den første side</h1></article>
+    </section>
+    <section id="key_site" class="hide">
+      <div class="arrow_wrap">
+        <div class="arrow_right"></div>
+      </div>
+      <article><h1>Dette er den anden side</h1></article>
+    </section>
+
+
+<section id="the_form" class="">
+    <h1 class="test">Hej lisa & peter</h1>
     <div class="form-container">
       <form data-state="post">
         <label>
@@ -53,22 +106,8 @@
         <div class="container"></div>
       </div>
     </div>
-    <template>
-      <article class="article" data-id>
-        <header>        
-          <p class="first_name">Title</p>
-          <p class="last_name">Description</p>
-          <p class="work_email">Number</p>
-          <p class="phone_number">date</p>
-          <p class="country">date</p>
-          <p class="job_title">date</p>
-          <div class="buttons">
-            <button data-action="delete" class="delete" data-id><i class="fa-3x fa fa-trash"></i></button>
-          </div>
-        </header>
-        <!--   <button data-action="move-right" class="move">move right</button> -->
-      </article>
-    </template>
+  </section>
+
     <script src="main.js"></script>
   </body>
 </html>
