@@ -99,27 +99,6 @@ function showCard(card) {
   console.log("appended all + new clone");
 }
 
-/* function getSingleCard(id, callback) {
-    console.log(id);
-    fetch(`${endpoint}/${id}`, {
-      method: "get",
-      headers: { "Content-Type": "application/json; charset=utf-8", "x-apikey": apiKey, "cache-control": "no-cache" },
-    })
-      .then((res) => res.json())
-      .then((data) => callback(data));
-  } */
-/* 
-  function setupFormForEdit(data) {
-    console.log("hi mom");
-    const form = document.querySelector("form");
-    form.dataset.state = "edit";
-    form.dataset.id = data._id;
-    form.elements.title.value = data.title;
-    form.elements.description.value = data.description;
-    form.elements.date.value = data.date;
-    form.elements.number.value = data.number;
-  } */
-
 function deleteCard(id) {
   console.log("deleted this card", id);
 
