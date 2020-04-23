@@ -1,10 +1,9 @@
 :root {
-  --color-1: #322f31;
-  --color-2: #a2a2a2;
-  --color-3: #f8f7f5;
-  --color-4: #eeeae0;
-  --color-5: #fbd2c0;
-  --color-6: #b2ccab;
+  --color-1: #000000;
+  --color-2: #f2f2f2;
+  --color-3: #ffed00;
+  --color-4: #00c9ff;
+  --color-5: #64ff00;
   --color-7: #a7bbce8e;
   --color-8: #87afc7;
 
@@ -18,4 +17,17 @@
   --font-8: "GT-Walsheim-Pro-regular";
 
   --nav-height: 5vh;
+}
+
+@font-face {
+  font-family: "GT-Walsheim-Pro-Bold";
+  src: url("/static/font/GT-Walsheim-Pro-Bold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GT-Walsheim-Pro-Regular";
+  src: url("/static/font/GT-Walsheim-Pro-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
