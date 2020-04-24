@@ -234,6 +234,10 @@ p {
   transform: translate(0px, 10px);
 }
 
+.explainedtitle {
+  margin-top: 60px;
+}
+
 @media only screen and (max-width: 700px) {
   .boxes {
     display: flex;
@@ -322,7 +326,6 @@ p {
     display: flex;
     flex-direction: column;
     color: white;
-    padding: 1rem;
     margin: 0 auto;
   }
 }
