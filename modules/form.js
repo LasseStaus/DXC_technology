@@ -35,6 +35,7 @@ function stopScroll() {
 export function checkIfValid(formElements) {
   if (form.checkValidity()) {
     console.log(form.elements);
+    postCard(data);
     form.reset();
     document.querySelector("#the_form").classList.remove("flex");
     document.querySelector("#the_form").classList.add("hide");
@@ -60,6 +61,23 @@ export function checkIfValid(formElements) {
       }
     });
   }
+}
+
+function postCard(payLoad) {
+  console.log("hej");
+  const postData = JSON.stringify(payLoad);
+  console.log(payLoad);
+  fetch(endpoint, {
+    method: "post",
+    headers: { "Content-Type": "application/json; charset=utf-8", "x-apikey": apiKey, "cache-control": "no-cache" },
+    body: postData,
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+      showCard(data);
+    });
+  console.log("submitted");
 }
 
 export function checkIfSubitted() {
