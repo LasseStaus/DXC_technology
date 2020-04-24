@@ -10,256 +10,234 @@
     <title>Document</title>
   </head>
   <body>
-    <header>
-      <template>
-        <article class="article" data-id>
-          <p class="first_name">Title</p>
-          <p class="last_name">Description</p>
-          <p class="work_email">Number</p>
-          <p class="phone_number">date</p>
-          <p class="country">date</p>
-          <p class="job_title">date</p>
-          <div class="buttons">
-            <button data-action="delete" class="delete" data-id><i class="fa-3x fa fa-trash"></i></button>
+    <main class="container">
+      <header>
+        <nav class="desktop">
+          <div class="wrap_desktop">
+            <p class="menu_et">Is Business Central right for your business?</p>
+            <div class="hjorne"></div>
+            <div class="menu_kasse">
+              <p class="menu_to">Key areas of comparison</p>
+            </div>
           </div>
-          <!--   <button data-action="move-right" class="move">move right</button> -->
+        </nav>
+        <nav class="mobile">
+          <div class="wrap_mobile">
+            <p class="menu_et">Business Central</p>
+            <div class="hjorne"></div>
+            <div class="menu_kasse">
+              <p class="menu_to">Key areas</p>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div class="theFormText">
+        <h1 class="persiasive_header"></h1>
+        <p class="persuasive_text"></p>
+      </div>
+      <section id="the_form" class="flex">
+        <!--     <div class="form-container"> -->
+        <form data-state="post">
+          <fieldset class="personal">
+            <!--           <legend>Personal</legend> -->
+            <div>
+              <label for="name">First name</label>
+              <input id="name" type="text" name="first_name" placeholder="First name" required />
+              <p class="invalid_text">|| Please provide your first name</p>
+              <span>|| Enter your first name</span>
+            </div>
+
+            <div>
+              <label for="last">Last name</label>
+              <input id="last" type="text" name="last_name" placeholder="Last name" required />
+              <p class="invalid_text">|| Please provide your last name</p>
+              <span>|| Enter your last name</span>
+            </div>
+
+            <div>
+              <label for="phone">Phone Number</label>
+              <input id="phone" type="number" name="phone_number" placeholder="Phone" required />
+              <p class="invalid_text">|| Please provide your phone number</p>
+              <span>|| Enter your phone number</span>
+            </div>
+
+            <div>
+              <label for="country">Country </label>
+              <input id="country" type="text" name="country" placeholder="Country" required />
+              <p class="invalid_text">|| Please specify your Country</p>
+              <span>|| What country do you live in?</span>
+            </div>
+          </fieldset>
+          <!--  <legend>Company</legend> -->
+          <fieldset class="company">
+            <div>
+              <label for="email"> Work Email </label>
+              <input id="email" type="email" name="work_email" placeholder="name@company.com" required />
+              <p class="invalid_text">|| Please provide your work email</p>
+              <span>|| Which email do you use at work?</span>
+            </div>
+
+            <div>
+              <label for="job"> Job title </label>
+              <input id="job" type="text" name="job_title" placeholder="Job title" required />
+              <p class="invalid_text">|| Please specify your job title</p>
+              <span>|| What do you do for a living?</span>
+            </div>
+          </fieldset>
+
+          <fieldset class="buttons">
+            <button type="submit" class="secondary submitted" data-action="next">I ALREADY SUBMITTED</button>
+            <button type="submit" class="primary submit save">SAVE</button>
+          </fieldset>
+        </form>
+      </section>
+      <section id="the_form_check" class="flex">
+        <!--     <div class="form-container"> -->
+        <form data-state="post">
+          <fieldset class="company">
+            <div>
+              <label for="check_email"> Work Email </label>
+              <input id="check_email" type="email" name="check_email" placeholder="name@company.com" required />
+              <p class="invalid_text">|| Your email does not match any already entered emails</p>
+              <span>|| Enter your work email</span>
+            </div>
+          </fieldset>
+
+          <fieldset class="buttons">
+            <button type="submit" class="secondary go_back" data-action="next">GO BACK</button>
+            <button type="submit" class="primary check_email">CHECK EMAIL</button>
+          </fieldset>
+        </form>
+      </section>
+
+      <section id="bc_site" class="">
+        <div class="arrow_wrap">
+          <div class="arrow_left"></div>
+        </div>
+        <article>
+          <h1>Microsoft Dynamics 365 Business Central is a software as a service ERP solution for the mid-size market. It was referred to as “Dynamics 365 Tenerife” during development and is often called “NAV in the Cloud.”</h1>
+          <p>Microsoft Dynamics 365 Business Central provides the same rich functionality as Microsoft Dynamics NAV — Microsoft’s flagship solution for the mid-size market that is used by over 160,000 companies worldwide. Both solutions offer tight integration with other Microsoft cloud-based solutions such as Microsoft Dynamics 365 for Sales, Microsoft Office 365, etc. Microsoft describes Business Central as: “An all-in-one business management solution that helps organizations streamline business processes, improve customer interactions and enable growth.”</p>
+          <h1>Business Central vs. Microsoft Dynamics</h1>
+          <h3>Standard functionality</h3>
+          <p>Just like Microsoft Dynamics NAV, Business Central functionality is divided across two packs. Essentials maps 1:1 to the functionality provided in the Dynamics NAV Starter Pack, and Premium maps to the Dynamics NAV Extended Pack. The table below shows the high-level functional areas that are addressed by both solutions.</p>
+
+          <h1>Explained</h1>
+          <div class="boxes">
+            <div class="box1">
+              <h1>1</h1>
+              <h2>Business without silos</h2>
+              <p>Can be used as a central hub that connects with familiar office tools through workflow (Microsoft Flow) and task automation (Office 365)</p>
+            </div>
+            <div class="box2">
+              <h1>2</h1>
+              <h2>Business without silos</h2>
+              <p>Can be used as a central hub that connects with familiar office tools through workflow (Microsoft Flow) and task automation (Office 365)</p>
+            </div>
+            <div class="box3">
+              <h1>3</h1>
+              <h2>Business without silos</h2>
+              <p>Can be used as a central hub that connects with familiar office tools through workflow (Microsoft Flow) and task automation (Office 365)</p>
+            </div>
+          </div>
+          <section id="footerarea">
+            <div class="info">
+              <div class="infobox1">
+                <h1>
+                  Business Central Essentials /<br />
+                  Dynamics NAV Starter Pack
+                </h1>
+
+                <ul>
+                  <h2>Financial Management</h2>
+                  <li>General Ledger</li>
+                  <li>Cash Management</li>
+                  <li>Fixed Assets</li>
+                  <li>Currencies</li>
+                  <li>Consolidation</li>
+                </ul>
+                <ul>
+                  <h2>Financial Management</h2>
+                  <li>General Ledger</li>
+                  <li>Cash Management</li>
+                  <li>Fixed Assets</li>
+                  <li>Currencies</li>
+                  <li>Consolidation</li>
+                </ul>
+                <ul>
+                  <h2>Financial Management</h2>
+                  <li>General Ledger</li>
+                  <li>Cash Management</li>
+                  <li>Fixed Assets</li>
+                  <li>Currencies</li>
+                  <li>Consolidation</li>
+                </ul>
+                <ul>
+                  <h2>Financial Management</h2>
+                  <li>General Ledger</li>
+                  <li>Cash Management</li>
+                  <li>Fixed Assets</li>
+                  <li>Currencies</li>
+                  <li>Consolidation</li>
+                </ul>
+                <ul>
+                  <h2>Financial Management</h2>
+                  <li>General Ledger</li>
+                  <li>Cash Management</li>
+                  <li>Fixed Assets</li>
+                  <li>Currencies</li>
+                  <li>Consolidation</li>
+                </ul>
+              </div>
+              <div class="infobox2">
+                <h1>
+                  Business Central Essentials /<br />
+                  Dynamics NAV Starter Pack
+                </h1>
+
+                <ul>
+                  <h2>Financial Management</h2>
+                  <li>General Ledger</li>
+                  <li>Cash Management</li>
+                  <li>Fixed Assets</li>
+                  <li>Currencies</li>
+                  <li>Consolidation</li>
+                </ul>
+                <ul>
+                  <h2>Financial Management</h2>
+                  <li>General Ledger</li>
+                  <li>Cash Management</li>
+                  <li>Fixed Assets</li>
+                  <li>Currencies</li>
+                  <li>Consolidation</li>
+                </ul>
+                <ul>
+                  <h2>Financial Management</h2>
+                  <li>General Ledger</li>
+                  <li>Cash Management</li>
+                  <li>Fixed Assets</li>
+                  <li>Currencies</li>
+                  <li>Consolidation</li>
+                </ul>
+                <ul>
+                  <h2>Financial Management</h2>
+                  <li>General Ledger</li>
+                  <li>Cash Management</li>
+                  <li>Fixed Assets</li>
+                  <li>Currencies</li>
+                  <li>Consolidation</li>
+                </ul>
+              </div>
+            </div>
+          </section>
         </article>
-      </template>
-
-      <nav class="desktop">
-        <div class="wrap_desktop">
-          <p class="menu_et">Is Business Central right for your business?</p>
-          <div class="hjorne"></div>
-          <div class="menu_kasse">
-            <p class="menu_to">Key areas of comparison</p>
-          </div>
+      </section>
+      <section id="key_site" class="hide">
+        <div class="arrow_wrap">
+          <div class="arrow_right"></div>
         </div>
-      </nav>
-      <nav class="mobile">
-        <div class="wrap_mobile">
-          <p class="menu_et">Business Central</p>
-          <div class="hjorne"></div>
-          <div class="menu_kasse">
-            <p class="menu_to">Key areas</p>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <section id="bc_site" class="">
-      <div class="arrow_wrap">
-        <div class="arrow_left"></div>
-      </div>
-      <article>
-        <h1>Microsoft Dynamics 365 Business Central is a software as a service ERP solution for the mid-size market. It was referred to as “Dynamics 365 Tenerife” during development and is often called “NAV in the Cloud.”</h1>
-        <p>Microsoft Dynamics 365 Business Central provides the same rich functionality as Microsoft Dynamics NAV — Microsoft’s flagship solution for the mid-size market that is used by over 160,000 companies worldwide. Both solutions offer tight integration with other Microsoft cloud-based solutions such as Microsoft Dynamics 365 for Sales, Microsoft Office 365, etc. Microsoft describes Business Central as: “An all-in-one business management solution that helps organizations streamline business processes, improve customer interactions and enable growth.”</p>
-        <h1>Business Central vs. Microsoft Dynamics</h1>
-        <h3>Standard functionality</h3>
-        <p>Just like Microsoft Dynamics NAV, Business Central functionality is divided across two packs. Essentials maps 1:1 to the functionality provided in the Dynamics NAV Starter Pack, and Premium maps to the Dynamics NAV Extended Pack. The table below shows the high-level functional areas that are addressed by both solutions.</p>
-
-        <h1>Explained</h1>
-        <div class="boxes">
-          <div class="box1">
-            <h1>1</h1>
-            <h2>Business without silos</h2>
-            <p>Can be used as a central hub that connects with familiar office tools through workflow (Microsoft Flow) and task automation (Office 365)</p>
-          </div>
-          <div class="box2">
-            <h1>2</h1>
-            <h2>Business without silos</h2>
-            <p>Can be used as a central hub that connects with familiar office tools through workflow (Microsoft Flow) and task automation (Office 365)</p>
-          </div>
-          <div class="box3">
-            <h1>3</h1>
-            <h2>Business without silos</h2>
-            <p>Can be used as a central hub that connects with familiar office tools through workflow (Microsoft Flow) and task automation (Office 365)</p>
-          </div>
-        </div>
-        <section id="footerarea">
-          <div class="info">
-            <div class="infobox1">
-              <h1>
-                Business Central Essentials /<br />
-                Dynamics NAV Starter Pack
-              </h1>
-
-              <ul>
-                <h2>Financial Management</h2>
-                <li>General Ledger</li>
-                <li>Cash Management</li>
-                <li>Fixed Assets</li>
-                <li>Currencies</li>
-                <li>Consolidation</li>
-              </ul>
-              <ul>
-                <h2>Financial Management</h2>
-                <li>General Ledger</li>
-                <li>Cash Management</li>
-                <li>Fixed Assets</li>
-                <li>Currencies</li>
-                <li>Consolidation</li>
-              </ul>
-              <ul>
-                <h2>Financial Management</h2>
-                <li>General Ledger</li>
-                <li>Cash Management</li>
-                <li>Fixed Assets</li>
-                <li>Currencies</li>
-                <li>Consolidation</li>
-              </ul>
-              <ul>
-                <h2>Financial Management</h2>
-                <li>General Ledger</li>
-                <li>Cash Management</li>
-                <li>Fixed Assets</li>
-                <li>Currencies</li>
-                <li>Consolidation</li>
-              </ul>
-              <ul>
-                <h2>Financial Management</h2>
-                <li>General Ledger</li>
-                <li>Cash Management</li>
-                <li>Fixed Assets</li>
-                <li>Currencies</li>
-                <li>Consolidation</li>
-              </ul>
-            </div>
-            <div class="infobox2">
-              <h1>
-                Business Central Essentials /<br />
-                Dynamics NAV Starter Pack
-              </h1>
-
-              <ul>
-                <h2>Financial Management</h2>
-                <li>General Ledger</li>
-                <li>Cash Management</li>
-                <li>Fixed Assets</li>
-                <li>Currencies</li>
-                <li>Consolidation</li>
-              </ul>
-              <ul>
-                <h2>Financial Management</h2>
-                <li>General Ledger</li>
-                <li>Cash Management</li>
-                <li>Fixed Assets</li>
-                <li>Currencies</li>
-                <li>Consolidation</li>
-              </ul>
-              <ul>
-                <h2>Financial Management</h2>
-                <li>General Ledger</li>
-                <li>Cash Management</li>
-                <li>Fixed Assets</li>
-                <li>Currencies</li>
-                <li>Consolidation</li>
-              </ul>
-              <ul>
-                <h2>Financial Management</h2>
-                <li>General Ledger</li>
-                <li>Cash Management</li>
-                <li>Fixed Assets</li>
-                <li>Currencies</li>
-                <li>Consolidation</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-      </article>
-    </section>
-    <section id="key_site" class="hide">
-      <div class="arrow_wrap">
-        <div class="arrow_right"></div>
-      </div>
-      <article><h1>Dette er den anden side</h1></article>
-    </section>
-
-    <section id="the_form" class="flex">
-      <!--     <div class="form-container"> -->
-      <form data-state="post">
-        <fieldset class="personal">
-          <!--           <legend>Personal</legend> -->
-          <div>
-            <label for="name">First name</label>
-            <input id="name" type="text" name="first_name" placeholder="First name" required />
-            <p class="invalid_text">|| Please provide your first name</p>
-            <span>|| Enter your first name</span>
-          </div>
-
-          <div>
-            <label for="last">Last name</label>
-            <input id="last" type="text" name="last_name" placeholder="Last name" required />
-            <p class="invalid_text">|| Please provide your last name</p>
-            <span>|| Enter your last name</span>
-          </div>
-
-          <div>
-            <label for="phone">Phone Number</label>
-            <input id="phone" type="number" name="phone_number" placeholder="Phone" required />
-            <p class="invalid_text">|| Please provide your phone number</p>
-            <span>|| Enter your phone number</span>
-          </div>
-
-          <div>
-            <label for="country">Country </label>
-            <input id="country" type="text" name="country" placeholder="Country" required />
-            <p class="invalid_text">|| Please specify your Country</p>
-            <span>|| What country do you live in?</span>
-          </div>
-        </fieldset>
-        <!--  <legend>Company</legend> -->
-        <fieldset class="company">
-          <div>
-            <label for="email"> Work Email </label>
-            <input id="email" type="email" name="work_email" placeholder="name@company.com" required />
-            <p class="invalid_text">|| Please provide your work email</p>
-            <span>|| Which email do you use at work?</span>
-          </div>
-
-          <div>
-            <label for="job"> Job title </label>
-            <input id="job" type="text" name="job_title" placeholder="Job title" required />
-            <p class="invalid_text">|| Please specify your job title</p>
-            <span>|| What do you do for a living?</span>
-          </div>
-        </fieldset>
-
-        <fieldset class="buttons">
-          <button type="submit" class="secondary submitted" data-action="next">I ALREADY SUBMITTED</button>
-          <button type="submit" class="primary submit save">SAVE</button>
-        </fieldset>
-      </form>
-      <!--     </div> -->
-      <!-- <div class="main-container">
-      <div id="cardlist">
-        <div class="container"></div>
-      </div>
-    </div> -->
-    </section>
-    <section id="the_form_check" class="flex">
-      <!--     <div class="form-container"> -->
-      <form data-state="post">
-        <fieldset class="company">
-          <div>
-            <label for="check_email"> Work Email </label>
-            <input id="check_email" type="email" name="check_email" placeholder="name@company.com" required />
-            <p class="invalid_text">|| Your email does not match any already entered emails</p>
-            <span>|| Enter your work email</span>
-          </div>
-        </fieldset>
-
-        <fieldset class="buttons">
-          <button type="submit" class="secondary go_back" data-action="next">GO BACK</button>
-          <button type="submit" class="primary check_email">CHECK EMAIL</button>
-        </fieldset>
-      </form>
-      <!--     </div> -->
-      <!-- <div class="main-container">
-      <div id="cardlist">
-        <div class="container"></div>
-      </div>
-    </div> -->
-    </section>
-
+        <article><h1>Dette er den anden side</h1></article>
+      </section>
+    </main>
     <script src="main.js"></script>
     <script src="https://kea-alt-del.dk/dxc/login.js"></script>
   </body>

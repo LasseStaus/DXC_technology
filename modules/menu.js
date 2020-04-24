@@ -6,11 +6,28 @@ export function menuDelegation() {
       et.addEventListener(evt, showBcSection);
     });
   });
-  ["touch", "click", "mouseover"].forEach((evt) => {
-    document.querySelectorAll(".menu_to").forEach((to) => {
-      to.addEventListener(evt, showKeySection);
+  document.querySelectorAll(".primary").forEach((button) => {
+    button.addEventListener("click", () => {
+      setTimeout(() => {
+        activateSecondLink();
+      }, 3000);
     });
   });
+}
+
+function activateSecondLink() {
+  console.log("activateSecondLink");
+  const form1 = document.querySelector("#the_form");
+  const form2 = document.querySelector("#the_form_check");
+  console.log(form1.classList[0]);
+  console.log(form2.classList[0]);
+  if (form1.classList[0] == "hide" && form2.classList[0] == "hide") {
+    ["touch", "click", "mouseover"].forEach((evt) => {
+      document.querySelectorAll(".menu_to").forEach((to) => {
+        to.addEventListener(evt, showKeySection);
+      });
+    });
+  }
 }
 
 function showBcSection() {
