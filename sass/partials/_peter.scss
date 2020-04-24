@@ -107,7 +107,7 @@ p {
 
 #footerarea {
   width: 100%;
-  height: auto;
+  height: 100%;
   background-color: black;
 }
 
@@ -165,21 +165,25 @@ p {
 #picturebanner {
   position: relative;
   right: 0;
-  width: 60%;
-
+  width: 64%;
   height: 80vh;
   float: right;
-  background-image: url(/static/billeder/working.jpg);
+  /* background-image: url(/static/billeder/working.jpg); */
   background-repeat: no-repeat;
   background-size: 100%;
   /* background-size: cover; */
   -webkit-clip-path: circle(70% at 78% 51%);
-  clip-path: circle(50% at 78% 51%);
+  clip-path: circle(34% at 78% 46%);
+}
+
+#picturebanner img {
+  width: 100%;
+  height: auto;
 }
 
 #blackcircle {
   width: 100%;
-  height: 45vh;
+  height: auto;
   -webkit-clip-path: circle(50% at 3% 51%);
   clip-path: circle(40% at 3% 51%);
   background-color: black;
@@ -211,27 +215,63 @@ p {
 }
 
 #picturebanner2 {
-  width: 84%;
+  width: 90%;
   height: 100vh;
   float: right;
-  background-image: url(/static/billeder/computer_man.jpg);
+  /* background-image: url(/static/billeder/computer_man.jpg); */
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-clip-path: circle(47.4% at 90% 53%);
-  clip-path: circle(42.4% at 80% 59%);
+  clip-path: circle(44.4% at 80% 62%);
 }
 
-@media only screen and (max-width: 500px) {
+#picturebanner2 img {
+  width: 100%;
+  height: auto;
+  transform: translate(0px, 10px);
+}
+
+@media only screen and (max-width: 700px) {
   .boxes {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
   }
 
+  #blackcircle {
+    width: 300%;
+  }
+
   .info {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+  }
+
+  .infobox2 {
+    color: white;
+    padding: 50px;
+    padding-top: 0px;
+    margin-right: 0px;
+  }
+
+  .infobox1 h1 {
+    color: white;
+    font-size: 26px;
+    width: 100%;
+  }
+
+  .infobox2 h1 {
+    color: white;
+    font-size: 26px;
+    width: 100%;
+  }
+
+  #blackcircle {
+    clip-path: circle(90% at 3% 51%);
+    background-color: black;
+    width: 100%;
+    height: auto;
   }
 
   article h1 {
@@ -254,13 +294,22 @@ p {
   }
 
   #picturebanner2 {
-    width: 70%;
-    height: 100vh;
-    /* float: right; */
-    background-image: url(/static/billeder/computer_man.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-clip-path: circle(47.4% at 90% 53%);
-    clip-path: circle(62.4% at 90% 53%);
+    display: none;
+  }
+
+  .infobox1 {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 1rem;
+    margin: 0 auto;
+  }
+
+  .infobox2 {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 1rem;
+    margin: 0 auto;
   }
 }
