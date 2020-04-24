@@ -6,43 +6,67 @@ let position;
 
 export function formDelegation() {
   console.log("formDelegation");
-  document.querySelector(".container").addEventListener("scroll", stopScroll);
+  document.querySelector(".container").addEventListener("scroll", setPosition);
 }
 
-function stopScroll() {
+function setPosition() {
   const container = document.querySelector(".container");
   position = container.scrollTop / (container.scrollHeight - container.clientHeight);
   console.log(position);
-  if (position >= 0.39) {
-    document.querySelector("#bc_site").classList.add("hide");
-    document.querySelectorAll("nav").forEach((nav) => {
-      nav.classList.add("hide");
-    });
-    document.querySelector(".container").removeEventListener("scroll", stopScroll);
-    document.querySelector(".container").style.overflow = "hidden";
-    setTimeout(() => {
-      document.querySelector(".container").style.overflow = "scroll";
-    }, 500);
-    document.querySelector(".persiasive_header").textContent = "Persuasive header";
-    document.querySelector(".persuasive_text").textContent = "Der skal stå noget persuasive her";
-    document.querySelector("#the_form").style.transform = "translateY(50px)";
-    document.querySelector("#the_form_check").style.transform = "translateY(0px)";
-    document.querySelector(".theFormText").style.transform = "translateY(0)";
-    document.querySelector(".theFormText").scrollIntoView();
+  if (innerWidth < 500) {
+    console.log("<500");
+    if (position >= 0.15) {
+      stopScroll();
+    }
+  } else if (innerWidth < 1000) {
+    console.log("<1000");
+    if (position >= 0.2) {
+      stopScroll();
+    }
+  } else if (innerWidth < 2500) {
+    console.log("<1500");
+    if (position >= 0.45) {
+      stopScroll();
+    }
   }
+}
+
+function stopScroll() {
+  document.querySelector("#bc_site").classList.add("hide");
+  document.querySelectorAll("nav").forEach((nav) => {
+    nav.classList.add("hide");
+  });
+  document.querySelector(".container").removeEventListener("scroll", setPosition);
+  document.querySelector(".container").style.overflow = "hidden";
+  setTimeout(() => {
+    document.querySelector(".container").style.overflow = "scroll";
+  }, 500);
+  document.querySelector(".persiasive_header").textContent = "Persuasive header";
+  document.querySelector(".persuasive_text").textContent = "Der skal stå noget persuasive her";
+  document.querySelector("#the_form").style.transform = "translateY(50px)";
+  document.querySelector("#the_form_check").style.transform = "translateY(0px)";
+  document.querySelector(".theFormText").style.transform = "translateY(0)";
+  document.querySelector(".theFormText").scrollIntoView();
 }
 
 export function checkIfValid(formElements) {
   if (form.checkValidity()) {
     console.log(form.elements);
-    postCard(data);
+    postCard({
+      first_name: form.elements.first_name.value,
+      last_name: form.elements.last_name.value,
+      work_email: form.elements.work_email.value,
+      phone_number: form.elements.phone_number.value,
+      country: form.elements.country.value,
+      job_title: form.elements.job_title.value,
+    });
     form.reset();
     document.querySelector("#the_form").classList.remove("flex");
     document.querySelector("#the_form").classList.add("hide");
     document.querySelector("#the_form_check").classList.remove("flex");
     document.querySelector("#the_form_check").classList.add("hide");
     document.querySelector(".container").style.overflow = "scroll";
-    document.querySelector(".container").removeEventListener("scroll", stopScroll);
+    document.querySelector(".container").removeEventListener("scroll", setPosition);
     document.querySelector("#bc_site").classList.remove("hide");
     document.querySelector(".theFormText").classList.add("hide");
 
@@ -75,7 +99,6 @@ function postCard(payLoad) {
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
-      showCard(data);
     });
   console.log("submitted");
 }
@@ -122,16 +145,14 @@ async function get() {
 
 function checkData(data) {
   console.log("checkData");
-  //console.log(data);
   const email = document.querySelector("#check_email").value;
-  console.log("input: " + email + " " + "bd: " + data.work_email);
   if (email == data.work_email) {
     console.log("Already used");
     console.log("input: " + email + " " + "bd: " + data.work_email);
     document.querySelector("#the_form_check").classList.add("hide");
     document.querySelector("#the_form_check").classList.remove("flex");
     document.querySelector(".container").style.overflow = "scroll";
-    document.querySelector(".container").removeEventListener("scroll", stopScroll);
+    document.querySelector(".container").removeEventListener("scroll", setPosition);
     document.querySelector("#bc_site").classList.remove("hide");
     document.querySelector(".theFormText").classList.add("hide");
     if (innerWidth > 1000) {

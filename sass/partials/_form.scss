@@ -12,9 +12,10 @@ button {
 #the_form {
   height: 100vh;
   width: 100vw;
-  background-color: #fff;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 66%, rgba(255, 255, 255, 0.7217261904761905) 80%, rgba(255, 255, 255, 0) 100%);
   position: absolute;
-  transform: translateY(300px);
+  transform: translateY(500px);
   z-index: 10000;
   justify-content: center;
   align-items: center;
@@ -25,9 +26,10 @@ button {
 #the_form_check {
   height: 100vh;
   width: 100vw;
-  background-color: #fff;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 66%, rgba(255, 255, 255, 0.7217261904761905) 80%, rgba(255, 255, 255, 0) 100%);
   position: absolute;
-  transform: translateY(300px);
+  transform: translateY(500px);
   z-index: 1000;
   justify-content: center;
   align-items: center;
@@ -37,12 +39,12 @@ button {
 
 .theFormText {
   position: absolute;
-  transform: translateY(200px);
   z-index: 11000;
 }
 
 form {
   background: var(--color-2);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 70%, rgba(255, 255, 255, 0.7217261904761905) 80%, rgba(255, 255, 255, 0) 100%);
   width: 100%;
   padding: 2rem;
 }
@@ -77,6 +79,10 @@ button[data-action="delete"] {
   &:hover {
     border: 2px solid red;
   }
+}
+
+.theFormText {
+  padding: 2rem;
 }
 
 .invalid_text {
@@ -229,6 +235,13 @@ button:hover:not(:disabled) {
   form {
     width: 80%;
   }
+  #the_form {
+    transform: translateY(200px);
+  }
+
+  #the_form_check {
+    transform: translateY(200px);
+  }
 }
 @media (min-width: 700px) {
   form {
@@ -245,6 +258,7 @@ button:hover:not(:disabled) {
     width: 30%;
   }
 }
+
 @media (min-width: 1800px) {
   form {
     width: 20%;
