@@ -1,9 +1,251 @@
 #key_site {
+  padding-bottom: 50px;
+
+  h1,
+  h2,
+  h3 {
+    font-size: 2.5rem;
+    color: white;
+  }
+
+  p {
+    font-size: 1.25rem;
+    color: white;
+  }
+}
+
+#key_site {
   width: 100%;
   height: 100%;
   background-color: #000;
   color: white;
+  max-width: 100vw;
+  overflow: hidden;
 }
-#key_site article {
-  border: 0;
+
+.licensing,
+.enhancing,
+#key_site2 .tekst-container {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.image1 {
+  background-image: url("/static/billeder/man_laughing.jpg");
+  background-position: right;
+  transform: translateX(-12.5%);
+
+}
+
+.image2 {
+  background-image: url("/static/billeder/computer_and_hands.jpg");
+  background-position: right;
+}
+
+.image {
+  min-height: 50vh;
+
+  width: 100%;
+  max-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // border-radius: 25% 0px 0px 25%;
+}
+
+.image-box {
+  border-radius: 50vh 0px 0px 50vh;
+  overflow: hidden;
+  transform: translateX(25%);
+
+}
+
+.image-box2 {
+  border-radius: 0px 50% 50% 0px;
+  overflow: hidden;
+
+}
+
+p>span {
+  font-weight: bold;
+}
+
+.testhenrik {
+  width: 30%;
+  height: auto;
+  border-radius: 0 100% 100% 0;
+  transform: translate(-85px, 16px);
+  background-color: red;
+}
+
+#key_site div.learn-more {
+  margin-top: 40px;
+
+}
+
+.learn-more>.container {
+  height: 200px;
+  width: 50%;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 0px 100px 99px 0px;
+  padding: 4rem;
+
+}
+
+.learn-more .tekst {
+  display: grid;
+  justify-content: end;
+  margin-right: 15px;
+}
+
+
+
+#key_site div.learn-more p {
+  font-size: 1rem;
+  color: black;
+  padding: 0em;
+}
+
+#key_site div.learn-more h3 {
+  padding: 0;
+  font-size: 1.25rem;
+}
+
+#key_site div.learn-more h3 a {
+  padding: 0;
+  color: black;
+}
+
+#key_site2 .container {
+  background-color: white;
+
+}
+
+
+//  #keysite skabelon done
+
+// key_site s2 start
+
+
+
+
+@media only screen and (min-width: 768px) {
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: auto;
+  }
+
+  section#key_site2 {
+    min-height: 80vh;
+  }
+
+  #key_site2 {
+    .container {
+      max-height: 90vh;
+    }
+
+    .image {
+      position: relative;
+      min-height: 100vh;
+      width: 100%;
+      overflow: visible;
+      top: 0;
+      border: 0px 50% 50% 0px;
+      border-radius: 0px 50% 50% 0px;
+      transform: translateX(-35%);
+    }
+
+    section {
+      min-height: 80vh;
+      max-height: 80vh;
+    }
+
+    .tekst-container {
+      transform: translateX(-20%);
+      grid-column: 2;
+    }
+
+    .tekst-container {
+      padding-left: 0em;
+
+      h1 {
+        font-size: 90px;
+        width: 70%;
+        margin-left: 10%;
+      }
+
+      h1>span {
+        color: var(--color-3)
+      }
+
+      .childs {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+        justify-items: center;
+        align-items: baseline;
+
+        article {
+          width: 63%;
+
+        }
+
+        article.first p {
+          padding: 0;
+        }
+
+        article+article {
+          width: 100%;
+          display: flex;
+          flex-wrap: nowrap;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+
+  #key_site {
+
+    padding-bottom: 100px;
+
+    .enhancing {
+      grid-column: 1 / span 6;
+      grid-row: 1 / span 5;
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+
+
+
+    .licensing {
+      grid-column: 1 / span 6;
+      grid-row: 6 / span 5;
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+
+    .image-container {
+      transform: translateX(15%);
+      grid-column: 7 / span 6;
+      grid-row: 2 / span 11;
+    }
+
+    .learn-more {
+      grid-column: 1 / span 6;
+      grid-row: 11 / span 2;
+      grid-template-rows: 150px;
+    }
+
+    .image {
+      min-height: 100vh;
+    }
+  }
 }
