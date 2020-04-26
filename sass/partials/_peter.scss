@@ -16,8 +16,7 @@ body {
 }
 
 #bc_site {
-  padding-left: 4rem;
-  padding-right: 4rem;
+  padding: 0 4rem 2rem;
 
   .boxes {
     display: flex;
@@ -30,8 +29,8 @@ body {
     font-family: "GT-Walsheim-Pro-Regular";
     padding-left: 0px;
     color: black;
-    line-height: 30px;
-    font-size: 20px;
+    line-height: 1.3rem;
+    font-size: 0.9rem;
     margin-top: -30px;
   }
 
@@ -53,24 +52,18 @@ body {
 
   .box1 p {
     font-size: 0.9rem;
-
-    /* padding: 50px; */
     padding-top: 20px;
     padding-left: 40px;
   }
 
   .box2 p {
     font-size: 0.9rem;
-
-    /* padding: 50px; */
     padding-top: 20px;
     padding-left: 40px;
   }
 
   .box3 p {
     font-size: 0.9rem;
-
-    /* padding: 50px; */
     padding-top: 20px;
     padding-left: 40px;
   }
@@ -90,15 +83,20 @@ body {
     padding: 20px;
     padding-left: 0px;
     color: black;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
   }
 
   h2,
   h3 {
     font-family: "GT-Walsheim-Pro-Bold";
-    padding: 20px;
-    padding-left: 0px;
+    padding: 0 0 1rem 0;
+
     color: black;
+  }
+
+  .vs_text {
+    width: 60%;
   }
 
   p {
@@ -113,7 +111,7 @@ body {
     width: 100vw;
     height: 100%;
     background-color: black;
-    transform: translate(-5rem, 0px);
+    transform: translate(-4rem, 0px);
   }
 
   .info {
@@ -130,6 +128,9 @@ body {
   .infobox1 h1 {
     color: white;
     font-size: 20px;
+  }
+  .info ul {
+    padding: 0.5rem 0 2rem;
   }
 
   .infobox1 li {
@@ -167,16 +168,28 @@ body {
     margin-bottom: -15px;
   }
 
+  .key_heading {
+    font-size: 2rem;
+    padding-top: 2rem;
+  }
+
   .picturebanner {
     background-image: url(/static/billeder/working.jpg);
     background-repeat: no-repeat;
     background-position: 83% 50%;
     background-size: cover;
-    width: 66vw;
+    width: 55rem;
     border-radius: 100% 50% 50% 100%;
-    height: 66vw;
-    transform: translate(50rem, -10rem);
+    height: 55rem;
+    transform: translate(60vw, -10rem);
     position: absolute;
+  }
+
+  .key_heading {
+    width: 85%;
+  }
+  .key_text {
+    width: 65%;
   }
 
   #picturebanner img {
@@ -185,18 +198,18 @@ body {
   }
 
   #blackcircle {
-    width: 30%;
-    height: auto;
-    border-radius: 0 100% 100% 0;
+    width: 40rem;
+    height: 30rem;
+    border-radius: 0 40rem 40rem 0;
     transform: translate(-85px, 16px);
     background-color: black;
   }
 
   #blackcircle h1 {
     color: white;
-    font-size: 20px;
+
     padding: 80px;
-    width: 400px;
+
     transform: translate(-25px, 0px);
   }
 
@@ -225,10 +238,13 @@ body {
     background-repeat: no-repeat;
     background-position: 83% 50%;
     background-size: cover;
-    width: 66vw;
+    background-repeat: no-repeat;
+    background-position: 83% 50%;
+    background-size: cover;
+    width: 55rem;
     border-radius: 100% 50% 50% 100%;
-    height: 66vw;
-    transform: translate(25rem, -6rem);
+    height: 55rem;
+    transform: translate(40vw, -6rem);
     position: absolute;
   }
 
@@ -242,7 +258,94 @@ body {
     margin-top: 60px;
   }
 
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 1500px) {
+    .picturebanner2 {
+      background-image: url(/static/billeder/computer_man.jpg);
+      background-repeat: no-repeat;
+      background-position: 83% 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 83% 50%;
+      background-size: cover;
+      width: 55rem;
+      border-radius: 100% 50% 50% 100%;
+      height: 55rem;
+      transform: translate(30vw, -6rem);
+      position: absolute;
+    }
+  }
+  @media only screen and (max-width: 1260px) {
+    .picturebanner {
+      background-image: url(/static/billeder/working.jpg);
+      background-repeat: no-repeat;
+      background-position: 83% 50%;
+      background-size: cover;
+      width: 50rem;
+      border-radius: 100% 50% 50% 100%;
+      height: 50rem;
+      transform: translate(50vw, 0rem);
+      position: absolute;
+    }
+
+    .picturebanner2 {
+      background-image: url(/static/billeder/computer_man.jpg);
+      background-repeat: no-repeat;
+      background-position: 83% 50%;
+      background-size: cover;
+      width: 55rem;
+      border-radius: 100% 50% 50% 100%;
+      height: 55rem;
+      transform: translate(25vw, -6rem);
+      position: absolute;
+    }
+
+    .vs,
+    .vs_text {
+      width: 60%;
+    }
+    .key_heading {
+      width: 100%;
+    }
+    .key_text {
+      width: 100%;
+    }
+    #blackcircle {
+      width: 30rem;
+      height: 30rem;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .info {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+    .infobox1 {
+      flex-basis: 500px;
+      flex-grow: 1;
+    }
+
+    .infobox2 {
+      flex-basis: 500px;
+      flex-grow: 1;
+      width: 100%;
+      padding: 0 4rem;
+    }
+
+    .picturebanner2 {
+      background-image: url(/static/billeder/computer_man.jpg);
+      background-repeat: no-repeat;
+      background-position: 110% 50%;
+      background-size: cover;
+      width: 60rem;
+      border-radius: 100% 50% 50% 100%;
+      height: 60rem;
+      transform: translate(45vw, -50rem);
+      position: absolute;
+    }
+  }
+  @media only screen and (max-width: 768px) {
     .boxes {
       display: flex;
       flex-wrap: wrap;
@@ -265,6 +368,10 @@ body {
     p {
       font-size: 1rem;
     }
+    .vs,
+    .vs_text {
+      width: 100%;
+    }
 
     h1,
     h2,
@@ -272,13 +379,20 @@ body {
     p {
       padding-bottom: 1rem;
     }
+    h1 {
+      font-size: 2rem;
+    }
 
     .infobox1 h1 {
       color: white;
-      font-size: 26px;
+
       width: 100%;
     }
 
+    .key_heading {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
     .infobox2 h1 {
       color: white;
       font-size: 26px;
@@ -288,21 +402,20 @@ body {
     #blackcircle {
       background-color: black;
       transform: translate(-81px, 10px);
-      width: 90vw;
-      height: 90vw;
+      width: 27rem;
+      height: 27rem;
     }
 
     #blackcircle h1 {
-      font-size: 30px;
+      font-size: 2rem;
     }
 
     #blackcircle ul {
-      font-size: 20px;
+      font-size: 0.9rem;
     }
 
     article h1 {
-      font-size: 2.5rem;
-      width: 350px;
+      font-size: 2rem;
     }
 
     #bc_site {
@@ -315,9 +428,68 @@ body {
       background-repeat: no-repeat;
       background-position: 83% 50%;
       background-size: cover;
-      width: 170vw;
+      width: 55rem;
       border-radius: 100% 50% 50% 100%;
-      height: 170vw;
+      height: 50rem;
+      transform: translate(1rem, 0rem);
+      position: static;
+    }
+    .picturebanner2 {
+      background-image: url(/static/billeder/computer_man.jpg);
+      background-repeat: no-repeat;
+      background-position: 83% 50%;
+      background-size: cover;
+      width: 45rem;
+      border-radius: 100% 50% 50% 100%;
+      height: 45rem;
+      transform: translate(20vw, 0rem);
+      position: static;
+    }
+
+    .infobox1 {
+      display: flex;
+      flex-direction: column;
+      color: white;
+      // padding: 1rem;
+      margin: 0 auto;
+    }
+
+    .infobox2 {
+      display: flex;
+      flex-direction: column;
+      color: white;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .key_heading {
+      width: 100%;
+    }
+    .key_text {
+      width: 100%;
+    }
+    .infobox1 {
+      padding: 4rem;
+    }
+    .inforbox2 {
+      padding: 4rem;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    #blackcircle {
+      background-color: black;
+      transform: translate(-81px, 10px);
+      width: 90vw;
+      height: 90vw;
+    }
+    #bc_site .picturebanner {
+      background-image: url(/static/billeder/working.jpg);
+      background-repeat: no-repeat;
+      background-position: 83% 50%;
+      background-size: cover;
+      width: 40rem;
+      border-radius: 100% 50% 50% 100%;
+      height: 40rem;
       transform: translate(1rem, 0rem);
       position: static;
     }
@@ -327,26 +499,39 @@ body {
       background-repeat: no-repeat;
       background-position: 83% 50%;
       background-size: cover;
-      width: 170vw;
+      width: 40rem;
       border-radius: 100% 50% 50% 100%;
-      height: 170vw;
+      height: 40rem;
       transform: translate(1rem, 0rem);
       position: static;
     }
-
-    .infobox1 {
-      display: flex;
-      flex-direction: column;
-      color: white;
-      padding: 1rem;
-      margin: 0 auto;
+    .key_heading {
+      width: 100%;
+    }
+    .key_text {
+      width: 100%;
     }
 
-    .infobox2 {
-      display: flex;
-      flex-direction: column;
-      color: white;
-      margin: 0 auto;
+    .infobox1 {
+      padding: 2rem;
+    }
+    .inforbox2 {
+      padding: 2rem;
+    }
+
+    #bc_site {
+      padding: 0 2rem 2rem 2rem;
+    }
+    #blackcircle h1 {
+      font-size: 2rem;
+      line-height: 2rem;
+    }
+  }
+  @media only screen and (max-width: 430px) {
+    #blackcircle h1 {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      padding: 60px;
     }
   }
 }
