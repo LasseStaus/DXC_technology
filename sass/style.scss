@@ -1,9 +1,10 @@
 @use "partials/lisa";
 @use "partials/menu";
-@use "partials/peter";
+
 @use "partials/root";
 @use "partials/bc_site";
 @use "partials/key_site";
+@use "partials/peter";
 
 * {
   margin: 0;
@@ -11,8 +12,8 @@
   box-sizing: border-box;
 }
 
-html {
-}
+
+html {}
 
 body {
   font-family: Arial, Helvetica, sans-serif;
