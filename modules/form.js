@@ -7,6 +7,9 @@ let position;
 export function formDelegation() {
   console.log("formDelegation");
   document.querySelector(".container").addEventListener("scroll", setPosition);
+  if (innerWidth >= 1000) {
+    document.querySelector("#the_form").style.alignItems = "initial";
+  }
 }
 
 function setPosition() {
@@ -18,14 +21,19 @@ function setPosition() {
     if (position >= 0.15) {
       stopScroll();
     }
-  } else if (innerWidth < 1000) {
+  } else if (innerWidth < 900) {
+    console.log("<1000");
+    if (position >= 0.16) {
+      stopScroll();
+    }
+  } else if (innerWidth < 1300) {
     console.log("<1000");
     if (position >= 0.2) {
       stopScroll();
     }
   } else if (innerWidth < 2500) {
     console.log("<1500");
-    if (position >= 0.45) {
+    if (position >= 0.35) {
       stopScroll();
     }
   }
@@ -41,11 +49,10 @@ function stopScroll() {
   setTimeout(() => {
     document.querySelector(".container").style.overflow = "scroll";
   }, 500);
-  document.querySelector(".persiasive_header").textContent = "Persuasive header";
-  document.querySelector(".persuasive_text").textContent = "Der skal stå noget persuasive her";
-  document.querySelector("#the_form").style.transform = "translateY(50px)";
+  document.querySelector(".theFormText").style.marginTop = "0";
+  document.querySelector(".initial_form").style.marginTop = "0";
+  document.querySelector("#the_form").style.transform = "translateY(0px)";
   document.querySelector("#the_form_check").style.transform = "translateY(0px)";
-  document.querySelector(".theFormText").style.transform = "translateY(0)";
   document.querySelector(".theFormText").scrollIntoView();
 }
 

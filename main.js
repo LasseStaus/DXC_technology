@@ -37,6 +37,7 @@ function setupForm() {
     e.preventDefault();
     document.querySelector("#the_form").classList.remove("flex");
     document.querySelector("#the_form").classList.add("hide");
+    document.querySelector("#the_form_check").classList.remove("hide");
   });
 
   document.querySelector(".go_back").addEventListener("click", (e) => {
@@ -45,6 +46,7 @@ function setupForm() {
     document.querySelector("#check_email").value = "";
     document.querySelector("#the_form").classList.add("flex");
     document.querySelector("#the_form").classList.remove("hide");
+    document.querySelector("#the_form_check").classList.add("hide");
   });
   document.querySelector(".check_email").addEventListener("click", (e) => {
     e.preventDefault();

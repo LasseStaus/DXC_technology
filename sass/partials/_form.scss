@@ -10,24 +10,27 @@ button {
 }
 
 #the_form {
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
   width: 100vw;
   background: rgb(255, 255, 255);
-  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 66%, rgba(255, 255, 255, 0.7217261904761905) 80%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 90%, rgba(255, 255, 255, 0.7217261904761905) 95%, rgba(255, 255, 255, 0) 100%);
   position: absolute;
   transform: translateY(500px);
   z-index: 10000;
+  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
   font-family: var(--font-8);
   font-size: 1rem;
+  padding: 2rem;
 }
 
 #the_form_check {
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
   width: 100vw;
   background: rgb(255, 255, 255);
-  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 66%, rgba(255, 255, 255, 0.7217261904761905) 80%, rgba(255, 255, 255, 0) 100%);
   position: absolute;
   transform: translateY(500px);
   z-index: 1000;
@@ -35,18 +38,44 @@ button {
   align-items: center;
   font-family: var(--font-8);
   font-size: 1rem;
+  padding: 2rem;
+}
+
+#the_form form {
+  padding-top: 0;
 }
 
 .theFormText {
-  position: absolute;
-  z-index: 11000;
+  width: 100%;
+  //  padding: 2rem 2rem 0 2rem;
+  flex-basis: 400px;
+  flex-grow: 1;
+  margin-top: 6rem;
+  max-width: 600px;
+}
+
+.persuasive_text {
+  line-height: 1.6rem;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+.persuasive_header {
+  line-height: 2.5rem;
+  padding: 0 0 1rem 0;
+  font-size: 2.5rem;
+}
+
+.persuasive_header span {
+  color: var(--color-3);
 }
 
 form {
   background: var(--color-2);
-  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 70%, rgba(255, 255, 255, 0.7217261904761905) 80%, rgba(255, 255, 255, 0) 100%);
   width: 100%;
-  padding: 2rem;
+  flex-basis: 400px;
+  flex-grow: 1;
+  max-width: 600px;
 }
 
 fieldset {
@@ -79,10 +108,6 @@ button[data-action="delete"] {
   &:hover {
     border: 2px solid red;
   }
-}
-
-.theFormText {
-  padding: 2rem;
 }
 
 .invalid_text {
@@ -138,7 +163,7 @@ input.invalid ~ span {
 input {
   width: 100%;
   min-width: 100px;
-  padding: 0.6rem;
+  padding: 0.65rem 0.6rem 0.55rem;
   display: block;
   border: 1px solid var(--color-1);
   background-color: rgb(255, 251, 253);
@@ -147,6 +172,7 @@ input {
 
 input::placeholder {
   color: rgb(138, 138, 138);
+  font-size: 0.8rem;
 }
 
 .primary,
@@ -236,23 +262,64 @@ button:hover:not(:disabled) {
     width: 80%;
   }
   #the_form {
-    transform: translateY(200px);
+    transform: translateY(300px);
   }
-
-  #the_form_check {
-    transform: translateY(200px);
+  .persuasive_text {
+    line-height: 1.3rem;
+    padding: 0;
+    font-size: 0.9rem;
+  }
+  input::placeholder {
+    font-size: 0.7rem;
   }
 }
 @media (min-width: 700px) {
   form {
     width: 60%;
   }
-}
-@media (min-width: 1000px) {
-  form {
-    width: 40%;
+  #the_form {
+    flex-direction: row;
+  }
+  #the_form {
+    transform: translateY(200px);
+    padding: 4rem;
+  }
+  .persuasive_header {
+    line-height: 2.7rem;
+    font-size: 3rem;
   }
 }
+@media (min-width: 800px) {
+  .initial_form {
+    margin-top: 6rem;
+    width: 40%;
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width: 928px) {
+  .theFormText {
+    padding: 3rem 2rem 2rem 0;
+  }
+  .persuasive_header {
+    line-height: 2rem;
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .persuasive_header {
+    line-height: 2.5rem;
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 1150px) {
+  .persuasive_header {
+    line-height: 2.8rem;
+    font-size: 3rem;
+  }
+}
+
 @media (min-width: 1400px) {
   form {
     width: 30%;
