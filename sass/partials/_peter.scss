@@ -4,7 +4,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "GT-Walsheim-Pro-Regular";
   src: url("/static/font/GT-Walsheim-Pro-Regular.woff2") format("woff2");
@@ -22,7 +21,7 @@ body {
 
   .boxes {
     display: flex;
-    flex-wrap: no-wrap;
+    flex-wrap: nowrap;
     flex-direction: row;
     padding: 20px;
   }
@@ -41,13 +40,11 @@ body {
     text-align: center;
     margin-bottom: -30px;
   }
-
   .box2 h1 {
     margin: 0 auto;
     text-align: center;
     margin-bottom: -30px;
   }
-
   .box3 h1 {
     margin: 0 auto;
     text-align: center;
@@ -55,24 +52,24 @@ body {
   }
 
   .box1 p {
-    font-size: 16px;
-    width: 90%;
+    font-size: 0.9rem;
+
     /* padding: 50px; */
     padding-top: 20px;
     padding-left: 40px;
   }
 
   .box2 p {
-    font-size: 16px;
-    width: 90%;
+    font-size: 0.9rem;
+
     /* padding: 50px; */
     padding-top: 20px;
     padding-left: 40px;
   }
 
   .box3 p {
-    font-size: 16px;
-    width: 90%;
+    font-size: 0.9rem;
+
     /* padding: 50px; */
     padding-top: 20px;
     padding-left: 40px;
@@ -81,11 +78,9 @@ body {
   .box1 h2 {
     text-align: center;
   }
-
   .box2 h2 {
     text-align: center;
   }
-
   .box3 h2 {
     text-align: center;
   }
@@ -95,7 +90,7 @@ body {
     padding: 20px;
     padding-left: 0px;
     color: black;
-    font-size: 45px;
+    font-size: 3rem;
   }
 
   h2,
@@ -111,6 +106,7 @@ body {
     padding: 20px;
     padding-left: 0px;
     color: black;
+    font-size: 0.9rem;
   }
 
   #footerarea {
@@ -122,7 +118,7 @@ body {
 
   .info {
     display: flex;
-    flex-wrap: no-wrap;
+    flex-wrap: nowrap;
     flex-direction: row;
   }
 
@@ -266,6 +262,17 @@ body {
       margin-right: 0px;
     }
 
+    p {
+      font-size: 1rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      padding-bottom: 1rem;
+    }
+
     .infobox1 h1 {
       color: white;
       font-size: 26px;
@@ -294,8 +301,13 @@ body {
     }
 
     article h1 {
-      font-size: 40px;
+      font-size: 2.5rem;
       width: 350px;
+    }
+
+    #bc_site {
+      padding-left: 2rem;
+      padding-right: 2rem;
     }
 
     .picturebanner {
