@@ -33,12 +33,12 @@ function activateSecondLink() {
 function showBcSection() {
   console.log("showBcSection");
   document.querySelector("#bc_site").classList.remove("hide");
-  document.querySelector("#key_site").classList.add("hide");
+  document.querySelector("#key_site0").classList.add("hide");
   document.querySelector(".wrap_mobile").classList.add("yellow");
 }
 function showKeySection() {
   console.log("showKeySection");
   document.querySelector("#bc_site").classList.add("hide");
-  document.querySelector("#key_site").classList.remove("hide");
+  document.querySelector("#key_site0").classList.remove("hide");
   document.querySelector(".wrap_mobile").classList.remove("yellow");
 }
