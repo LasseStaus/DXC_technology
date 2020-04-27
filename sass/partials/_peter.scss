@@ -260,7 +260,7 @@ body {
     justify-content: center;
     justify-self: center;
     align-items: center;
-    margin-top: 5rem;
+    margin-top: 3rem;
   }
 
   .circletext {
@@ -578,6 +578,30 @@ body {
       background-color: black;
       width: 87%;
       margin-top: 0;
+    }
+
+    .box1 h2 {
+      justify-self: left;
+    }
+
+    .box2 h2 {
+      justify-self: left;
+    }
+
+    .box3 h2 {
+      justify-self: left;
+    }
+
+    .box1 p {
+      margin-left: 0rem;
+    }
+
+    .box2 p {
+      margin-left: 0rem;
+    }
+
+    .box3 p {
+      margin-left: 0rem;
     }
 
     #bc_site .artikel {
