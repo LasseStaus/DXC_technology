@@ -30,7 +30,8 @@ body {
     padding-bottom: 1rem;
     font-family: "GT-Walsheim-Pro-Regular";
   }
-  p > span {
+
+  p>span {
     font-family: "GT-Walsheim-Pro-Bold";
   }
 }
@@ -100,7 +101,7 @@ body {
   position: relative;
 }
 
-p > span {
+p>span {
   font-weight: bold;
 }
 
@@ -116,7 +117,7 @@ p > span {
   margin-top: 6rem;
 }
 
-.learn-more > .lcontainer {
+.learn-more>.lcontainer {
   height: 200px;
   width: 60%;
   background-color: white;
@@ -164,7 +165,7 @@ footer {
   padding-bottom: 2rem;
 }
 
-footer > div {
+footer>div {
   padding: 2rem;
 }
 
@@ -204,7 +205,7 @@ footer a {
       align-items: center;
     }
 
-    footer > div {
+    footer>div {
       padding: 2rem;
     }
 
@@ -244,8 +245,8 @@ footer a {
   }
 
   #key_site {
-    .learn-more > .lcontainer {
-      width: 35%;
+    .learn-more>.lcontainer {
+      width: 20%;
       height: 200px;
     }
 
@@ -321,6 +322,7 @@ footer a {
   }
 
   #key_site {
+
     .licensing,
     .enhancing {
       width: 50%;
@@ -352,6 +354,7 @@ footer a {
   }
 
   #key_site {
+
     .licensing,
     .enhancing {
       width: 55%;

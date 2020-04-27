@@ -7,20 +7,24 @@
   border-top: 25px solid #ffed00;
   margin: 0 2rem;
 }
+
 .arrow_wrap {
   display: flex;
   flex-wrap: nowrap;
 }
+
 #BC_site .arrow_wrap {
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
 }
+
 #key_site .arrow_wrap {
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-end;
 }
+
 .white_desk,
 .black_desk {
   width: 50px;
@@ -31,6 +35,7 @@
   z-index: 100000;
   transition: 0.3s;
 }
+
 header {
   .desktop {
     display: none;
@@ -49,6 +54,7 @@ header {
     text-align: right;
     display: flex;
   }
+
   .hjorne {
     width: 0;
     height: 0;
@@ -65,12 +71,14 @@ header {
     border-top: 0;
     border-left: 0;
   }
+
   .hjorne1 {
     border-bottom: 100px solid black;
     border-left: 100px solid transparent;
     border-top: 0;
     border-right: 0;
   }
+
   .wrap_desktop {
     /*     display: flex;
     flex-wrap: nowrap;
@@ -92,13 +100,16 @@ header {
     justify-content: center;
     align-items: center;
   }
+
   .menu_kasse {
     grid-column: 3;
   }
+
   .wrap_mobile,
   .menu_kasse {
     align-items: center;
   }
+
   .menu_et {
     grid-column: 1;
     padding: 1rem 0rem 1rem 2rem;
@@ -114,6 +125,7 @@ header {
     width: 100%;
     text-align: right;
     cursor: pointer;
+
     &:hover {
       color: #ffed00;
     }
@@ -122,10 +134,12 @@ header {
   .yellow {
     background-color: #fff;
   }
+
   @media (min-width: 500px) {
     .menu_kasse {
       height: 200px;
     }
+
     .hjorne {
       /*       border-bottom: 200px solid black;
       border-left: 200px solid transparent; */
@@ -138,19 +152,23 @@ header {
       border-top: 0;
       border-left: 0;
     }
+
     .hjorne1 {
       border-bottom: 200px solid black;
       border-left: 200px solid transparent;
     }
+
     .wrap_mobile {
       height: 200px;
       grid-template-rows: 200px;
     }
   }
+
   @media (min-width: 1000px) {
     .mobile {
       display: none;
     }
+
     .white_desk,
     .black_desk {
       width: 70px;
@@ -164,12 +182,14 @@ header {
 
     .desktop {
       display: block;
-      font-size: 4vw;
+      font-size: 4rem;
       font-weight: 600;
     }
+
     .wrap_desktop {
       height: 300px;
     }
+
     .menu_kasse {
       height: 300px;
     }
@@ -186,10 +206,12 @@ header {
       border-top: 0;
       border-left: 0;
     }
+
     .hjorne1 {
       border-bottom: 300px solid black;
       border-left: 300px solid transparent;
     }
+
     .wrap_desktop {
       align-items: center;
     }
@@ -197,13 +219,16 @@ header {
     .menu_et {
       padding: 1rem 0rem 1rem 4rem;
       cursor: pointer;
+
       &:hover {
         color: #ffed00;
       }
     }
+
     .menu_to {
       padding: 1rem 4rem 1rem 0rem;
     }
+
     .arrow_left,
     .arrow_right {
       border-left: 25px solid transparent;

@@ -24,7 +24,7 @@ body {
     align-items: center;
   }
 
-  footer > div {
+  footer>div {
     padding: 2rem;
   }
 
@@ -90,10 +90,12 @@ body {
     font-size: 3.4rem;
     margin-bottom: 1rem;
   }
+
   .box2 h1 {
     font-size: 3.4rem;
     margin-bottom: 1rem;
   }
+
   .box3 h1 {
     font-size: 3.4rem;
     margin-bottom: 1rem;
@@ -223,40 +225,40 @@ body {
 
   // footer area list paddings
 
-  #info2ul > ul:nth-child(3) {
+  #info2ul>ul:nth-child(3) {
     padding: 0.5rem 0 6rem;
   }
 
-  #info2ul > ul:nth-child(5) {
+  #info2ul>ul:nth-child(5) {
     padding: 0.5rem 0 17.43rem;
   }
 
-  #info2ul > ul:nth-child(7) {
+  #info2ul>ul:nth-child(7) {
     padding: 0.5rem 0 5rem;
   }
 
-  #info1ul > ul:nth-child(3) {
+  #info1ul>ul:nth-child(3) {
     padding: 0.5rem 0 2.5rem;
   }
 
-  #info1ul > ul:nth-child(9) {
+  #info1ul>ul:nth-child(9) {
     padding: 0.5rem 0 2.5rem;
   }
 
-  #info1ul > ul:nth-child(5) {
+  #info1ul>ul:nth-child(5) {
     padding: 0.5rem 0 3rem;
   }
 
-  #info1ul > ul:nth-child(9) {
+  #info1ul>ul:nth-child(9) {
     padding: 0.5rem 0 4rem;
   }
 
-  #info1ul > ul:nth-child(7) {
+  #info1ul>ul:nth-child(7) {
     padding: 0.5rem 0 4rem;
   }
 
   .key_heading {
-    font-size: 2rem;
+    font-size: 2.5rem;
     padding-top: 2rem;
   }
 
@@ -322,8 +324,7 @@ body {
     font-size: 1rem;
   }
 
-  #blackcircle ul {
-  }
+  #blackcircle ul {}
 
   .picturebanner2 {
     background-image: url(/static/billeder/computer_man.jpg);
@@ -368,6 +369,7 @@ body {
       /*      transform: translate(30vw, -6rem); */
       position: absolute;
     }
+
     .box1,
     .box2,
     .box3 {
@@ -423,27 +425,27 @@ body {
       width: 42%;
     }
 
-    #info2ul > ul:nth-child(3) {
+    #info2ul>ul:nth-child(3) {
       padding: 0.5rem 0 2rem;
     }
 
-    #info2ul > ul:nth-child(5) {
+    #info2ul>ul:nth-child(5) {
       padding: 0.5rem 0 2rem;
     }
 
-    #info2ul > ul:nth-child(7) {
+    #info2ul>ul:nth-child(7) {
       padding: 0.5rem 0 2rem;
     }
 
-    #info1ul > ul:nth-child(3) {
+    #info1ul>ul:nth-child(3) {
       padding: 0.5rem 0 2rem;
     }
 
-    #info1ul > ul:nth-child(7) {
+    #info1ul>ul:nth-child(7) {
       padding: 0.5rem 0 2rem;
     }
 
-    #info1ul > ul:nth-child(9) {
+    #info1ul>ul:nth-child(9) {
       padding: 0.5rem 0 2rem;
     }
   }
@@ -676,7 +678,7 @@ body {
       padding: 2rem;
     }
 
-    #bc_site > article:nth-child(2) {
+    #bc_site>article:nth-child(2) {
       padding: 2rem;
     }
 
@@ -696,7 +698,7 @@ body {
       position: static;
     }
 
-    #footerarea > div > div.infobox2 > div.picturebanner2 {
+    #footerarea>div>div.infobox2>div.picturebanner2 {
       margin-bottom: 60px;
     }
 
