@@ -41,6 +41,22 @@ button {
   padding: 2rem;
 }
 
+.theConsent #consent {
+  margin: 0.5rem 0 0 0;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border: 1px solid var(--color-1);
+  outline: none;
+  transition-duration: 0.6s;
+  background-color: var(--color-2);
+  cursor: pointer;
+}
+
 #the_form form {
   padding-top: 0;
 }
@@ -83,7 +99,7 @@ fieldset {
 }
 
 form span {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: rgb(138, 138, 138);
   padding: 0 0 0.3rem 0;
 }
@@ -91,6 +107,10 @@ form span {
 .personal,
 .company {
   margin-top: 2rem;
+}
+
+.theConsent {
+  margin: 1rem 0;
 }
 fieldset div {
   padding-top: 0.5rem;
@@ -140,6 +160,12 @@ fieldset.company > div:nth-child(2) > span,
 fieldset.company > div:nth-child(2) > p {
   transform: translateX(62px) translateY(-56px);
 }
+fieldset.theConsent > span {
+  transform: translateX(-30px) translateY(30px);
+}
+fieldset.theConsent > p {
+  transform: translateX(12px) translateY(32px);
+}
 
 form span,
 .invalid_text {
@@ -157,7 +183,7 @@ input.invalid + .invalid_text {
 input ~ span {
   display: inline;
 }
-input.invalid ~ span {
+input.invalid ~ span:not(.checkSpan) {
   display: none;
 }
 input {
@@ -181,7 +207,7 @@ input::placeholder {
   margin-top: 1rem;
   margin-bottom: 2rem;
   font-weight: 600;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   box-shadow: 1px 1px 5px rgba(75, 75, 75, 0.509);
   cursor: pointer;
 }
@@ -193,6 +219,14 @@ input::placeholder {
 .primary {
   background-color: var(--color-3);
   color: var(--color-1);
+}
+
+/*////////
+////////////CHECKED///////////
+////////*/
+
+#consent:checked {
+  background-color: var(--color-3);
 }
 
 /*////////
@@ -212,7 +246,7 @@ input:disabled {
 ////////////VALID///////////
 ////////*/
 
-input:valid:not(input#check_email),
+input:valid:not(input#check_email):not(#consent),
 input:valid:not(:focus):not(:placeholder-shown),
 input.valid:not(:focus):not(:placeholder-shown) {
   background: url(/static/billeder/yes.png) no-repeat scroll 7px 7px;
@@ -225,15 +259,15 @@ input.valid:not(:focus):not(:placeholder-shown) {
 ////////////INVALID///////////
 ////////*/
 
-input:invalid:not(:focus):not(:placeholder-shown),
-input.invalid:not(:focus) {
+input:invalid:not(:focus):not(:placeholder-shown):not(#consent),
+input.invalid:not(:focus):not(#consent) {
   background: url(/static/billeder/no.png) no-repeat scroll 7px 7px;
   background-size: contain;
   background-size: 15px;
   background-position: 98% 50%;
 }
 
-input:focus,
+input:focus:not(#consent),
 button:focus {
   box-shadow: 0px 0px 4px var(--color-3);
   border: 1px solid var(--color-3);
@@ -244,7 +278,7 @@ button:focus {
 ////////////HOVER///////////
 ////////*/
 
-input:hover:not(:focus):not(:disabled) {
+input:hover:not(:focus):not(:disabled):not(#consent) {
   box-shadow: 0px 0px 2px var(--color-1);
   outline: var(--color-3);
   border: 1px solid var(--color-3);
@@ -252,11 +286,35 @@ input:hover:not(:focus):not(:disabled) {
 
 button:hover:not(:disabled) {
   box-shadow: 1px 1px 5px var(--color-1);
-  // border: 1px solid var(--color-3);
   opacity: 0.9;
   transform: scale(1.01);
 }
 
+@media (min-width: 340px) {
+  .primary,
+  .secondary {
+    font-size: 0.7rem;
+  }
+  form span {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 450px) {
+  #consent {
+    display: inline-block;
+    float: left;
+  }
+  fieldset.theConsent > span {
+    transform: translateX(12px) translateY(12px);
+  }
+  fieldset.theConsent > label {
+    position: relative;
+    top: 0.6rem;
+    left: 0.3rem;
+    // transform: translateX(100px) translateY(200px);
+  }
+}
 @media (min-width: 500px) {
   form {
     width: 80%;
