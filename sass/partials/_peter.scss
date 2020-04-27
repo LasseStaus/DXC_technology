@@ -16,13 +16,14 @@ body {
 }
 
 #bc_site {
-  padding: 0 4rem 2rem;
+  /*   padding: 0 4rem 2rem; */
 
   .boxes {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: baseline;
   }
 
   article p {
@@ -34,48 +35,51 @@ body {
     margin-top: -30px;
   }
 
+  .artikel {
+    padding: 4rem;
+  }
+
+  .box1,
+  .box2,
+  .box3 {
+    max-width: 59rem;
+    padding: 2rem;
+    align-content: center;
+    align-items: baseline;
+    justify-items: center;
+    display: grid;
+  }
+
   .box1 h1 {
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: -30px;
   }
   .box2 h1 {
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: -30px;
   }
   .box3 h1 {
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: -30px;
   }
 
   .box1 p {
     font-size: 0.9rem;
     padding-top: 20px;
-    padding-left: 40px;
   }
 
   .box2 p {
     font-size: 0.9rem;
     padding-top: 20px;
-    padding-left: 40px;
   }
 
   .box3 p {
     font-size: 0.9rem;
     padding-top: 20px;
-    padding-left: 40px;
   }
 
   .box1 h2 {
-    text-align: center;
+    justify-self: left;
   }
   .box2 h2 {
-    text-align: center;
+    justify-self: left;
   }
   .box3 h2 {
-    text-align: center;
+    justify-self: left;
   }
 
   h1 {
@@ -111,13 +115,12 @@ body {
     width: 100vw;
     height: 100%;
     background-color: black;
-    transform: translate(-4rem, 0px);
+    /*    transform: translate(-4rem, 0px); */
   }
 
   .info {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .infobox1 {
@@ -181,8 +184,9 @@ body {
     width: 55rem;
     border-radius: 100% 50% 50% 100%;
     height: 55rem;
-    transform: translate(60vw, -10rem);
+    /*transform: translate(60vw, -10rem); */
     position: absolute;
+    right: -22rem;
   }
 
   .key_heading {
@@ -201,16 +205,22 @@ body {
     width: 40rem;
     height: 30rem;
     border-radius: 0 40rem 40rem 0;
-    transform: translate(-85px, 16px);
+
     background-color: black;
+    display: grid;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+  }
+
+  .circletext {
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   #blackcircle h1 {
     color: white;
-
-    padding: 80px;
-
-    transform: translate(-25px, 0px);
   }
 
   #blackcircle span {
@@ -220,17 +230,9 @@ body {
   #blackcircle li {
     list-style: none;
     color: white;
-    padding: 80px;
-    width: 400px;
-    padding-bottom: 0;
-    margin-top: -65px;
   }
 
   #blackcircle ul {
-    position: relative;
-    top: -60px;
-    transform: translate(-25px, 0px);
-    padding-bottom: 20px;
   }
 
   .picturebanner2 {
@@ -244,14 +246,15 @@ body {
     width: 55rem;
     border-radius: 100% 50% 50% 100%;
     height: 55rem;
-    transform: translate(40vw, -6rem);
+    /*  transform: translate(40vw, -6rem); */
     position: absolute;
+    right: -27rem;
   }
 
   #picturebanner2 img {
     width: 100%;
     height: auto;
-    transform: translate(0px, 10px);
+    /*   transform: translate(0px, 10px); */
   }
 
   .explainedtitle {
@@ -270,7 +273,7 @@ body {
       width: 55rem;
       border-radius: 100% 50% 50% 100%;
       height: 55rem;
-      transform: translate(30vw, -6rem);
+      /*      transform: translate(30vw, -6rem); */
       position: absolute;
     }
   }
@@ -283,7 +286,7 @@ body {
       width: 50rem;
       border-radius: 100% 50% 50% 100%;
       height: 50rem;
-      transform: translate(50vw, 0rem);
+      /* transform: translate(50vw, 0rem); */
       position: absolute;
     }
 
@@ -295,7 +298,7 @@ body {
       width: 55rem;
       border-radius: 100% 50% 50% 100%;
       height: 55rem;
-      transform: translate(25vw, -6rem);
+      /*       transform: translate(25vw, -6rem); */
       position: absolute;
     }
 
@@ -310,8 +313,7 @@ body {
       width: 100%;
     }
     #blackcircle {
-      width: 30rem;
-      height: 30rem;
+      width: 42%;
     }
   }
 
@@ -341,17 +343,11 @@ body {
       width: 60rem;
       border-radius: 100% 50% 50% 100%;
       height: 60rem;
-      transform: translate(45vw, -50rem);
+      /*  transform: translate(45vw, -50rem); */
       position: absolute;
     }
   }
   @media only screen and (max-width: 768px) {
-    .boxes {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-    }
-
     .info {
       display: flex;
       flex-wrap: wrap;
@@ -401,9 +397,8 @@ body {
 
     #blackcircle {
       background-color: black;
-      transform: translate(-81px, 10px);
-      width: 27rem;
-      height: 27rem;
+
+      width: 100%;
     }
 
     #blackcircle h1 {
@@ -442,7 +437,7 @@ body {
       width: 45rem;
       border-radius: 100% 50% 50% 100%;
       height: 45rem;
-      transform: translate(20vw, 0rem);
+      /*    transform: translate(20vw, 0rem); */
       position: static;
     }
 
@@ -478,9 +473,6 @@ body {
   @media only screen and (max-width: 500px) {
     #blackcircle {
       background-color: black;
-      transform: translate(-81px, 10px);
-      width: 90vw;
-      height: 90vw;
     }
     #bc_site .picturebanner {
       background-image: url(/static/billeder/working.jpg);
@@ -490,7 +482,7 @@ body {
       width: 40rem;
       border-radius: 100% 50% 50% 100%;
       height: 40rem;
-      transform: translate(1rem, 0rem);
+      /*       transform: translate(1rem, 0rem); */
       position: static;
     }
 
@@ -502,7 +494,7 @@ body {
       width: 40rem;
       border-radius: 100% 50% 50% 100%;
       height: 40rem;
-      transform: translate(1rem, 0rem);
+      /*    transform: translate(1rem, 0rem); */
       position: static;
     }
     .key_heading {
@@ -525,6 +517,10 @@ body {
     #blackcircle h1 {
       font-size: 2rem;
       line-height: 2rem;
+    }
+
+    .boxes {
+      grid-template-columns: repeat(auto-fit, minmax(251px, 1fr));
     }
   }
   @media only screen and (max-width: 430px) {
