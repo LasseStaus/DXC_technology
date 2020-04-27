@@ -4,6 +4,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "GT-Walsheim-Pro-Regular";
   src: url("/static/font/GT-Walsheim-Pro-Regular.woff2") format("woff2");
@@ -16,6 +17,30 @@ body {
 }
 
 #bc_site {
+  footer {
+    grid-template-columns: repeat(5, 1fr);
+
+    justify-items: center;
+    align-items: center;
+  }
+
+  footer>div {
+    padding: 2rem;
+  }
+
+  footer a {
+    grid-column: 5;
+  }
+
+
+  footer.bc-footer {
+    background-color: white;
+
+    .footerImg {
+      background-image: url("/static/billeder/dxc-sort.png");
+    }
+  }
+
   /*   padding: 0 4rem 2rem; */
 
   .boxes {
@@ -51,12 +76,11 @@ body {
     display: grid;
   }
 
-  .box1 h1 {
-  }
-  .box2 h1 {
-  }
-  .box3 h1 {
-  }
+  .box1 h1 {}
+
+  .box2 h1 {}
+
+  .box3 h1 {}
 
   .box1 p {
     font-size: 0.9rem;
@@ -76,9 +100,11 @@ body {
   .box1 h2 {
     justify-self: left;
   }
+
   .box2 h2 {
     justify-self: left;
   }
+
   .box3 h2 {
     justify-self: left;
   }
@@ -132,6 +158,7 @@ body {
     color: white;
     font-size: 20px;
   }
+
   .info ul {
     padding: 0.5rem 0 2rem;
   }
@@ -172,35 +199,35 @@ body {
 
   // footer area list paddings
 
-  #info2ul > ul:nth-child(3) {
+  #info2ul>ul:nth-child(3) {
     padding: 0.5rem 0 6rem;
   }
 
-  #info2ul > ul:nth-child(5) {
+  #info2ul>ul:nth-child(5) {
     padding: 0.5rem 0 16.43rem;
   }
 
-  #info2ul > ul:nth-child(7) {
+  #info2ul>ul:nth-child(7) {
     padding: 0.5rem 0 5rem;
   }
 
-  #info1ul > ul:nth-child(3) {
+  #info1ul>ul:nth-child(3) {
     padding: 0.5rem 0 2.5rem;
   }
 
-  #info1ul > ul:nth-child(9) {
+  #info1ul>ul:nth-child(9) {
     padding: 0.5rem 0 2.5rem;
   }
 
-  #info1ul > ul:nth-child(5) {
+  #info1ul>ul:nth-child(5) {
     padding: 0.5rem 0 3rem;
   }
 
-  #info1ul > ul:nth-child(9) {
+  #info1ul>ul:nth-child(9) {
     padding: 0.5rem 0 4rem;
   }
 
-  #info1ul > ul:nth-child(7) {
+  #info1ul>ul:nth-child(7) {
     padding: 0.5rem 0 4rem;
   }
 
@@ -225,6 +252,7 @@ body {
   .key_heading {
     width: 85%;
   }
+
   .key_text {
     width: 65%;
   }
@@ -266,8 +294,7 @@ body {
     line-height: 2rem;
   }
 
-  #blackcircle ul {
-  }
+  #blackcircle ul {}
 
   .picturebanner2 {
     background-image: url(/static/billeder/computer_man.jpg);
@@ -295,14 +322,7 @@ body {
     margin-top: 60px;
   }
 
-  #bc_site {
-    footer {
-      background-color: white;
-    }
-    .footerImg {
-      background-image: url("/static/billeder/dxc-sort.png");
-    }
-  }
+
 
   @media only screen and (max-width: 1500px) {
     .picturebanner2 {
@@ -320,6 +340,7 @@ body {
       position: absolute;
     }
   }
+
   @media only screen and (max-width: 1260px) {
     .picturebanner {
       background-image: url(/static/billeder/working.jpg);
@@ -349,37 +370,40 @@ body {
     .vs_text {
       width: 60%;
     }
+
     .key_heading {
       width: 100%;
     }
+
     .key_text {
       width: 100%;
     }
+
     #blackcircle {
       width: 42%;
     }
 
-    #info2ul > ul:nth-child(3) {
+    #info2ul>ul:nth-child(3) {
       padding: 0.5rem 0 2rem;
     }
 
-    #info2ul > ul:nth-child(5) {
+    #info2ul>ul:nth-child(5) {
       padding: 0.5rem 0 2rem;
     }
 
-    #info2ul > ul:nth-child(7) {
+    #info2ul>ul:nth-child(7) {
       padding: 0.5rem 0 2rem;
     }
 
-    #info1ul > ul:nth-child(3) {
+    #info1ul>ul:nth-child(3) {
       padding: 0.5rem 0 2rem;
     }
 
-    #info1ul > ul:nth-child(7) {
+    #info1ul>ul:nth-child(7) {
       padding: 0.5rem 0 2rem;
     }
 
-    #info1ul > ul:nth-child(9) {
+    #info1ul>ul:nth-child(9) {
       padding: 0.5rem 0 2rem;
     }
   }
@@ -390,6 +414,7 @@ body {
       flex-wrap: wrap;
       flex-direction: column;
     }
+
     .infobox1 {
       flex-basis: 500px;
       flex-grow: 1;
@@ -414,7 +439,18 @@ body {
       position: absolute;
     }
   }
+
   @media only screen and (max-width: 768px) {
+
+
+    footer {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    footer a {
+      grid-column: 1;
+    }
+
     .info {
       display: flex;
       flex-wrap: wrap;
@@ -431,6 +467,7 @@ body {
     p {
       font-size: 1rem;
     }
+
     .vs,
     .vs_text {
       width: 100%;
@@ -442,6 +479,7 @@ body {
     p {
       padding-bottom: 1rem;
     }
+
     h1 {
       font-size: 2rem;
     }
@@ -456,6 +494,7 @@ body {
       font-size: 1.5rem;
       margin-bottom: 1rem;
     }
+
     .infobox2 h1 {
       color: white;
       font-size: 26px;
@@ -496,6 +535,7 @@ body {
       transform: translate(5rem, 0rem);
       position: static;
     }
+
     .picturebanner2 {
       background-image: url(/static/billeder/computer_man.jpg);
       background-repeat: no-repeat;
@@ -524,15 +564,19 @@ body {
       width: 100%;
       overflow-x: hidden;
     }
+
     .key_heading {
       width: 100%;
     }
+
     .key_text {
       width: 100%;
     }
+
     .infobox1 {
       padding: 3rem;
     }
+
     .inforbox2 {
       padding: 3rem;
     }
@@ -556,7 +600,7 @@ body {
       position: static;
     }
 
-    #footerarea > div > div.infobox2 > div.picturebanner2 {
+    #footerarea>div>div.infobox2>div.picturebanner2 {
       margin-bottom: 60px;
     }
 
@@ -586,9 +630,11 @@ body {
       /*    transform: translate(1rem, 0rem); */
       position: static;
     }
+
     .key_heading {
       width: 100%;
     }
+
     .key_text {
       width: 100%;
     }
@@ -596,6 +642,7 @@ body {
     .infobox1 {
       padding: 2rem;
     }
+
     .inforbox2 {
       padding: 2rem;
     }
@@ -603,6 +650,7 @@ body {
     #bc_site {
       padding: 0 2rem 2rem 2rem;
     }
+
     #blackcircle h1 {
       font-size: 2rem;
       line-height: 2rem;
@@ -612,6 +660,7 @@ body {
       grid-template-columns: repeat(auto-fit, minmax(251px, 1fr));
     }
   }
+
   @media only screen and (max-width: 430px) {
     #blackcircle h1 {
       font-size: 1.5rem;

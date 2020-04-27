@@ -12,7 +12,7 @@ body {
 }
 
 #key_site0 {
-  padding-bottom: 50px;
+
   color: white;
 
   h1,
@@ -36,7 +36,7 @@ body {
     color: black;
   }
 
-  p > span {
+  p>span {
     font-weight: bold;
   }
 
@@ -100,7 +100,7 @@ body {
   position: relative;
 }
 
-p > span {
+p>span {
   font-weight: bold;
 }
 
@@ -116,7 +116,7 @@ p > span {
   margin-top: 6rem;
 }
 
-.learn-more > .lcontainer {
+.learn-more>.lcontainer {
   height: 200px;
   width: 90%;
   background-color: white;
@@ -156,7 +156,6 @@ footer {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-
   padding-left: 2rem;
   padding-right: 2rem;
   justify-items: center;
@@ -165,13 +164,15 @@ footer {
   padding-bottom: 2rem;
 }
 
-footer > div {
+footer>div {
   padding: 2rem;
 }
+
 footer a {
   width: 100%;
   grid-column: 1;
 }
+
 .footerImg {
   background-image: url("/static/billeder/dxc_hvid.png");
   background-repeat: no-repeat;
@@ -203,7 +204,7 @@ footer a {
       align-items: center;
     }
 
-    footer > div {
+    footer>div {
       padding: 2rem;
     }
 
@@ -211,8 +212,9 @@ footer a {
       grid-column: 5;
     }
 
-    padding-bottom: 50px;
+
     color: white;
+
     h1,
     h2,
     h3 {
@@ -243,7 +245,7 @@ footer a {
   }
 
   #key_site {
-    .learn-more > .lcontainer {
+    .learn-more>.lcontainer {
       width: 35%;
       height: 200px;
     }
@@ -275,6 +277,7 @@ footer a {
       height: 50rem;
       overflow-y: hidden;
     }
+
     .image {
       margin: 0;
       height: 50rem;
@@ -293,6 +296,7 @@ footer a {
     h1 {
       padding-bottom: 5rem;
     }
+
     .childs {
       display: grid;
       grid-template-columns: 40% 60%;
@@ -318,20 +322,24 @@ footer a {
   }
 
   #key_site {
+
     .licensing,
     .enhancing {
       width: 50%;
     }
   }
 }
+
 @media only screen and (min-width: 1600px) {
   #key_site2 {
     .container {
       grid-template-columns: 30% 60%;
     }
+
     .childs {
       grid-gap: 4rem;
     }
+
     .tekst-container {
       h1 {
         color: black;
@@ -346,6 +354,7 @@ footer a {
   }
 
   #key_site {
+
     .licensing,
     .enhancing {
       width: 55%;
