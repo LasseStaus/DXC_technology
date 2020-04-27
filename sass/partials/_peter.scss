@@ -24,6 +24,7 @@ body {
     grid-template-rows: 1fr;
     justify-content: center;
     align-items: baseline;
+    margin-bottom: 6rem;
   }
 
   article p {
@@ -32,11 +33,12 @@ body {
     color: black;
     line-height: 1.3rem;
     font-size: 0.9rem;
-    margin-top: -30px;
+    margin-bottom: 4rem;
   }
 
   .artikel {
     padding: 4rem;
+    padding-top: 0rem;
     overflow-x: hidden;
   }
 
@@ -44,7 +46,8 @@ body {
   .box2,
   .box3 {
     max-width: 59rem;
-    padding: 2rem;
+    padding: 6rem;
+    margin-top: -120px;
     align-content: center;
     align-items: baseline;
     justify-items: center;
@@ -52,40 +55,50 @@ body {
   }
 
   .box1 h1 {
+    font-size: 3.4rem;
+    margin-bottom: 1rem;
   }
   .box2 h1 {
+    font-size: 3.4rem;
+    margin-bottom: 1rem;
   }
   .box3 h1 {
+    font-size: 3.4rem;
+    margin-bottom: 1rem;
   }
 
   .box1 p {
     font-size: 0.9rem;
-    padding-top: 20px;
+    width: 18rem;
+    margin-left: 2.2rem;
   }
 
   .box2 p {
     font-size: 0.9rem;
-    padding-top: 20px;
+
+    width: 18rem;
+    margin-left: 2.2rem;
   }
 
   .box3 p {
     font-size: 0.9rem;
-    padding-top: 20px;
+    width: 18rem;
+    margin-left: 2.2rem;
   }
 
   .box1 h2 {
-    justify-self: left;
+    justify-self: center;
   }
   .box2 h2 {
-    justify-self: left;
+    justify-self: center;
   }
   .box3 h2 {
-    justify-self: left;
+    justify-self: center;
   }
 
   h1 {
     font-family: "GT-Walsheim-Pro-Bold";
-    padding: 20px;
+
     padding-left: 0px;
     color: black;
     font-size: 2.5rem;
@@ -100,12 +113,12 @@ body {
   }
 
   .vs_text {
-    width: 60%;
+    width: 32%;
   }
 
   p {
     font-family: "GT-Walsheim-Pro-Regular";
-    padding: 20px;
+
     padding-left: 0px;
     color: black;
     font-size: 0.9rem;
@@ -131,6 +144,7 @@ body {
   .infobox1 h1 {
     color: white;
     font-size: 20px;
+    width: 80%;
   }
   .info ul {
     padding: 0.5rem 0 2rem;
@@ -146,6 +160,7 @@ body {
     font-size: 15px;
 
     margin-bottom: -15px;
+    margin-top: 15px;
   }
 
   .infobox2 {
@@ -156,6 +171,7 @@ body {
   .infobox2 h1 {
     color: white;
     font-size: 20px;
+    width: 80%;
   }
 
   .infobox2 li {
@@ -168,6 +184,7 @@ body {
     font-size: 15px;
 
     margin-bottom: -15px;
+    margin-top: 15px;
   }
 
   // footer area list paddings
@@ -177,7 +194,7 @@ body {
   }
 
   #info2ul > ul:nth-child(5) {
-    padding: 0.5rem 0 16.43rem;
+    padding: 0.5rem 0 17.43rem;
   }
 
   #info2ul > ul:nth-child(7) {
@@ -214,7 +231,7 @@ body {
     background-repeat: no-repeat;
     background-position: 83% 50%;
     background-size: cover;
-    width: 55rem;
+    width: 62rem;
     border-radius: 100% 50% 50% 100%;
     height: 55rem;
     /*transform: translate(60vw, -10rem); */
@@ -235,15 +252,15 @@ body {
   }
 
   #blackcircle {
-    width: 32rem;
+    width: 35.1rem;
     height: 30rem;
     border-radius: 0 40rem 40rem 0;
-
     background-color: black;
     display: grid;
     justify-content: center;
     justify-self: center;
     align-items: center;
+    margin-top: 5rem;
   }
 
   .circletext {
@@ -254,6 +271,8 @@ body {
 
   #blackcircle h1 {
     color: white;
+    width: 83%;
+    padding: 2rem;
   }
 
   #blackcircle span {
@@ -264,6 +283,9 @@ body {
     list-style: none;
     color: white;
     line-height: 2rem;
+    /* padding: 0rem; */
+    padding-left: 2rem;
+    font-size: 1rem;
   }
 
   #blackcircle ul {
@@ -293,6 +315,8 @@ body {
 
   .explainedtitle {
     margin-top: 60px;
+    font-size: 3.5rem;
+    padding: 2rem;
   }
 
   #bc_site {
@@ -318,6 +342,17 @@ body {
       height: 55rem;
       /*      transform: translate(30vw, -6rem); */
       position: absolute;
+    }
+    .box1,
+    .box2,
+    .box3 {
+      max-width: 59rem;
+      padding: 2rem;
+      margin-top: -120px;
+      align-content: center;
+      align-items: baseline;
+      justify-items: center;
+      display: grid;
     }
   }
   @media only screen and (max-width: 1260px) {
@@ -541,7 +576,26 @@ body {
   @media only screen and (max-width: 500px) {
     #blackcircle {
       background-color: black;
-      width: 75%;
+      width: 87%;
+      margin-top: 0;
+    }
+
+    #bc_site .artikel {
+      padding: 2rem;
+      padding-top: 0rem;
+      overflow-x: hidden;
+    }
+
+    #bc_site .artikel {
+      padding: 2rem;
+    }
+
+    #bc_site > article:nth-child(2) {
+      padding: 2rem;
+    }
+
+    #bc_site article p {
+      margin-top: 0px;
     }
 
     #bc_site .picturebanner {
@@ -564,7 +618,7 @@ body {
     .box2,
     .box3 {
       max-width: 59rem;
-      padding: 2rem;
+      padding: 4rem;
       align-content: left;
       align-items: baseline;
       justify-items: left;
@@ -616,7 +670,8 @@ body {
     #blackcircle h1 {
       font-size: 1.5rem;
       line-height: 1.5rem;
-      padding: 60px;
+
+      width: 81%;
     }
   }
 }
