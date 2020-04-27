@@ -21,22 +21,23 @@ body {
     line-height: 2.7rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    font-family: "GT-Walsheim-Pro-Bold";
   }
 
   p {
     font-size: 1rem;
-    line-height: 1.5rem;
+    line-height: 1.3rem;
     padding-bottom: 1rem;
+    font-family: "GT-Walsheim-Pro-Regular";
+  }
+  p > span {
+    font-family: "GT-Walsheim-Pro-Bold";
   }
 }
 
 #key_site2 {
   p {
     color: black;
-  }
-
-  p > span {
-    font-weight: bold;
   }
 
   .tekst-container {
@@ -223,8 +224,8 @@ footer a {
     }
 
     p {
-      font-size: 1.2rem;
-      line-height: 1.5rem;
+      font-size: 1rem;
+      line-height: 1.3rem;
       padding-bottom: 1rem;
     }
   }

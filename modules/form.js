@@ -1,147 +1,235 @@
 export const endpoint = "https://frontendspring20-4521.restdb.io/rest/dxctechnology";
 export const apiKey = "5e956df0436377171a0c2302";
+let formIsValid;
+let data;
+let position;
+let count = 0;
+let counter = 0;
 
-export function setupForm() {
-  const form = document.querySelector("form");
-  window.form = form;
-  const elements = form.elements;
-  window.elements = elements;
-
-  form.setAttribute("novalidate", true);
-  /* elements.date.value = 12; */
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const formElements = form.querySelectorAll("input");
-    formElements.forEach((el) => {
-      el.classList.remove("invalid");
-    });
-
-    if (form.checkValidity()) {
-      console.log(form.elements);
-      if (form.dataset.state === "post") {
-        postCard({
-          first_name: form.elements.first_name.value,
-          last_name: form.elements.last_name.value,
-          work_email: form.elements.work_email.value,
-          phone_number: form.elements.phone_number.value,
-          country: form.elements.country.value,
-          job_title: form.elements.job_title.value,
-        });
-      } else {
-        putCard(
-          {
-            title: form.elements.title.value,
-            description: form.elements.description.value,
-          },
-          form.dataset.id
-        );
-      }
-      form.reset();
-      //send to restdb/api
-    } else {
-      formElements.forEach((el) => {
-        console.log(el);
-        if (!el.checkValidity()) {
-          el.classList.add("invalid");
-        }
-      });
-    }
-  });
+export function formDelegation() {
+  console.log("formDelegation");
+  document.querySelector(".container1").addEventListener("scroll", setPosition);
+  if (innerWidth >= 1000) {
+    document.querySelector("#the_form").style.alignItems = "initial";
+  }
 }
-function postCard(payLoad) {
-  console.log("hej");
-  const postData = JSON.stringify(payLoad);
-  console.log(payLoad);
-  fetch(endpoint, {
-    method: "post",
-    headers: { "Content-Type": "application/json; charset=utf-8", "x-apikey": apiKey, "cache-control": "no-cache" },
-    body: postData,
-  })
-    .then((res) => res.json())
-    .then((data) => {
-      console.log(data);
-      showCard(data);
+
+function setPosition() {
+  const container = document.querySelector(".container1");
+  position = container.scrollTop / (container.scrollHeight - container.clientHeight);
+  console.log(position);
+  if (innerWidth < 500) {
+    console.log("<500");
+    if (position >= 0.15) {
+      stopScroll();
+    }
+  } else if (innerWidth < 900) {
+    console.log("<1000");
+    if (position >= 0.16) {
+      stopScroll();
+    }
+  } else if (innerWidth < 1300) {
+    console.log("<1000");
+    if (position >= 0.2) {
+      stopScroll();
+    }
+  } else if (innerWidth < 2500) {
+    console.log("<1500");
+    if (position >= 0.35) {
+      stopScroll();
+    }
+  }
+}
+
+function stopScroll() {
+  console.log("scrollintoview");
+  document.querySelector("#bc_site").classList.add("hide");
+  document.querySelector("header").classList.add("hide");
+  document.querySelector(".container1").removeEventListener("scroll", setPosition);
+  document.querySelector(".container1").style.overflow = "hidden";
+  setTimeout(() => {
+    document.querySelector(".container1").style.overflow = "scroll";
+  }, 500);
+  document.querySelector(".theFormText").style.marginTop = "0";
+  document.querySelector(".initial_form").style.marginTop = "0";
+  document.querySelector("#the_form").style.transform = "translateY(0px)";
+  document.querySelector("#the_form_check").style.transform = "translateY(0px)";
+  document.querySelector(".theFormText").scrollIntoView();
+}
+
+export function checkIfValid(formElements) {
+  if (form.checkValidity()) {
+    get();
+    //send to restdb/api
+  } else {
+    formElements.forEach((el) => {
+      console.log(el);
+      if (!el.checkValidity()) {
+        el.classList.add("invalid");
+      }
     });
+  }
+}
+
+function loopData(data) {
+  const email = document.querySelector("#email").value;
+  if (count === 1) {
+    console.log("not unique");
+    console.log("input: " + email + " " + "bd: " + data.work_email);
+    document.querySelector("#email").classList.add("invalid");
+    document.querySelector(".mail").textContent = "|| Not unique. Go to 'already submitted'";
+    window.addEventListener("keyup", function () {
+      document.querySelector("#email").classList.remove("invalid");
+    });
+  }
+  if (count === 0) {
+    console.log("not");
+    postCard({
+      first_name: form.elements.first_name.value,
+      last_name: form.elements.last_name.value,
+      work_email: form.elements.work_email.value,
+      phone_number: form.elements.phone_number.value,
+      country: form.elements.country.value,
+      job_title: form.elements.job_title.value,
+      login_amount: 1,
+    });
+    form.reset();
+    document.querySelector("#the_form").classList.remove("flex");
+    document.querySelector("#the_form").classList.add("hide");
+    document.querySelector("#the_form_check").classList.remove("flex");
+    document.querySelector("#the_form_check").classList.add("hide");
+    document.querySelector(".container1").style.overflow = "scroll";
+    document.querySelector(".container1").removeEventListener("scroll", setPosition);
+    document.querySelector("#bc_site").classList.remove("hide");
+    document.querySelector(".theFormText").classList.add("hide");
+    document.querySelector("header").classList.remove("hide");
+  }
+  count = 0;
+}
+
+async function postCard(payload) {
+  console.log("post");
+  const postData = JSON.stringify(payload);
+  let response = await fetch(endpoint, {
+    method: "post",
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+      "x-apikey": apiKey,
+      "cache-control": "no-cache",
+    },
+    body: postData,
+  });
+  data = await response.json();
+  console.log(data);
   console.log("submitted");
 }
 
-export function get() {
-  fetch(endpoint, {
-    method: "get",
-    headers: { accept: "application/json", "x-apikey": apiKey, "cache-control": "no-cache" },
-  })
-    .then((e) => e.json())
-    .then((data) => {
-      data.forEach(showCard);
-      console.log(data);
-    });
+export function checkIfSubitted() {
+  const checkMail = document.querySelector(".check_email");
+  const isValid = form.checkValidity();
+  console.log("checkIfSubitted");
+  form.setAttribute("novalidate", true);
+  console.log("checkIfSubitted");
+  if (checkMail.length === 0) {
+    console.log("0");
+    formIsValid = false;
+    document.querySelector("#check_email").classList.add("invalid");
+  } else {
+    formIsValid = true;
+  }
+  if (isValid && formIsValid) {
+    console.log("all good");
+    document.querySelector("#check_email").classList.add("invalid");
+  } else {
+    console.log("invalid");
+    if (checkMail.length === 0) {
+      console.log("0 chara");
+      document.querySelector("#check_email").classList.add("invalid");
+    } else {
+      get();
+    }
+  }
+}
+async function get() {
   console.log("get");
-}
-const template = document.querySelector("template").content;
-const cardContainer = document.querySelector("#cardlist > .container");
-
-function showCard(card) {
-  console.log(card);
-
-  const clone = template.cloneNode(true);
-
-  clone.querySelector("article").dataset.id = card._id;
-  clone.querySelector(".first_name").textContent = card.first_name;
-  clone.querySelector(".last_name").textContent = card.last_name;
-  clone.querySelector(".work_email").textContent = card.work_email;
-  clone.querySelector(".phone_number").textContent = card.phone_number;
-  clone.querySelector(".country").textContent = card.country;
-  clone.querySelector(".job_title").textContent = card.job_title;
-
-  clone.querySelector(`[data-action="delete"]`).addEventListener("click", (e) => deleteCard(card._id));
-
-  cardContainer.appendChild(clone);
-  console.log("appended all + new clone");
-}
-
-/* function getSingleCard(id, callback) {
-    console.log(id);
-    fetch(`${endpoint}/${id}`, {
-      method: "get",
-      headers: { "Content-Type": "application/json; charset=utf-8", "x-apikey": apiKey, "cache-control": "no-cache" },
-    })
-      .then((res) => res.json())
-      .then((data) => callback(data));
-  } */
-/* 
-  function setupFormForEdit(data) {
-    console.log("hi mom");
-    const form = document.querySelector("form");
-    form.dataset.state = "edit";
-    form.dataset.id = data._id;
-    form.elements.title.value = data.title;
-    form.elements.description.value = data.description;
-    form.elements.date.value = data.date;
-    form.elements.number.value = data.number;
-  } */
-
-function deleteCard(id) {
-  console.log("deleted this card", id);
-
-  fetch(`${endpoint}/${id}`, {
-    method: "delete",
-    headers: { "Content-Type": "application/json; charset=utf-8", "x-apikey": apiKey, "cache-control": "no-cache" },
-  })
-    .then((res) => res.json())
-    .then((data) => console.log(data));
-  document.querySelector(`article[data-id="${id}"]`).remove();
-}
-
-function putCard(payLoad, id) {
-  console.log("put function");
-  const postData = JSON.stringify(payLoad);
-  fetch(`${endpoint}/${id}`, {
-    method: "put",
-    headers: { "Content-Type": "application/json; charset=utf-8", "x-apikey": apiKey, "cache-control": "no-cache" },
-    body: postData,
-  })
-    .then((res) => res.json())
-    .then((data) => {
-      console.log(data);
+  const firstForm = document.querySelector("#the_form");
+  let response = await fetch(endpoint, {
+    method: "get",
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+      "x-apikey": apiKey,
+      "cache-control": "no-cache",
+    },
+  });
+  data = await response.json();
+  if (firstForm.classList[0] == "flex") {
+    console.log("first form");
+    data.forEach((data) => {
+      const email = document.querySelector("#email").value;
+      if (email == data.work_email) {
+        count++;
+        console.log("JA");
+      } else {
+        console.log("IKKE");
+      }
     });
+    console.log(count);
+    loopData(data);
+  } else {
+    console.log("second form");
+    data.forEach(checkData);
+  }
+  console.log(data);
+}
+
+function checkData(data) {
+  console.log("checkData");
+  const email = document.querySelector("#check_email").value;
+  if (email == data.work_email) {
+    console.log("Already used");
+    console.log("input: " + email + " " + "bd: " + data.work_email);
+    document.querySelector("#the_form_check").classList.add("hide");
+    document.querySelector("#the_form_check").classList.remove("flex");
+    document.querySelector(".container1").style.overflow = "scroll";
+    document.querySelector(".container1").removeEventListener("scroll", setPosition);
+    document.querySelector("#bc_site").classList.remove("hide");
+    document.querySelector(".theFormText").classList.add("hide");
+    document.querySelector("header").classList.remove("hide");
+    put(
+      //login_amount: amount,
+      { $inc: { login_amount: 1 } },
+      //id sendes videre til put, så vi redigerer i det korrekte objekt.
+      data._id
+    );
+    /*     if (innerWidth > 1000) {
+      document.querySelector(".desktop").classList.remove("hide");
+    } else {
+      document.querySelector(".mobile").classList.remove("hide");
+    } */
+  } else {
+    console.log(email);
+    console.log("does not match");
+    document.querySelector("#check_email").classList.add("invalid");
+    window.addEventListener("keyup", function () {
+      document.querySelector("#check_email").classList.remove("invalid");
+    });
+  }
+}
+
+async function put(payload, id) {
+  console.log("put");
+  const postData = JSON.stringify(payload);
+  //Sikrer det er det rigtige id der redigeres
+  let response = await fetch(`${endpoint}/${id}`, {
+    method: "put",
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+      "x-apikey": apiKey,
+      "cache-control": "no-cache",
+    },
+    body: postData,
+  });
+  //objektet ændres i db
+  data = await response.json();
+  //console.log(data);
 }
