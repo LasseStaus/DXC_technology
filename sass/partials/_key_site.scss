@@ -13,7 +13,6 @@ body {
 
 #key_site0 {
   padding-bottom: 50px;
-
   color: white;
 
   h1,
@@ -29,8 +28,6 @@ body {
     font-size: 1rem;
     line-height: 1.5rem;
     padding-bottom: 1rem;
-
-
   }
 }
 
@@ -39,11 +36,9 @@ body {
     color: black;
   }
 
-  p>span {
+  p > span {
     font-weight: bold;
   }
-
-
 
   .tekst-container {
     h1 {
@@ -63,7 +58,6 @@ body {
 #key_site2 .tekst-container {
   padding-left: 2rem;
   padding-right: 2rem;
-
 }
 
 .licensing,
@@ -73,12 +67,6 @@ body {
 
 .container {
   overflow-x: hidden;
-  /*   display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: auto;
-  justify-content: center;
-  align-items: center;
-  align-content: center; */
 }
 
 .image1 {
@@ -89,8 +77,6 @@ body {
   float: right;
   margin-bottom: 1rem;
   margin-top: 1rem;
-
-
 }
 
 .image2 {
@@ -101,26 +87,20 @@ body {
   background-position: right;
   transform: translateX(-10%);
   float: left;
-
 }
 
 .image {
   height: 25rem;
   width: 25rem;
-
   background-repeat: no-repeat;
   background-size: cover;
-
-  // border-radius: 25% 0px 0px 25%;
 }
 
 .image-container {
   position: relative;
 }
 
-
-
-p>span {
+p > span {
   font-weight: bold;
 }
 
@@ -134,17 +114,15 @@ p>span {
 
 #key_site div.learn-more {
   margin-top: 6rem;
-
 }
 
-.learn-more>.lcontainer {
+.learn-more > .lcontainer {
   height: 200px;
   width: 90%;
   background-color: white;
   overflow: hidden;
   border-radius: 0px 100px 100px 0px;
   padding: 4rem;
-
 }
 
 .learn-more .tekst {
@@ -152,8 +130,6 @@ p>span {
   justify-content: end;
   margin-right: 15px;
 }
-
-
 
 #key_site div.learn-more p {
   font-size: 1rem;
@@ -173,12 +149,9 @@ p>span {
 
 #key_site2 .container {
   background-color: white;
-
 }
 
-
 @media only screen and (min-width: 520px) {
-
   .image {
     height: 35rem;
     width: 35rem;
@@ -186,7 +159,6 @@ p>span {
 }
 
 @media only screen and (min-width: 690px) {
-
   .image {
     height: 45rem;
     width: 45rem;
@@ -194,12 +166,9 @@ p>span {
 }
 
 @media only screen and (min-width: 770px) {
-
   #key_site0 {
     padding-bottom: 50px;
-
     color: white;
-
     h1,
     h2,
     h3 {
@@ -213,8 +182,6 @@ p>span {
       font-size: 1.2rem;
       line-height: 1.5rem;
       padding-bottom: 1rem;
-
-
     }
   }
 
@@ -232,7 +199,7 @@ p>span {
   }
 
   #key_site {
-    .learn-more>.lcontainer {
+    .learn-more > .lcontainer {
       width: 35%;
       height: 200px;
     }
@@ -247,17 +214,13 @@ p>span {
     .image {
       height: 60rem;
       width: 60rem;
-
       position: absolute;
       top: -20rem;
       right: -25rem;
-
-
     }
   }
 
   #key_site2 {
-
     .container {
       display: grid;
       grid-template-columns: repeat;
@@ -268,14 +231,7 @@ p>span {
       height: 50rem;
       overflow-y: hidden;
     }
-
-
-    .tekst-container {}
-
-    .image-container {}
-
     .image {
-
       margin: 0;
       height: 50rem;
       width: 50rem;
@@ -284,22 +240,15 @@ p>span {
       bottom: -25rem;
       left: -25rem;
       float: none;
-
-
-
     }
   }
-
 }
 
 @media only screen and (min-width: 1100px) {
-
   #key_site2 {
-
     h1 {
       padding-bottom: 5rem;
     }
-
     .childs {
       display: grid;
       grid-template-columns: 40% 60%;
@@ -309,49 +258,36 @@ p>span {
   }
 }
 
-
 @media only screen and (min-width: 1100px) {
   #key_site2 {
     .image {
       left: -20rem;
     }
   }
-
 }
 
 @media only screen and (min-width: 1100px) {
   #key_site2 {
     .container {
-
       grid-template-columns: 35% 60%;
     }
   }
 
   #key_site {
-
     .licensing,
     .enhancing {
       width: 50%;
     }
   }
-
 }
-
 @media only screen and (min-width: 1600px) {
   #key_site2 {
     .container {
-
       grid-template-columns: 30% 60%;
-
     }
-
     .childs {
       grid-gap: 4rem;
     }
-
-
-
-
     .tekst-container {
       h1 {
         color: black;
@@ -362,30 +298,20 @@ p>span {
           color: var(--color-3);
         }
       }
-
     }
-
-
-
   }
 
-
-
-
   #key_site {
-
     .licensing,
     .enhancing {
-      width: 50%;
+      width: 55%;
     }
 
     .image {
       right: -15rem;
     }
   }
-
 }
-
 
 //  #keysite skabelon done
 
