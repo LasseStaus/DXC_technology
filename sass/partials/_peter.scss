@@ -4,7 +4,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "GT-Walsheim-Pro-Regular";
   src: url("/static/font/GT-Walsheim-Pro-Regular.woff2") format("woff2");
@@ -17,77 +16,71 @@ body {
 }
 
 #bc_site {
-  padding-left: 4rem;
-  padding-right: 4rem;
+  /*   padding: 0 4rem 2rem; */
 
   .boxes {
-    display: flex;
-    flex-wrap: no-wrap;
-    flex-direction: row;
-    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: baseline;
   }
 
   article p {
     font-family: "GT-Walsheim-Pro-Regular";
     padding-left: 0px;
     color: black;
-    line-height: 30px;
-    font-size: 20px;
+    line-height: 1.3rem;
+    font-size: 0.9rem;
     margin-top: -30px;
   }
 
+  .artikel {
+    padding: 4rem;
+    overflow-x: hidden;
+  }
+
+  .box1,
+  .box2,
+  .box3 {
+    max-width: 59rem;
+    padding: 2rem;
+    align-content: center;
+    align-items: baseline;
+    justify-items: center;
+    display: grid;
+  }
+
   .box1 h1 {
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: -30px;
   }
-
   .box2 h1 {
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: -30px;
   }
-
   .box3 h1 {
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: -30px;
   }
 
   .box1 p {
-    font-size: 16px;
-    width: 90%;
-    /* padding: 50px; */
+    font-size: 0.9rem;
     padding-top: 20px;
-    padding-left: 40px;
   }
 
   .box2 p {
-    font-size: 16px;
-    width: 90%;
-    /* padding: 50px; */
+    font-size: 0.9rem;
     padding-top: 20px;
-    padding-left: 40px;
   }
 
   .box3 p {
-    font-size: 16px;
-    width: 90%;
-    /* padding: 50px; */
+    font-size: 0.9rem;
     padding-top: 20px;
-    padding-left: 40px;
   }
 
   .box1 h2 {
-    text-align: center;
+    justify-self: left;
   }
-
   .box2 h2 {
-    text-align: center;
+    justify-self: left;
   }
-
   .box3 h2 {
-    text-align: center;
+    justify-self: left;
   }
 
   h1 {
@@ -95,15 +88,19 @@ body {
     padding: 20px;
     padding-left: 0px;
     color: black;
-    font-size: 45px;
+    font-size: 2.5rem;
   }
 
   h2,
   h3 {
     font-family: "GT-Walsheim-Pro-Bold";
-    padding: 20px;
-    padding-left: 0px;
+    padding: 0 0 1rem 0;
+
     color: black;
+  }
+
+  .vs_text {
+    width: 60%;
   }
 
   p {
@@ -111,19 +108,19 @@ body {
     padding: 20px;
     padding-left: 0px;
     color: black;
+    font-size: 0.9rem;
   }
 
   #footerarea {
     width: 100vw;
     height: 100%;
     background-color: black;
-    transform: translate(-5rem, 0px);
+    /*    transform: translate(-4rem, 0px); */
   }
 
   .info {
-    display: flex;
-    flex-wrap: no-wrap;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .infobox1 {
@@ -134,6 +131,9 @@ body {
   .infobox1 h1 {
     color: white;
     font-size: 20px;
+  }
+  .info ul {
+    padding: 0.5rem 0 2rem;
   }
 
   .infobox1 li {
@@ -151,7 +151,6 @@ body {
   .infobox2 {
     color: white;
     padding-top: 60px;
-    margin-right: -1400px;
   }
 
   .infobox2 h1 {
@@ -171,16 +170,63 @@ body {
     margin-bottom: -15px;
   }
 
+  // footer area list paddings
+
+  #info2ul > ul:nth-child(3) {
+    padding: 0.5rem 0 6rem;
+  }
+
+  #info2ul > ul:nth-child(5) {
+    padding: 0.5rem 0 16.43rem;
+  }
+
+  #info2ul > ul:nth-child(7) {
+    padding: 0.5rem 0 5rem;
+  }
+
+  #info1ul > ul:nth-child(3) {
+    padding: 0.5rem 0 2.5rem;
+  }
+
+  #info1ul > ul:nth-child(9) {
+    padding: 0.5rem 0 2.5rem;
+  }
+
+  #info1ul > ul:nth-child(5) {
+    padding: 0.5rem 0 3rem;
+  }
+
+  #info1ul > ul:nth-child(9) {
+    padding: 0.5rem 0 4rem;
+  }
+
+  #info1ul > ul:nth-child(7) {
+    padding: 0.5rem 0 4rem;
+  }
+
+  .key_heading {
+    font-size: 2rem;
+    padding-top: 2rem;
+  }
+
   .picturebanner {
     background-image: url(/static/billeder/working.jpg);
     background-repeat: no-repeat;
     background-position: 83% 50%;
     background-size: cover;
-    width: 66vw;
+    width: 55rem;
     border-radius: 100% 50% 50% 100%;
-    height: 66vw;
-    transform: translate(50rem, -10rem);
+    height: 55rem;
+    /*transform: translate(60vw, -10rem); */
     position: absolute;
+    right: -22rem;
+  }
+
+  .key_heading {
+    width: 85%;
+  }
+  .key_text {
+    width: 65%;
   }
 
   #picturebanner img {
@@ -189,19 +235,25 @@ body {
   }
 
   #blackcircle {
-    width: 30%;
-    height: auto;
-    border-radius: 0 100% 100% 0;
-    transform: translate(-85px, 16px);
+    width: 32rem;
+    height: 30rem;
+    border-radius: 0 40rem 40rem 0;
+
     background-color: black;
+    display: grid;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+  }
+
+  .circletext {
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   #blackcircle h1 {
     color: white;
-    font-size: 20px;
-    padding: 80px;
-    width: 400px;
-    transform: translate(-25px, 0px);
   }
 
   #blackcircle span {
@@ -211,17 +263,10 @@ body {
   #blackcircle li {
     list-style: none;
     color: white;
-    padding: 80px;
-    width: 400px;
-    padding-bottom: 0;
-    margin-top: -65px;
+    line-height: 2rem;
   }
 
   #blackcircle ul {
-    position: relative;
-    top: -60px;
-    transform: translate(-25px, 0px);
-    padding-bottom: 20px;
   }
 
   .picturebanner2 {
@@ -229,30 +274,147 @@ body {
     background-repeat: no-repeat;
     background-position: 83% 50%;
     background-size: cover;
-    width: 66vw;
+    background-repeat: no-repeat;
+    background-position: 83% 50%;
+    background-size: cover;
+    width: 55rem;
     border-radius: 100% 50% 50% 100%;
-    height: 66vw;
-    transform: translate(25rem, -6rem);
+    height: 55rem;
+    /*  transform: translate(40vw, -6rem); */
     position: absolute;
+    right: -27rem;
   }
 
   #picturebanner2 img {
     width: 100%;
     height: auto;
-    transform: translate(0px, 10px);
+    /*   transform: translate(0px, 10px); */
   }
 
   .explainedtitle {
     margin-top: 60px;
   }
 
-  @media only screen and (max-width: 700px) {
-    .boxes {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
+  #bc_site {
+    footer {
+      background-color: white;
+    }
+    .footerImg {
+      background-image: url("/static/billeder/dxc-sort.png");
+    }
+  }
+
+  @media only screen and (max-width: 1500px) {
+    .picturebanner2 {
+      background-image: url(/static/billeder/computer_man.jpg);
+      background-repeat: no-repeat;
+      background-position: 83% 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 83% 50%;
+      background-size: cover;
+      width: 55rem;
+      border-radius: 100% 50% 50% 100%;
+      height: 55rem;
+      /*      transform: translate(30vw, -6rem); */
+      position: absolute;
+    }
+  }
+  @media only screen and (max-width: 1260px) {
+    .picturebanner {
+      background-image: url(/static/billeder/working.jpg);
+      background-repeat: no-repeat;
+      background-position: 83% 50%;
+      background-size: cover;
+      width: 50rem;
+      border-radius: 100% 50% 50% 100%;
+      height: 50rem;
+      /* transform: translate(50vw, 0rem); */
+      position: absolute;
     }
 
+    .picturebanner2 {
+      background-image: url(/static/billeder/computer_man.jpg);
+      background-repeat: no-repeat;
+      background-position: 83% 50%;
+      background-size: cover;
+      width: 55rem;
+      border-radius: 100% 50% 50% 100%;
+      height: 55rem;
+      /*       transform: translate(25vw, -6rem); */
+      position: absolute;
+    }
+
+    .vs,
+    .vs_text {
+      width: 60%;
+    }
+    .key_heading {
+      width: 100%;
+    }
+    .key_text {
+      width: 100%;
+    }
+    #blackcircle {
+      width: 42%;
+    }
+
+    #info2ul > ul:nth-child(3) {
+      padding: 0.5rem 0 2rem;
+    }
+
+    #info2ul > ul:nth-child(5) {
+      padding: 0.5rem 0 2rem;
+    }
+
+    #info2ul > ul:nth-child(7) {
+      padding: 0.5rem 0 2rem;
+    }
+
+    #info1ul > ul:nth-child(3) {
+      padding: 0.5rem 0 2rem;
+    }
+
+    #info1ul > ul:nth-child(7) {
+      padding: 0.5rem 0 2rem;
+    }
+
+    #info1ul > ul:nth-child(9) {
+      padding: 0.5rem 0 2rem;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .info {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+    .infobox1 {
+      flex-basis: 500px;
+      flex-grow: 1;
+    }
+
+    .infobox2 {
+      flex-basis: 500px;
+      flex-grow: 1;
+      width: 100%;
+      padding: 0 4rem;
+    }
+
+    .picturebanner2 {
+      background-image: url(/static/billeder/computer_man.jpg);
+      background-repeat: no-repeat;
+      background-position: 110% 50%;
+      background-size: cover;
+      width: 60rem;
+      border-radius: 100% 50% 50% 100%;
+      height: 60rem;
+      /*  transform: translate(45vw, -50rem); */
+      position: absolute;
+    }
+  }
+  @media only screen and (max-width: 768px) {
     .info {
       display: flex;
       flex-wrap: wrap;
@@ -266,12 +428,34 @@ body {
       margin-right: 0px;
     }
 
-    .infobox1 h1 {
-      color: white;
-      font-size: 26px;
+    p {
+      font-size: 1rem;
+    }
+    .vs,
+    .vs_text {
       width: 100%;
     }
 
+    h1,
+    h2,
+    h3,
+    p {
+      padding-bottom: 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+
+    .infobox1 h1 {
+      color: white;
+
+      width: 100%;
+    }
+
+    .key_heading {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
     .infobox2 h1 {
       color: white;
       font-size: 26px;
@@ -280,22 +464,25 @@ body {
 
     #blackcircle {
       background-color: black;
-      transform: translate(-81px, 10px);
-      width: 90vw;
-      height: 90vw;
+
+      width: 61%;
     }
 
     #blackcircle h1 {
-      font-size: 30px;
+      font-size: 2rem;
     }
 
     #blackcircle ul {
-      font-size: 20px;
+      font-size: 0.9rem;
     }
 
     article h1 {
-      font-size: 40px;
-      width: 350px;
+      font-size: 2rem;
+    }
+
+    #bc_site {
+      padding-left: 2rem;
+      padding-right: 2rem;
     }
 
     .picturebanner {
@@ -303,22 +490,21 @@ body {
       background-repeat: no-repeat;
       background-position: 83% 50%;
       background-size: cover;
-      width: 170vw;
+      width: 55rem;
       border-radius: 100% 50% 50% 100%;
-      height: 170vw;
-      transform: translate(1rem, 0rem);
+      height: 50rem;
+      transform: translate(5rem, 0rem);
       position: static;
     }
-
     .picturebanner2 {
       background-image: url(/static/billeder/computer_man.jpg);
       background-repeat: no-repeat;
       background-position: 83% 50%;
       background-size: cover;
-      width: 170vw;
+      width: 45rem;
       border-radius: 100% 50% 50% 100%;
-      height: 170vw;
-      transform: translate(1rem, 0rem);
+      height: 52rem;
+      transform: translate(6rem, -1rem);
       position: static;
     }
 
@@ -326,7 +512,7 @@ body {
       display: flex;
       flex-direction: column;
       color: white;
-      padding: 1rem;
+      // padding: 1rem;
       margin: 0 auto;
     }
 
@@ -335,6 +521,102 @@ body {
       flex-direction: column;
       color: white;
       margin: 0 auto;
+      width: 100%;
+      overflow-x: hidden;
+    }
+    .key_heading {
+      width: 100%;
+    }
+    .key_text {
+      width: 100%;
+    }
+    .infobox1 {
+      padding: 3rem;
+    }
+    .inforbox2 {
+      padding: 3rem;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    #blackcircle {
+      background-color: black;
+      width: 75%;
+    }
+
+    #bc_site .picturebanner {
+      background-image: url(/static/billeder/working.jpg);
+      background-repeat: no-repeat;
+      background-position: 83% 50%;
+      background-size: cover;
+      width: 40rem;
+      border-radius: 100% 50% 50% 100%;
+      height: 40rem;
+      /*       transform: translate(1rem, 0rem); */
+      position: static;
+    }
+
+    #footerarea > div > div.infobox2 > div.picturebanner2 {
+      margin-bottom: 60px;
+    }
+
+    .box1,
+    .box2,
+    .box3 {
+      max-width: 59rem;
+      padding: 2rem;
+      align-content: left;
+      align-items: baseline;
+      justify-items: left;
+      display: grid;
+    }
+
+    .box1 {
+      justify-items: left;
+    }
+
+    .picturebanner2 {
+      background-image: url(/static/billeder/computer_man.jpg);
+      background-repeat: no-repeat;
+      background-position: 83% 50%;
+      background-size: cover;
+      width: 40rem;
+      border-radius: 100% 50% 50% 100%;
+      height: 40rem;
+      /*    transform: translate(1rem, 0rem); */
+      position: static;
+    }
+    .key_heading {
+      width: 100%;
+    }
+    .key_text {
+      width: 100%;
+    }
+
+    .infobox1 {
+      padding: 2rem;
+    }
+    .inforbox2 {
+      padding: 2rem;
+    }
+
+    #bc_site {
+      padding: 0 2rem 2rem 2rem;
+    }
+    #blackcircle h1 {
+      font-size: 2rem;
+      line-height: 2rem;
+    }
+
+    .boxes {
+      grid-template-columns: repeat(auto-fit, minmax(251px, 1fr));
+    }
+  }
+  @media only screen and (max-width: 430px) {
+    #blackcircle h1 {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      padding: 60px;
     }
   }
 }
