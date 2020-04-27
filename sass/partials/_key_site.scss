@@ -151,6 +151,35 @@ p > span {
   background-color: white;
 }
 
+footer {
+  background-color: black;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+
+  padding-left: 2rem;
+  padding-right: 2rem;
+  justify-items: center;
+  align-content: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+footer > div {
+  padding: 2rem;
+}
+footer a {
+  width: 100%;
+  grid-column: 1;
+}
+.footerImg {
+  background-image: url("/static/billeder/dxc_hvid.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 60px;
+}
+
 @media only screen and (min-width: 520px) {
   .image {
     height: 35rem;
@@ -167,6 +196,21 @@ p > span {
 
 @media only screen and (min-width: 770px) {
   #key_site0 {
+    footer {
+      grid-template-columns: repeat(5, 1fr);
+
+      justify-items: center;
+      align-items: center;
+    }
+
+    footer > div {
+      padding: 2rem;
+    }
+
+    footer a {
+      grid-column: 5;
+    }
+
     padding-bottom: 50px;
     color: white;
     h1,
