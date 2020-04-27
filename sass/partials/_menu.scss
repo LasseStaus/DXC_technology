@@ -182,7 +182,7 @@ header {
 
     .desktop {
       display: block;
-      font-size: 4rem;
+      font-size: 4vw;
       font-weight: 600;
     }
 
@@ -234,6 +234,16 @@ header {
       border-left: 25px solid transparent;
       border-right: 25px solid transparent;
       border-top: 35px solid #ffed00;
+    }
+  }
+  @media (min-width: 1450px) {
+    .desktop {
+      font-size: 3rem;
+    }
+  }
+  @media (min-width: 1850px) {
+    .desktop {
+      font-size: 4rem;
     }
   }
 }
