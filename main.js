@@ -38,6 +38,7 @@ function setupForm() {
     document.querySelector("#the_form").classList.remove("flex");
     document.querySelector("#the_form").classList.add("hide");
     document.querySelector("#the_form_check").classList.remove("hide");
+    form.reset();
   });
 
   document.querySelector(".go_back").addEventListener("click", (e) => {

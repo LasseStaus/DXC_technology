@@ -14,8 +14,10 @@
       <header>
         <nav class="desktop">
           <div class="wrap_desktop">
+            <img src="static/billeder/dxc_sort_vertical.png" class="white_desk" />
+            <img src="static/billeder/dxc_hvid_vertacal.png" class="black_desk" />
             <p class="menu_et">Is Business Central right for your business?</p>
-            <div class="hjorne"></div>
+            <div class="hjorne hjorne1"></div>
             <div class="menu_kasse">
               <p class="menu_to">Key areas of comparison</p>
             </div>
@@ -23,98 +25,102 @@
         </nav>
         <nav class="mobile">
           <div class="wrap_mobile">
+            <img src="static/billeder/dxc_sort_vertical.png" class="white_desk" />
+            <img src="static/billeder/dxc_hvid_vertacal.png" class="black_desk" />
             <p class="menu_et">Business Central</p>
-            <div class="hjorne"></div>
+            <div class="hjorne hjorne1"></div>
             <div class="menu_kasse">
               <p class="menu_to">Key areas</p>
             </div>
           </div>
         </nav>
       </header>
-      <section id="the_form" class="flex">
-        <div class="theFormText">
-          <h1 class="persuasive_header">Do you want to make <span>qualified</span> decisions that suits your company’s ERP needs?</h1>
-          <p class="persuasive_text">We know it can take up a lot of time to stay up to date on different technical software and equipment and we know your time is precious.<br />With this guide we’ve made it easier and faster for you to make an efficient differentiation on Business Central and Microsoft Dynamics NAV, to ultimately get an understanding on which better suits your company’s need.<br /><br />Sign up and get all time full access to our carefully reviewed guide. It is our guarantee that you always have the latest knowledge to make the best qualified decisions which will save your company time and money. Furthermore, you will receive an email if the specifications change or if a new solution is available, to make sure your company is always up to date.</p>
-        </div>
+      <section id="forms">
+        <section id="the_form" class="flex">
+          <div class="theFormText">
+            <h1 class="persuasive_header">Do you want to make <span>qualified</span> decisions that suits your company’s ERP needs?</h1>
+            <p class="persuasive_text">We know it can take up a lot of time to stay up to date on different technical software and equipment and we know your time is precious.<br />With this guide we’ve made it easier and faster for you to make an efficient differentiation on Business Central and Microsoft Dynamics NAV, to ultimately get an understanding on which better suits your company’s need.<br /><br />Sign up and get all time full access to our carefully reviewed guide. It is our guarantee that you always have the latest knowledge to make the best qualified decisions which will save your company time and money. Furthermore, you will receive an email if the specifications change or if a new solution is available, to make sure your company is always up to date.</p>
+          </div>
 
-        <!--     <div class="form-container"> -->
-        <form class="initial_form" data-state="post">
-          <fieldset class="personal">
-            <!--           <legend>Personal</legend> -->
-            <div>
-              <label for="name">First name</label>
-              <input id="name" type="text" name="first_name" placeholder="First name" required />
-              <p class="invalid_text">|| Please provide your first name</p>
-              <span>|| Enter your first name</span>
-            </div>
+          <!--     <div class="form-container"> -->
+          <form class="initial_form" data-state="post">
+            <fieldset class="personal">
+              <!--           <legend>Personal</legend> -->
+              <div>
+                <label for="name">First name</label>
+                <input id="name" type="text" name="first_name" placeholder="First name" required />
+                <p class="invalid_text">|| Please provide your first name</p>
+                <span>|| Enter your first name</span>
+              </div>
 
-            <div>
-              <label for="last">Last name</label>
-              <input id="last" type="text" name="last_name" placeholder="Last name" required />
-              <p class="invalid_text">|| Please provide your last name</p>
-              <span>|| Enter your last name</span>
-            </div>
+              <div>
+                <label for="last">Last name</label>
+                <input id="last" type="text" name="last_name" placeholder="Last name" required />
+                <p class="invalid_text">|| Please provide your last name</p>
+                <span>|| Enter your last name</span>
+              </div>
 
-            <div>
-              <label for="phone">Phone Number</label>
-              <input id="phone" type="number" name="phone_number" placeholder="Phone" required />
-              <p class="invalid_text">|| Please provide your phone number</p>
-              <span>|| Enter your phone number</span>
-            </div>
+              <div>
+                <label for="phone">Phone Number</label>
+                <input id="phone" type="number" name="phone_number" placeholder="Phone" required />
+                <p class="invalid_text">|| Please provide your phone number</p>
+                <span>|| Enter your phone number</span>
+              </div>
 
-            <div>
-              <label for="country">Country </label>
-              <input id="country" type="text" name="country" placeholder="Country" required />
-              <p class="invalid_text">|| Please specify your Country</p>
-              <span>|| What country do you live in?</span>
-            </div>
-          </fieldset>
-          <!--  <legend>Company</legend> -->
-          <fieldset class="company">
-            <div>
-              <label for="email"> Work Email </label>
-              <input id="email" type="email" name="work_email" placeholder="name@company.com" required />
-              <p class="invalid_text">|| Please provide your work email</p>
-              <span>|| Which email do you use at work?</span>
-            </div>
+              <div>
+                <label for="country">Country </label>
+                <input id="country" type="text" name="country" placeholder="Country" required />
+                <p class="invalid_text">|| Please specify your Country</p>
+                <span>|| What country do you live in?</span>
+              </div>
+            </fieldset>
+            <!--  <legend>Company</legend> -->
+            <fieldset class="company">
+              <div>
+                <label for="email"> Work Email </label>
+                <input id="email" type="email" name="work_email" placeholder="name@company.com" required />
+                <p class="invalid_text mail">|| Please provide your work email</p>
+                <span>|| Which email do you use at work?</span>
+              </div>
 
-            <div>
-              <label for="job"> Job title </label>
-              <input id="job" type="text" name="job_title" placeholder="Job title" required />
-              <p class="invalid_text">|| Please specify your job title</p>
-              <span>|| What do you do for a living?</span>
-            </div>
-          </fieldset>
-          <fieldset class="theConsent">
-            <label for="consent">Yes</label>
-            <input type="checkbox" id="consent" class="consent" required />
-            <p class="invalid_text">|| Please tick this box off if you wish to enter the guide.</p>
-            <span class="checkSpan">|| I understand by filling out this form DXC Technology may contact me.</span>
-          </fieldset>
+              <div>
+                <label for="job"> Job title </label>
+                <input id="job" type="text" name="job_title" placeholder="Job title" required />
+                <p class="invalid_text">|| Please specify your job title</p>
+                <span>|| What do you do for a living?</span>
+              </div>
+            </fieldset>
+            <fieldset class="theConsent">
+              <label for="consent">Yes</label>
+              <input type="checkbox" id="consent" class="consent" required />
+              <p class="invalid_text">|| Please tick this box off to enter the guide.</p>
+              <span class="checkSpan">|| I understand by filling out this form DXC Technology may contact me.</span>
+            </fieldset>
 
-          <fieldset class="buttons">
-            <button type="submit" class="secondary submitted" data-action="next">I ALREADY SUBMITTED</button>
-            <button type="submit" class="primary submit save">SAVE</button>
-          </fieldset>
-        </form>
-      </section>
-      <section id="the_form_check" class="flex hide">
-        <!--     <div class="form-container"> -->
-        <form data-state="post">
-          <fieldset class="company">
-            <div>
-              <label for="check_email"> Work Email </label>
-              <input id="check_email" type="email" name="check_email" placeholder="name@company.com" required />
-              <p class="invalid_text">|| Your email does not match any already entered emails</p>
-              <span>|| Enter your work email</span>
-            </div>
-          </fieldset>
+            <fieldset class="buttons">
+              <button type="submit" class="secondary submitted" data-action="next">I ALREADY SUBMITTED</button>
+              <button type="submit" class="primary submit save">SAVE</button>
+            </fieldset>
+          </form>
+        </section>
+        <section id="the_form_check" class="flex hide">
+          <!--     <div class="form-container"> -->
+          <form data-state="post">
+            <fieldset class="company">
+              <div>
+                <label for="check_email"> Work Email </label>
+                <input id="check_email" type="email" name="check_email" placeholder="name@company.com" required />
+                <p class="invalid_text">|| Your email does not match any already entered emails</p>
+                <span>|| Enter your work email</span>
+              </div>
+            </fieldset>
 
-          <fieldset class="buttons">
-            <button type="submit" class="secondary go_back" data-action="next">GO BACK</button>
-            <button type="submit" class="primary check_email">CHECK EMAIL</button>
-          </fieldset>
-        </form>
+            <fieldset class="buttons">
+              <button type="submit" class="secondary go_back" data-action="next">GO BACK</button>
+              <button type="submit" class="primary check_email">CHECK EMAIL</button>
+            </fieldset>
+          </form>
+        </section>
       </section>
 
       <section id="bc_site" class="">

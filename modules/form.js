@@ -3,6 +3,8 @@ export const apiKey = "5e956df0436377171a0c2302";
 let formIsValid;
 let data;
 let position;
+let count = 0;
+let counter = 0;
 
 export function formDelegation() {
   console.log("formDelegation");
@@ -41,9 +43,7 @@ function setPosition() {
 
 function stopScroll() {
   document.querySelector("#bc_site").classList.add("hide");
-  document.querySelectorAll("nav").forEach((nav) => {
-    nav.classList.add("hide");
-  });
+  document.querySelector("header").classList.add("hide");
   document.querySelector(".container").removeEventListener("scroll", setPosition);
   document.querySelector(".container").style.overflow = "hidden";
   setTimeout(() => {
@@ -58,39 +58,8 @@ function stopScroll() {
 
 export function checkIfValid(formElements) {
   if (form.checkValidity()) {
-    const email = document.querySelector("#check_email").value;
-    data = get();
-    console.log(data);
-    if (email == data.work_email) {
-      console.log("not unique");
-      document.querySelector("#check_email").classList.add("invalid");
-    } else {
-      console.log(form.elements);
-      postCard({
-        first_name: form.elements.first_name.value,
-        last_name: form.elements.last_name.value,
-        work_email: form.elements.work_email.value,
-        phone_number: form.elements.phone_number.value,
-        country: form.elements.country.value,
-        job_title: form.elements.job_title.value,
-        login_amount: 1,
-      });
-      form.reset();
-      document.querySelector("#the_form").classList.remove("flex");
-      document.querySelector("#the_form").classList.add("hide");
-      document.querySelector("#the_form_check").classList.remove("flex");
-      document.querySelector("#the_form_check").classList.add("hide");
-      document.querySelector(".container").style.overflow = "scroll";
-      document.querySelector(".container").removeEventListener("scroll", setPosition);
-      document.querySelector("#bc_site").classList.remove("hide");
-      document.querySelector(".theFormText").classList.add("hide");
-
-      if (innerWidth > 1000) {
-        document.querySelector(".desktop").classList.remove("hide");
-      } else {
-        document.querySelector(".mobile").classList.remove("hide");
-      }
-    } //send to restdb/api
+    get();
+    //send to restdb/api
   } else {
     formElements.forEach((el) => {
       console.log(el);
@@ -101,19 +70,56 @@ export function checkIfValid(formElements) {
   }
 }
 
-function postCard(payLoad) {
-  console.log("hej");
-  const postData = JSON.stringify(payLoad);
-  console.log(payLoad);
-  fetch(endpoint, {
-    method: "post",
-    headers: { "Content-Type": "application/json; charset=utf-8", "x-apikey": apiKey, "cache-control": "no-cache" },
-    body: postData,
-  })
-    .then((res) => res.json())
-    .then((data) => {
-      console.log(data);
+function loopData(data) {
+  const email = document.querySelector("#email").value;
+  if (count === 1) {
+    console.log("not unique");
+    console.log("input: " + email + " " + "bd: " + data.work_email);
+    document.querySelector("#email").classList.add("invalid");
+    document.querySelector(".mail").textContent = "|| Not unique. Go to 'already submitted'";
+    window.addEventListener("keyup", function () {
+      document.querySelector("#email").classList.remove("invalid");
     });
+  }
+  if (count === 0) {
+    console.log("not");
+    postCard({
+      first_name: form.elements.first_name.value,
+      last_name: form.elements.last_name.value,
+      work_email: form.elements.work_email.value,
+      phone_number: form.elements.phone_number.value,
+      country: form.elements.country.value,
+      job_title: form.elements.job_title.value,
+      login_amount: 1,
+    });
+    form.reset();
+    document.querySelector("#the_form").classList.remove("flex");
+    document.querySelector("#the_form").classList.add("hide");
+    document.querySelector("#the_form_check").classList.remove("flex");
+    document.querySelector("#the_form_check").classList.add("hide");
+    document.querySelector(".container").style.overflow = "scroll";
+    document.querySelector(".container").removeEventListener("scroll", setPosition);
+    document.querySelector("#bc_site").classList.remove("hide");
+    document.querySelector(".theFormText").classList.add("hide");
+    document.querySelector("header").classList.remove("hide");
+  }
+  count = 0;
+}
+
+async function postCard(payload) {
+  console.log("post");
+  const postData = JSON.stringify(payload);
+  let response = await fetch(endpoint, {
+    method: "post",
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+      "x-apikey": apiKey,
+      "cache-control": "no-cache",
+    },
+    body: postData,
+  });
+  data = await response.json();
+  console.log(data);
   console.log("submitted");
 }
 
@@ -145,6 +151,7 @@ export function checkIfSubitted() {
 }
 async function get() {
   console.log("get");
+  const firstForm = document.querySelector("#the_form");
   let response = await fetch(endpoint, {
     method: "get",
     headers: {
@@ -154,8 +161,24 @@ async function get() {
     },
   });
   data = await response.json();
-  data.forEach(checkData);
-  return data;
+  if (firstForm.classList[0] == "flex") {
+    console.log("first form");
+    data.forEach((data) => {
+      const email = document.querySelector("#email").value;
+      if (email == data.work_email) {
+        count++;
+        console.log("JA");
+      } else {
+        console.log("IKKE");
+      }
+    });
+    console.log(count);
+    loopData(data);
+  } else {
+    console.log("second form");
+    data.forEach(checkData);
+  }
+  console.log(data);
 }
 
 function checkData(data) {
@@ -170,22 +193,20 @@ function checkData(data) {
     document.querySelector(".container").removeEventListener("scroll", setPosition);
     document.querySelector("#bc_site").classList.remove("hide");
     document.querySelector(".theFormText").classList.add("hide");
-
-    //send til put(data)
-
-    //find entry i db der matcher email (id) get input_amout og increase login_amount med +1
+    document.querySelector("header").classList.remove("hide");
     put(
       //login_amount: amount,
       { $inc: { login_amount: 1 } },
       //id sendes videre til put, så vi redigerer i det korrekte objekt.
       data._id
     );
-    if (innerWidth > 1000) {
+    /*     if (innerWidth > 1000) {
       document.querySelector(".desktop").classList.remove("hide");
     } else {
       document.querySelector(".mobile").classList.remove("hide");
-    }
-  } else if (((email == data.work_email) == Array.length) == 0) {
+    } */
+  } else {
+    console.log(email);
     console.log("does not match");
     document.querySelector("#check_email").classList.add("invalid");
     window.addEventListener("keyup", function () {
