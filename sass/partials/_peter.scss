@@ -24,7 +24,7 @@ body {
     align-items: center;
   }
 
-  footer>div {
+  footer > div {
     padding: 2rem;
   }
 
@@ -64,7 +64,8 @@ body {
     font-family: "GT-Walsheim-Pro-Regular";
     padding-left: 0px;
     color: black;
-    font-size: 3.5rem;
+    font-size: 3rem;
+    line-height: 3rem;
     width: 42%;
   }
 
@@ -142,14 +143,14 @@ body {
 
   h2,
   h3 {
-    font-family: "GT-Walsheim-Pro-Bold";
-    padding: 0 0 1rem 0;
+    font-family: "GT-Walsheim-Pro-Regular";
+    padding: 1rem 0;
 
     color: black;
   }
 
   .vs_text {
-    width: 32%;
+    width: 50%;
   }
 
   p {
@@ -225,41 +226,42 @@ body {
 
   // footer area list paddings
 
-  #info2ul>ul:nth-child(3) {
+  #info2ul > ul:nth-child(3) {
     padding: 0.5rem 0 6rem;
   }
 
-  #info2ul>ul:nth-child(5) {
+  #info2ul > ul:nth-child(5) {
     padding: 0.5rem 0 17.43rem;
   }
 
-  #info2ul>ul:nth-child(7) {
+  #info2ul > ul:nth-child(7) {
     padding: 0.5rem 0 5rem;
   }
 
-  #info1ul>ul:nth-child(3) {
+  #info1ul > ul:nth-child(3) {
     padding: 0.5rem 0 2.5rem;
   }
 
-  #info1ul>ul:nth-child(9) {
+  #info1ul > ul:nth-child(9) {
     padding: 0.5rem 0 2.5rem;
   }
 
-  #info1ul>ul:nth-child(5) {
+  #info1ul > ul:nth-child(5) {
     padding: 0.5rem 0 3rem;
   }
 
-  #info1ul>ul:nth-child(9) {
+  #info1ul > ul:nth-child(9) {
     padding: 0.5rem 0 4rem;
   }
 
-  #info1ul>ul:nth-child(7) {
+  #info1ul > ul:nth-child(7) {
     padding: 0.5rem 0 4rem;
   }
 
   .key_heading {
     font-size: 2.5rem;
-    padding-top: 2rem;
+    padding-top: 4rem;
+    line-height: 2.5rem;
   }
 
   .picturebanner {
@@ -276,11 +278,11 @@ body {
   }
 
   .key_heading {
-    width: 85%;
+    width: 65%;
   }
 
   .key_text {
-    width: 65%;
+    width: 60%;
   }
 
   #picturebanner img {
@@ -324,7 +326,8 @@ body {
     font-size: 1rem;
   }
 
-  #blackcircle ul {}
+  #blackcircle ul {
+  }
 
   .picturebanner2 {
     background-image: url(/static/billeder/computer_man.jpg);
@@ -425,27 +428,27 @@ body {
       width: 42%;
     }
 
-    #info2ul>ul:nth-child(3) {
+    #info2ul > ul:nth-child(3) {
       padding: 0.5rem 0 2rem;
     }
 
-    #info2ul>ul:nth-child(5) {
+    #info2ul > ul:nth-child(5) {
       padding: 0.5rem 0 2rem;
     }
 
-    #info2ul>ul:nth-child(7) {
+    #info2ul > ul:nth-child(7) {
       padding: 0.5rem 0 2rem;
     }
 
-    #info1ul>ul:nth-child(3) {
+    #info1ul > ul:nth-child(3) {
       padding: 0.5rem 0 2rem;
     }
 
-    #info1ul>ul:nth-child(7) {
+    #info1ul > ul:nth-child(7) {
       padding: 0.5rem 0 2rem;
     }
 
-    #info1ul>ul:nth-child(9) {
+    #info1ul > ul:nth-child(9) {
       padding: 0.5rem 0 2rem;
     }
   }
@@ -460,6 +463,10 @@ body {
     .infobox1 {
       flex-basis: 500px;
       flex-grow: 1;
+    }
+    .vs,
+    .vs_text {
+      width: 40%;
     }
 
     .infobox2 {
@@ -531,8 +538,9 @@ body {
     }
 
     .key_heading {
-      font-size: 1.5rem;
+      font-size: 2rem;
       margin-bottom: 1rem;
+      line-height: 2rem;
     }
 
     .infobox2 h1 {
@@ -668,25 +676,24 @@ body {
       margin-left: 0rem;
     }
 
-    #bc_site .artikel {
+    .artikel {
       padding: 2rem;
       padding-top: 0rem;
       overflow-x: hidden;
     }
 
-    #bc_site .artikel {
+    .artikel {
+      padding: 2rem;
+    }
+    article:nth-child(2) {
       padding: 2rem;
     }
 
-    #bc_site>article:nth-child(2) {
-      padding: 2rem;
-    }
-
-    #bc_site article p {
+    article p {
       margin-top: 0px;
     }
 
-    #bc_site .picturebanner {
+    .picturebanner {
       background-image: url(/static/billeder/working.jpg);
       background-repeat: no-repeat;
       background-position: 83% 50%;
@@ -698,7 +705,7 @@ body {
       position: static;
     }
 
-    #footerarea>div>div.infobox2>div.picturebanner2 {
+    #footerarea > div > div.infobox2 > div.picturebanner2 {
       margin-bottom: 60px;
     }
 

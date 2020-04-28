@@ -27,10 +27,10 @@
 
 .white_desk,
 .black_desk {
-  width: 50px;
+  width: 45px;
   height: auto;
   position: absolute;
-  top: 140px;
+  top: 57px;
   left: calc(50% - 25px);
   z-index: 100000;
   transition: 0.3s;
@@ -161,6 +161,11 @@ header {
     .wrap_mobile {
       height: 200px;
       grid-template-rows: 200px;
+    }
+    .white_desk,
+    .black_desk {
+      width: 50x;
+      top: 140px;
     }
   }
 
