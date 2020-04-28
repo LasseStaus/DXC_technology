@@ -11,6 +11,10 @@ export function menuDelegation() {
     button.addEventListener("click", () => {
       setTimeout(() => {
         activateSecondLink();
+        document.querySelector("header").scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
       }, 3000);
     });
   });
@@ -31,7 +35,7 @@ function activateSecondLink() {
         console.log("vend to");
       });
     }
-  }, 1500);
+  }, 3000);
 }
 
 function showBcSection() {

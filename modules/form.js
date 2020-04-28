@@ -51,7 +51,7 @@ function readMore() {
   //document.querySelector(".container1").removeEventListener("scroll", setPosition);
 }
 
-function stopScroll() {
+/* function stopScroll() {
   console.log("scrollintoview");
   document.querySelector("#bc_site").classList.add("hide");
   document.querySelector("header").classList.add("hide");
@@ -64,7 +64,7 @@ function stopScroll() {
   document.querySelector("#the_form").style.transform = "translateY(0px)";
   document.querySelector("#the_form_check").style.transform = "translateY(0px)";
   document.querySelector(".theFormText").scrollIntoView();
-}
+} */
 
 export function checkIfValid(formElements) {
   if (form.checkValidity()) {
