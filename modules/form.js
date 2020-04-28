@@ -12,13 +12,14 @@ export function formDelegation() {
   if (innerWidth >= 1000) {
     document.querySelector("#the_form").style.alignItems = "initial";
   }
+  document.querySelector(".signUp").addEventListener("click", readMore);
 }
 
 function setPosition() {
   const container = document.querySelector(".container1");
   position = container.scrollTop / (container.scrollHeight - container.clientHeight);
-  console.log(position);
-  if (innerWidth < 500) {
+  //console.log(position);
+  /*   if (innerWidth < 500) {
     console.log("<500");
     if (position >= 0.15) {
       stopScroll();
@@ -38,14 +39,22 @@ function setPosition() {
     if (position >= 0.18) {
       stopScroll();
     }
-  }
+  } */
+}
+
+function readMore() {
+  console.log("readMore");
+  document.querySelector(".button_wrap").classList.add("hide");
+  document.querySelector("#the_form").classList.add("flex");
+  document.querySelector("#the_form").classList.remove("hide");
+  document.querySelector(".theFormText").scrollIntoView();
+  //document.querySelector(".container1").removeEventListener("scroll", setPosition);
 }
 
 function stopScroll() {
   console.log("scrollintoview");
   document.querySelector("#bc_site").classList.add("hide");
   document.querySelector("header").classList.add("hide");
-  document.querySelector(".container1").removeEventListener("scroll", setPosition);
   document.querySelector(".container1").style.overflow = "hidden";
   setTimeout(() => {
     document.querySelector(".container1").style.overflow = "scroll";
@@ -188,16 +197,33 @@ function checkData(data) {
   if (email == data.work_email) {
     console.log("Already used");
     console.log("input: " + email + " " + "bd: " + data.work_email);
-    document.querySelector("#the_form_check").classList.add("hide");
-    document.querySelector("#the_form_check").classList.remove("flex");
-    document.querySelector(".container1").style.overflow = "scroll";
-    document.querySelector(".container1").removeEventListener("scroll", setPosition);
-    document.querySelector("#bc_site").classList.remove("hide");
-    document.querySelector(".theFormText").classList.add("hide");
-    document.querySelector("header").classList.remove("hide");
+    document.querySelector(".welcome").classList.remove("hidden");
+    document.querySelector(".welcome").textContent = "Welcome back " + data.first_name;
+    document.querySelector("#the_form_check .invalid_text").style.display = "none";
+    setTimeout(() => {
+      document.querySelector(".welcome").classList.add("hidden");
+      document.querySelectorAll(".startHide").forEach((section) => {
+        section.classList.remove("hide");
+      });
+      document.querySelector("#the_form_check").classList.add("hide");
+      document.querySelector("#the_form_check").classList.remove("flex");
+      //document.querySelector(".container1").style.overflow = "scroll";
+      document.querySelector(".container1").removeEventListener("scroll", setPosition);
+      document.querySelector("#bc_site").classList.remove("hide");
+      document.querySelector(".theFormText").classList.add("hide");
+      document.querySelector("header").classList.remove("hide");
+    }, 2000);
     put(
-      //login_amount: amount,
-      { $inc: { login_amount: 1 } },
+      {
+        first_name: data.first_name.value,
+        last_name: data.last_name.value,
+        work_email: data.work_email.value,
+        phone_number: data.phone_number.value,
+        country: data.country.value,
+        job_title: data.job_title.value,
+        //login_amount: amount,
+        $inc: { login_amount: 1 },
+      },
       //id sendes videre til put, så vi redigerer i det korrekte objekt.
       data._id
     );

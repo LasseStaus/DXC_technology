@@ -20,16 +20,18 @@ function activateSecondLink() {
   console.log("activateSecondLink");
   const form1 = document.querySelector("#the_form");
   const form2 = document.querySelector("#the_form_check");
-  console.log(form1.classList[0]);
-  console.log(form2.classList[0]);
-  if (form1.classList[0] == "hide" && form2.classList[0] == "hide") {
-    ["touch", "click", "mouseover"].forEach((evt) => {
-      document.querySelectorAll(".menu_to").forEach((to) => {
-        to.addEventListener(evt, showKeySection);
+  setTimeout(() => {
+    console.log(form1.classList[0]);
+    console.log(form2.classList[0]);
+    if (form1.classList[0] == "hide" && form2.classList[0] == "hide") {
+      ["touch", "click", "mouseover"].forEach((evt) => {
+        document.querySelectorAll(".menu_to").forEach((to) => {
+          to.addEventListener(evt, showKeySection);
+        });
+        console.log("vend to");
       });
-      console.log("vend to");
-    });
-  }
+    }
+  }, 1500);
 }
 
 function showBcSection() {

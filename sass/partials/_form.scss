@@ -14,10 +14,10 @@
     min-height: 100vh;
     width: 100vw;
     background: rgb(255, 255, 255);
-    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 90%, rgba(255, 255, 255, 0.7217261904761905) 95%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 95%, rgba(255, 255, 255, 0.7217261904761905) 99%, rgba(255, 255, 255, 0) 100%);
     position: absolute;
     transform: translateY(500px);
-    z-index: 10000;
+    z-index: 4;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
@@ -32,8 +32,8 @@
     width: 100vw;
     background: rgb(255, 255, 255);
     position: absolute;
-    transform: translateY(500px);
-    z-index: 1000;
+    top: 0;
+    z-index: 3;
     justify-content: center;
     align-items: center;
     font-family: var(--font-8);
@@ -135,6 +135,7 @@
     margin: 0;
     padding: 0;
     color: #a83a34;
+    color: #cb9800;
     display: inline;
   }
   fieldset.personal > div:nth-child(1) > span,
@@ -234,6 +235,13 @@
 
   #consent:checked {
     background-color: var(--color-3);
+    &:after {
+      content: "✓";
+      font-size: 1.3rem;
+      position: relative;
+      top: -13px;
+      left: -8px;
+    }
   }
 
   /*////////
@@ -266,8 +274,8 @@
 ////////////INVALID///////////
 ////////*/
 
-  input:invalid:not(:focus):not(:placeholder-shown):not(#consent),
-  input.invalid:not(:focus):not(#consent) {
+  input:invalid:not(:focus):not(:placeholder-shown):not(#consent):not(#check_email),
+  input.invalid:not(:focus):not(#consent):not(#check_email) {
     background: url(/static/billeder/no.png) no-repeat scroll 7px 7px;
     background-size: contain;
     background-size: 15px;
@@ -295,6 +303,10 @@
     box-shadow: 1px 1px 5px var(--color-1);
     opacity: 0.9;
     transform: scale(1.01);
+  }
+
+  .welcome {
+    font-size: 1.5rem;
   }
 
   @media (min-width: 330px) {
@@ -333,7 +345,7 @@
       transform: translateY(300px);
     }
     .persuasive_text {
-      line-height: 1.3rem;
+      line-height: 1.6rem;
       padding: 0;
       font-size: 1rem;
     }
@@ -355,6 +367,10 @@
     .persuasive_header {
       line-height: 2.7rem;
       font-size: 3rem;
+    }
+
+    .welcome {
+      font-size: 3vw;
     }
   }
   @media (min-width: 800px) {
@@ -384,7 +400,10 @@
   @media (min-width: 1150px) {
     .persuasive_header {
       line-height: 3.3rem;
-      font-size: 3.4rem;
+      font-size: 3.3rem;
+    }
+    .welcome {
+      font-size: 2vw;
     }
   }
 
@@ -406,4 +425,61 @@
   .flex {
     display: flex;
   }
+  .hidden {
+    visibility: hidden;
+  }
+}
+button {
+  width: 49%;
+}
+
+.signUp {
+  height: 40px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  font-size: 0.75rem;
+  box-shadow: 1px 1px 5px rgba(75, 75, 75, 0.509);
+  cursor: pointer;
+}
+
+.signUp {
+  background-color: var(--color-3);
+  color: var(--color-1);
+}
+
+.signUp:focus {
+  box-shadow: 0px 0px 4px var(--color-3);
+  border: 1px solid var(--color-3);
+  outline: var(--color-3);
+}
+
+/*////////
+////////////HOVER///////////
+////////*/
+
+.signUp:hover:not(:disabled) {
+  box-shadow: 1px 1px 5px var(--color-1);
+  opacity: 0.9;
+  transform: scale(1.01);
+}
+/*////////
+////////////RED MORE BUTTON///////////
+////////*/
+.button_wrap {
+  width: 100%;
+  height: 30vh;
+  background-color: #fff;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 70%, rgba(255, 255, 255, 0.7217261904761905) 90%, rgba(255, 255, 255, 0) 100%);
+
+  display: flex;
+  align-items: flex-start;
+  position: fixed;
+  bottom: 0;
+}
+
+.signUp {
+  //transform: translateY(5rem);
+  width: 250px;
+  margin: 5rem auto;
 }
