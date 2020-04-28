@@ -35,7 +35,7 @@ function setPosition() {
     }
   } else if (innerWidth < 2500) {
     console.log("<1500");
-    if (position >= 0.35) {
+    if (position >= 0.18) {
       stopScroll();
     }
   }
