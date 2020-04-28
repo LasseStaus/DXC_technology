@@ -114,5 +114,10 @@ function checkInput() {
     console.log("checkInput invalid");
     document.querySelector(".save").removeEventListener("click", (e) => {});
     counter = 0;
+    document.querySelectorAll("input").forEach((el) => {
+      el.addEventListener("keyup", function () {
+        this.classList.remove("invalid");
+      });
+    });
   }
 }
