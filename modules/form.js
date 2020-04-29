@@ -227,11 +227,6 @@ function checkData(data) {
       //id sendes videre til put, så vi redigerer i det korrekte objekt.
       data._id
     );
-    /*     if (innerWidth > 1000) {
-      document.querySelector(".desktop").classList.remove("hide");
-    } else {
-      document.querySelector(".mobile").classList.remove("hide");
-    } */
   } else {
     console.log(email);
     console.log("does not match");

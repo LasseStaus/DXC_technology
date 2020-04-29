@@ -163,6 +163,10 @@
   fieldset.company > div:nth-child(3) > p {
     transform: translateX(84px) translateY(-56px);
   }
+  fieldset.signIn > div:nth-child(1) > span,
+  fieldset.signIn > div:nth-child(1) > p {
+    transform: translateX(84px) translateY(-56px);
+  }
   fieldset.theConsent > span {
     transform: translateX(0px) translateY(-55px);
     padding-right: 1rem;
@@ -328,7 +332,7 @@
       float: left;
     }
     fieldset.theConsent > span {
-      transform: translateX(12px) translateY(12px);
+      transform: translateX(8px) translateY(12px);
     }
     fieldset.theConsent > label {
       top: 0.6rem;
