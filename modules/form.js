@@ -26,7 +26,7 @@ function readMore() {
   document.querySelector("#the_form").classList.add("flex");
   document.querySelector("#the_form").classList.remove("hide");
   document.querySelector(".theFormText").scrollIntoView();
-  document.querySelector("#bc_site").style.position = "static";
+  //document.querySelector("#bc_site").style.position = "static";
 }
 
 export function checkIfValid(formElements) {
@@ -35,7 +35,7 @@ export function checkIfValid(formElements) {
     //send to restdb/api
   } else {
     formElements.forEach((el) => {
-      console.log(el);
+      //console.log(el);
       if (!el.checkValidity()) {
         el.classList.add("invalid");
       }

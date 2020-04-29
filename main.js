@@ -17,7 +17,7 @@ function init() {
   resetBackButton();
 }
 function resetBackButton() {
-  console.log(resetBackButton);
+  console.log("resetBackButton");
   (function (window, location) {
     history.replaceState(null, document.title, location.pathname + "#!/stealingyourhistory");
     history.pushState(null, document.title, location.pathname);
@@ -54,9 +54,10 @@ function setupForm() {
       el.classList.remove("invalid");
     });
     checkIfValid(formElements);
-    //const invalid = document.querySelector(".invalid");
-
+    //If the database was fast, this wasn't needed
+    document.querySelector(".submitted").classList.add("disabled");
     setTimeout(() => {
+      document.querySelector(".submitted").classList.remove("disabled");
       document.querySelectorAll("input").forEach((input) => {
         if (input.classList[0] == "invalid") {
           console.log("invalid");
@@ -74,7 +75,7 @@ function setupForm() {
     document.querySelector("#the_form").classList.add("hide");
     document.querySelector("#the_form_check").classList.remove("hide");
     document.querySelector("#the_form_check").classList.add("flex");
-    form.reset();
+    // form.reset();
     const formElements = form.querySelectorAll("input");
     formElements.forEach((el) => {
       el.classList.remove("invalid");
@@ -110,6 +111,7 @@ function checkInput() {
       behavior: "smooth",
       block: "start",
     });
+    document.querySelector("#bc_site").style.position = "static";
   } else {
     console.log("checkInput invalid");
     document.querySelector(".save").removeEventListener("click", (e) => {});
