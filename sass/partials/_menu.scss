@@ -36,9 +36,14 @@
   transition: 0.3s;
 }
 
+#bc_site>#block {
+  display: block;
+}
+
 header {
   .desktop {
     display: none;
+    background: white;
   }
 
   .mobile {
@@ -162,6 +167,7 @@ header {
       height: 200px;
       grid-template-rows: 200px;
     }
+
     .white_desk,
     .black_desk {
       width: 50px;
@@ -242,11 +248,13 @@ header {
       border-top: 35px solid #ffed00;
     }
   }
+
   @media (min-width: 1450px) {
     .desktop {
       font-size: 2.5rem;
     }
   }
+
   @media (min-width: 1850px) {
     .desktop {
       font-size: 4rem;
