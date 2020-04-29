@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
@@ -9,451 +8,371 @@
 
     <link rel="stylesheet" href="sass/style.scss" />
     <title>DXC Technology - Which ERP suits your company?</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container1">
-        <header>
-            <nav class="desktop">
-                <div class="wrap_desktop">
-                    <img src="static/billeder/dxc_sort_vertical.png" class="white_desk" />
-                    <img src="static/billeder/dxc_hvid_vertacal.png" class="black_desk" />
-                    <p class="menu_et">Is Business Central right for your business?</p>
-                    <div class="hjorne hjorne1"></div>
-                    <div class="menu_kasse">
-                        <p class="menu_to">Key areas of comparison</p>
-                    </div>
-                </div>
-            </nav>
-            <nav class="mobile">
-                <div class="wrap_mobile">
-                    <img src="static/billeder/dxc_sort_vertical.png" class="white_desk hide" />
-                    <img src="static/billeder/dxc_hvid_vertacal.png" class="black_desk" />
-                    <p class="menu_et">Business Central</p>
-                    <div class="hjorne hjorne1"></div>
-                    <div class="menu_kasse">
-                        <p class="menu_to">Key areas</p>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        <section id="forms">
-            <section id="the_form" class="hide">
-                <div class="theFormText">
-                    <h1 class="persuasive_header">Do you want to make <span>qualified</span> decisions that suits your
-                        company’s ERP needs?</h1>
-                    <p class="persuasive_text">We know it can take up a lot of time to stay up to date on different
-                        technical software and equipment and we know your time is precious.<br />With this guide our
-                        experts on ERP systems has made it easier and faster for you to make an efficient
-                        differentiation on Business Central and Microsoft Dynamics NAV, to ultimately get an
-                        understanding on which better suits your company’s need.<br /><br />Sign up and get all time
-                        full access to our carefully reviewed guide. It is our guarantee that you always have the latest
-                        knowledge to make the best qualified decisions which will save your company time and money.
-                        Furthermore, you will receive an email if the specifications change or if a new solution is
-                        available, to make sure your company is always up to date.</p>
-                </div>
-
-                <!--     <div class="form-container"> -->
-                <form class="initial_form" data-state="post">
-                    <fieldset class="personal">
-                        <!--           <legend>Personal</legend> -->
-                        <div>
-                            <label for="name">First name</label>
-                            <input id="name" type="text" name="first_name" placeholder="First name" required />
-                            <p class="invalid_text">|| Please provide your first name</p>
-                            <span>|| Enter your first name</span>
-                        </div>
-
-                        <div>
-                            <label for="last">Last name</label>
-                            <input id="last" type="text" name="last_name" placeholder="Last name" required />
-                            <p class="invalid_text">|| Please provide your last name</p>
-                            <span>|| Enter your last name</span>
-                        </div>
-
-                        <div>
-                            <label for="phone">Phone Number</label>
-                            <input id="phone" type="number" name="phone_number" placeholder="Phone" required />
-                            <p class="invalid_text">|| Please provide your phone number</p>
-                            <span>|| Enter your phone number</span>
-                        </div>
-
-                        <div>
-                            <label for="country">Country </label>
-                            <input id="country" type="text" name="country" placeholder="Country" required />
-                            <p class="invalid_text">|| Please specify your Country</p>
-                            <span>|| What country do you live in?</span>
-                        </div>
-                    </fieldset>
-                    <!--  <legend>Company</legend> -->
-                    <fieldset class="company">
-                        <div>
-                            <label for="email"> Work Email </label>
-                            <input id="email" type="email" name="work_email" placeholder="name@company.com" required />
-                            <p class="invalid_text mail">|| Please provide your work email</p>
-                            <span>|| Which email do you use at work?</span>
-                        </div>
-
-                        <div>
-                            <label for="job"> Job title </label>
-                            <input id="job" type="text" name="job_title" placeholder="Job title" required />
-                            <p class="invalid_text">|| Please specify your job title</p>
-                            <span>|| What do you do for a living?</span>
-                        </div>
-                    </fieldset>
-                    <fieldset class="theConsent">
-                        <label for="consent">Yes</label>
-                        <input type="checkbox" id="consent" required />
-                        <p class="invalid_text">|| Please tick this box off to enter the guide.</p>
-                        <span class="checkSpan">|| I understand by filling out this form DXC Technology may contact
-                            me.</span>
-                    </fieldset>
-
-                    <fieldset class="buttons">
-                        <button type="submit" class="secondary submitted" data-action="next">I ALREADY SIGNED
-                            UP</button>
-                        <button type="submit" class="primary submit save">SAVE</button>
-                    </fieldset>
-                </form>
-            </section>
-            <section id="the_form_check" class="hide">
-                <!--     <div class="form-container"> -->
-                <form data-state="post">
-                    <p class="welcome hidden">Welcome back</p>
-                    <fieldset class="company">
-                        <div>
-                            <label for="check_email"> Work Email </label>
-                            <input id="check_email" type="email" name="check_email" placeholder="name@company.com"
-                                required />
-                            <p class="invalid_text">|| Your email does not match any already entered emails</p>
-                            <span>|| Enter your work email</span>
-                        </div>
-                    </fieldset>
-
-                    <fieldset class="buttons">
-                        <button type="submit" class="secondary go_back" data-action="next">GO BACK</button>
-                        <button type="submit" class="primary check_email">SIGN IN</button>
-                    </fieldset>
-                </form>
-            </section>
-        </section>
-
-        <section id="bc_site" class="">
-            <div class="arrow_wrap">
-                <div class="arrow_left"></div>
+      <header>
+        <nav class="desktop">
+          <div class="wrap_desktop">
+            <img src="static/billeder/dxc_sort_vertical.png" class="white_desk" />
+            <img src="static/billeder/dxc_hvid_vertacal.png" class="black_desk hide" />
+            <p class="menu_et">Is Business Central right for your business?</p>
+            <div class="hjorne hjorne2"></div>
+            <div class="menu_kasse">
+              <p class="menu_to">Key areas of comparison</p>
             </div>
-            <article class="artikelGrid">
-                <div class="tekst-container">
+          </div>
+        </nav>
+        <nav class="mobile">
+          <div class="wrap_mobile">
+            <img src="static/billeder/dxc_sort_vertical.png" class="white_desk" />
+            <img src="static/billeder/dxc_hvid_vertacal.png" class="black_desk hide" />
+            <p class="menu_et">Business Central</p>
+            <div class="hjorne hjorne2"></div>
+            <div class="menu_kasse">
+              <p class="menu_to">Key areas</p>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <section id="forms">
+        <section id="the_form" class="hide">
+          <div class="theFormText">
+            <h1 class="persuasive_header">Do you want to make <span>qualified</span> decisions that suits your company’s ERP needs?</h1>
+            <p class="persuasive_text">We know it can take up a lot of time to stay up to date on different technical software and equipment and we know your time is precious. With this guide our experts on ERP systems has made it easier and faster for you to make an efficient differentiation on Business Central and Microsoft Dynamics NAV, to ultimately get an understanding on which better suits your company’s need.<br /><br />Sign up and get all time full access to our carefully reviewed guide. It is our guarantee that you always have the latest knowledge to make the best qualified decisions which will save your company time and money. Furthermore, you will receive an email if the specifications change or if a new solution is available, to make sure your company is always up to date.</p>
+          </div>
 
+          <!--     <div class="form-container"> -->
+          <form class="initial_form" data-state="post">
+            <fieldset class="personal">
+              <!--           <legend>Personal</legend> -->
+              <div>
+                <label for="name">First name</label>
+                <input id="name" type="text" name="first_name" placeholder="First name" required />
+                <p class="invalid_text">|| Please provide your first name</p>
+                <span>|| Enter your first name</span>
+              </div>
 
+              <div>
+                <label for="last">Last name</label>
+                <input id="last" type="text" name="last_name" placeholder="Last name" required />
+                <p class="invalid_text">|| Please provide your last name</p>
+                <span>|| Enter your last name</span>
+              </div>
 
-                    <h2 class="key_heading">Microsoft Dynamics 365 Business Central is a software as a service ERP
-                        solution
-                        for the mid-size market.</h2>
-                    <p class="key_text">
-                        It was referred to as “Dynamics 365 Tenerife” during development and is often called “NAV in the
-                        Cloud.” Microsoft Dynamics 365 Business Central provides the same rich functionality as
-                        Microsoft
-                        Dynamics NAV — Microsoft’s flagship solution for the mid-size market that is used by over
-                        160,000
-                        companies worldwide. Both solutions offer tight integration with other Microsoft cloud-based
-                        solutions such as Microsoft Dynamics 365 for Sales, Microsoft Office 365,etc. Microsoft
-                        describes
-                        Business Central as: “An all-in-one business management solution that helps organizations
-                        streamline
-                        business processes, improve customer interactions and enable growth.”
-                    </p>
-                </div>
-                <div class="tekst-container2">
-                    <div class="startHide hide">
+              <div>
+                <label for="country">Country </label>
+                <input id="country" type="text" name="country" placeholder="Country" required />
+                <p class="invalid_text">|| Please specify your Country</p>
+                <span>|| What country do you live in?</span>
+              </div>
+            </fieldset>
+            <!--  <legend>Company</legend> -->
+            <fieldset class="company">
+              <div>
+                <label for="company">Company</label>
+                <input id="company" type="text" name="company" placeholder="Company name" required />
+                <p class="invalid_text">|| Please enter the name of your company</p>
+                <span>|| Enter the name of your company</span>
+              </div>
+              <div>
+                <label for="job"> Job title </label>
+                <input id="job" type="text" name="job_title" placeholder="Job title" required />
+                <p class="invalid_text">|| Please specify your job title</p>
+                <span>|| What do you do for a living?</span>
+              </div>
+              <div>
+                <label for="email"> Work Email </label>
+                <input id="email" type="email" name="work_email" placeholder="name@company.com" required />
+                <p class="invalid_text mail">|| Please provide your work email</p>
+                <span>|| Which email do you use at work?</span>
+              </div>
+            </fieldset>
+            <fieldset class="theConsent">
+              <label for="consent">Yes</label>
+              <input type="checkbox" id="consent" required />
+              <p class="invalid_text">|| Please tick this box off to enter the guide.</p>
+              <span class="checkSpan">|| I understand by filling out this form DXC Technology may contact me.</span>
+            </fieldset>
 
-                        <h1 class="vs">
-                            Business Central vs. Microsoft Dynamics
-                        </h1>
-                        <h3>Standard functionality</h3>
-                        <p class="vs_text">
-                            Just like Microsoft Dynamics NAV, Business Central functionality is divided across two
-                            packs.
-                            Essentials maps 1:1 to the functionality provided in the Dynamics NAV Starter Pack, and
-                            Premium
-                            maps to the Dynamics NAV Extended Pack. The table below shows the high-level functional
-                            areas
-                            that are addressed by both solutions.
-                        </p>
-                    </div>
+            <fieldset class="buttons">
+              <button type="submit" class="secondary submitted" data-action="next">I ALREADY SIGNED UP</button>
+              <button type="submit" class="primary submit save">SAVE</button>
+            </fieldset>
+          </form>
+        </section>
+        <section id="the_form_check" class="hide">
+          <!--     <div class="form-container"> -->
+          <form data-state="post">
+            <p class="welcome hidden">Welcome back</p>
+            <fieldset class="signIn">
+              <div>
+                <label for="check_email"> Work Email </label>
+                <input id="check_email" type="email" name="check_email" placeholder="name@company.com" required />
+                <p class="invalid_text">|| Your email does not match any already entered emails</p>
+                <span>|| Enter your work email</span>
+              </div>
+            </fieldset>
 
-                </div>
-                <section id="blackcircle">
-                    <div class="circletext">
-                        <h1>Business Central delivers 3 <span>key business benefits</span>:</h1>
-                        <ul>
-                            <li>Business without silos</li>
-                            <li>Actionable insights</li>
-                            <li>Solutions built to evolve</li>
-                        </ul>
-                    </div>
-                </section>
-                <div class="picturebanner"></div>
-            </article>
+            <fieldset class="buttons">
+              <button type="submit" class="secondary go_back" data-action="next">GO BACK</button>
+              <button type="submit" class="primary check_email">SIGN IN</button>
+            </fieldset>
+          </form>
+        </section>
+      </section>
 
+      <section id="bc_site" class="">
+        <div class="arrow_wrap">
+          <div class="arrow_left"></div>
+        </div>
+        <article class="artikelGrid">
+          <div class="tekst-container">
+            <h2 class="key_heading">Microsoft Dynamics 365 Business Central is a software as a service ERP solution for the mid-size market.</h2>
+            <p class="key_text">
+              It was referred to as “Dynamics 365 Tenerife” during development and is often called “NAV in the Cloud.” Microsoft Dynamics 365 Business Central provides the same rich functionality as Microsoft Dynamics NAV — Microsoft’s flagship solution for the mid-size market that is used by over 160,000 companies worldwide. Both solutions offer tight integration with other Microsoft cloud-based solutions such as Microsoft Dynamics 365 for Sales, Microsoft Office 365,etc. Microsoft describes Business Central as: “An all-in-one business management solution that helps organizations streamline business processes, improve customer interactions and enable growth.”
+            </p>
+          </div>
+          <div class="tekst-container2">
             <div class="startHide hide">
-
-                <article id="block" class="artikel block">
-
-                </article>
-                <article>
-                    <h1 class="explainedtitle">Explained</h1>
-                    <div class="boxes">
-                        <div class="box1">
-                            <h1>1</h1>
-                            <h2>Business without silos</h2>
-                            <p>Can be used as a central hub that connects with familiar office tools through workflow
-                                (Microsoft Flow) and task automation (Office 365)</p>
-                        </div>
-                        <div class="box2">
-                            <h1>2</h1>
-                            <h2>Actionable insights</h2>
-                            <p>Delivered with Power BI integration and through Azure intelligence tools, such as
-                                Microsoft Cortana for forecasting</p>
-                        </div>
-                        <div class="box3">
-                            <h1>3</h1>
-                            <h2>Solutions built to evolve</h2>
-                            <p>A flexible platform that can scale to handle increasing volumes and complexity through
-                                support for Microsoft’s extensibility model</p>
-                        </div>
-                    </div>
-                </article>
-
-                <section id="footerarea">
-                    <div class="info">
-
-                        <div class="infobox1">
-                            <h1>
-                                Business Central Essentials /
-                                Dynamics NAV Starter Pack
-                            </h1>
-
-                            <div id="info1ul">
-
-                                <div class="item-container">
-                                    <h3>Financial Management</h3>
-                                    <div class="items-container">
-
-                                        <p> general ledger</p>
-                                        <p> Cash management ledger</p>
-                                        <p> Fixed assets</p>
-                                        <p> Currencies</p>
-                                        <p> Consolidation</p>
-                                    </div>
-                                </div>
-                                <div class="item-container">
-                                    <h3>Financial Management</h3>
-                                    <div class="items-container">
-
-                                        <p> general ledger</p>
-                                        <p> Cash management ledger</p>
-                                        <p> Fixed assets</p>
-                                        <p> Currencies</p>
-                                        <p> Consolidation</p>
-                                    </div>
-                                </div>
-                                <div class="item-container">
-                                    <h3>Financial Management</h3>
-                                    <div class="items-container">
-
-                                        <p> general ledger</p>
-                                        <p> Cash management ledger</p>
-                                        <p> Fixed assets</p>
-                                        <p> Currencies</p>
-                                        <p> Consolidation</p>
-                                    </div>
-                                </div>
-                                <div class="item-container">
-                                    <h3>Financial Management</h3>
-                                    <div class="items-container">
-
-                                        <p> general ledger</p>
-                                        <p> Cash management ledger</p>
-                                        <p> Fixed assets</p>
-                                        <p> Currencies</p>
-                                        <p> Consolidation</p>
-                                    </div>
-                                </div>
-                                <div class="item-container">
-                                    <h3>Financial Management</h3>
-                                    <div class="items-container">
-
-                                        <p> general ledger</p>
-                                        <p> Cash management ledger</p>
-                                        <p> Fixed assets</p>
-                                        <p> Currencies</p>
-                                        <p> Consolidation</p>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-                        <div class="infobox2">
-
-                            <h1>
-                                Business Central Premium /
-                                Dynamics NAV Extended Pack
-                            </h1>
-                            <div id="info2ul">
-
-                                <div class="item-container">
-                                    <h3>Financial Management</h3>
-                                    <div class="items-container">
-
-
-                                        <p> Consolidation</p>
-                                    </div>
-                                </div>
-                                <div class="item-container">
-                                    <h3>Financial Management</h3>
-                                    <div class="items-container">
-
-                                        <p> general ledger</p>
-
-                                        <p> Consolidation</p>
-                                    </div>
-                                </div>
-                                <div class="item-container">
-                                    <h3>Financial Management</h3>
-                                    <div class="items-container">
-
-                                        <p> general ledger</p>
-
-                                        <p> Consolidation</p>
-                                    </div>
-                                </div>
-                                <div class="item-container">
-                                    <h3>Financial Management</h3>
-                                    <div class="items-container">
-
-                                        <p> general ledger</p>
-                                        <p> Cash management ledger</p>
-
-                                    </div>
-                                </div>
-                                <div class="item-container">
-                                    <h3>Financial Management</h3>
-                                    <div class="items-container">
-
-                                        <p> general ledger</p>
-                                        <p> Cash management ledger</p>
-                                        <p> Fixed assets</p>
-                                        <p> Currencies</p>
-                                        <p> Consolidation</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="picturebanner2"></div>
-                </section>
-                <footer class="bc-footer">
-                    <a href="mailto:info@dxc.technology">
-                        <p class="contact">info@dxc.technology</p>
-                    </a>
-                    <a href="https://www.dxc.technology/dk" target="_blank">
-                        <div class="footerImg"></div>
-                    </a>
-                </footer>
+              <h1 class="vs">
+                Business Central vs. Microsoft Dynamics
+              </h1>
+              <h3>Standard functionality</h3>
+              <p class="vs_text">
+                Just like Microsoft Dynamics NAV, Business Central functionality is divided across two packs. Essentials maps 1:1 to the functionality provided in the Dynamics NAV Starter Pack, and Premium maps to the Dynamics NAV Extended Pack. The table below shows the high-level functional areas that are addressed by both solutions.
+              </p>
             </div>
+          </div>
+          <section id="blackcircle">
+            <div class="circletext">
+              <h1>Business Central delivers 3 <span>key business benefits</span>:</h1>
+              <ul>
+                <li>Business without silos</li>
+                <li>Actionable insights</li>
+                <li>Solutions built to evolve</li>
+              </ul>
+            </div>
+          </section>
+          <div class="picturebanner"></div>
+        </article>
+
+        <div class="startHide hide">
+          <article id="block" class="artikel block"></article>
+          <article>
+            <h1 class="explainedtitle">Explained</h1>
+            <div class="boxes">
+              <div class="box1">
+                <h1>1</h1>
+                <h2>Business without silos</h2>
+                <p>Can be used as a central hub that connects with familiar office tools through workflow (Microsoft Flow) and task automation (Office 365)</p>
+              </div>
+              <div class="box2">
+                <h1>2</h1>
+                <h2>Actionable insights</h2>
+                <p>Delivered with Power BI integration and through Azure intelligence tools, such as Microsoft Cortana for forecasting</p>
+              </div>
+              <div class="box3">
+                <h1>3</h1>
+                <h2>Solutions built to evolve</h2>
+                <p>A flexible platform that can scale to handle increasing volumes and complexity through support for Microsoft’s extensibility model</p>
+              </div>
+            </div>
+          </article>
+
+          <section id="footerarea">
+            <div class="info">
+              <div class="infobox1">
+                <h1>
+                  Business Central Essentials / Dynamics NAV Starter Pack
+                </h1>
+
+                <div id="info1ul">
+                  <div class="item-container">
+                    <h3>Financial Management</h3>
+                    <div class="items-container">
+                      <p>general ledger</p>
+                      <p>Cash management ledger</p>
+                      <p>Fixed assets</p>
+                      <p>Currencies</p>
+                      <p>Consolidation</p>
+                    </div>
+                  </div>
+                  <div class="item-container">
+                    <h3>Financial Management</h3>
+                    <div class="items-container">
+                      <p>general ledger</p>
+                      <p>Cash management ledger</p>
+                      <p>Fixed assets</p>
+                      <p>Currencies</p>
+                      <p>Consolidation</p>
+                    </div>
+                  </div>
+                  <div class="item-container">
+                    <h3>Financial Management</h3>
+                    <div class="items-container">
+                      <p>general ledger</p>
+                      <p>Cash management ledger</p>
+                      <p>Fixed assets</p>
+                      <p>Currencies</p>
+                      <p>Consolidation</p>
+                    </div>
+                  </div>
+                  <div class="item-container">
+                    <h3>Financial Management</h3>
+                    <div class="items-container">
+                      <p>general ledger</p>
+                      <p>Cash management ledger</p>
+                      <p>Fixed assets</p>
+                      <p>Currencies</p>
+                      <p>Consolidation</p>
+                    </div>
+                  </div>
+                  <div class="item-container">
+                    <h3>Financial Management</h3>
+                    <div class="items-container">
+                      <p>general ledger</p>
+                      <p>Cash management ledger</p>
+                      <p>Fixed assets</p>
+                      <p>Currencies</p>
+                      <p>Consolidation</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="infobox2">
+                <h1>
+                  Business Central Premium / Dynamics NAV Extended Pack
+                </h1>
+                <div id="info2ul">
+                  <div class="item-container">
+                    <h3>Financial Management</h3>
+                    <div class="items-container">
+                      <p>Consolidation</p>
+                    </div>
+                  </div>
+                  <div class="item-container">
+                    <h3>Financial Management</h3>
+                    <div class="items-container">
+                      <p>general ledger</p>
+
+                      <p>Consolidation</p>
+                    </div>
+                  </div>
+                  <div class="item-container">
+                    <h3>Financial Management</h3>
+                    <div class="items-container">
+                      <p>general ledger</p>
+
+                      <p>Consolidation</p>
+                    </div>
+                  </div>
+                  <div class="item-container">
+                    <h3>Financial Management</h3>
+                    <div class="items-container">
+                      <p>general ledger</p>
+                      <p>Cash management ledger</p>
+                    </div>
+                  </div>
+                  <div class="item-container">
+                    <h3>Financial Management</h3>
+                    <div class="items-container">
+                      <p>general ledger</p>
+                      <p>Cash management ledger</p>
+                      <p>Fixed assets</p>
+                      <p>Currencies</p>
+                      <p>Consolidation</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="picturebanner2"></div>
+          </section>
+          <footer class="bc-footer">
+            <a href="mailto:info@dxc.technology">
+              <p class="contact">info@dxc.technology</p>
+            </a>
+            <a href="https://www.dxc.technology/dk" target="_blank">
+              <div class="footerImg"></div>
+            </a>
+          </footer>
+        </div>
+      </section>
+
+      <section id="key_site0" class="hide">
+        <section id="key_site">
+          <div class="arrow_wrap">
+            <div class="arrow_right"></div>
+          </div>
+          <div class="container">
+            <article class="enhancing">
+              <h1>Enhancing the solutions</h1>
+              <p><span>Business Central</span> can be enhanced only with “apps” purchased through Microsoft AppSource. There is no custom development. All apps are approved and published by Microsoft. It is possible to customize Business Central through tenant- or customer-specific extensions created and uploaded to the tenant by partners.</p>
+              <p><span>Dynamics NAV</span> can be enhanced through “extensions” purchased through the partner channel (pre-built enhancements that are approvedby Microsoft) and through custom development. Customers can also skill-up and manage their own development. Features for menu design, creating reports, etc. are included as standard in both solutions.</p>
+            </article>
+            <article class="image-container">
+              <div class="image image1"></div>
+            </article>
+            <article class="licensing">
+              <h2>Licensing</h2>
+              <p><span>Business Central</span> uses subscription licensing that includes the application, hosting and maintenance in one per-user monthly fee.</p>
+              <p><span>Dynamics NAV</span> is available with perpetual or subscription-based licensing for the application (for subscription, the monthly fee includes maintenance); hosting is an additional cost.</p>
+              <h1>Hosting Options</h1>
+              <p><span>Business Central</span> is hosted by Microsoft on Azure in a public cloud.</p>
+              <p><span>Dynamics NAV</span> can be deployed on Azure, in a private data center or on premises.</p>
+            </article>
+            <div class="learn-more">
+              <div class="lcontainer">
+                <div class="tekst">
+                  <p>Learn more at:</p>
+                  <h3><a href="#" target="_blank">www.dxc.technology</a></h3>
+                </div>
+              </div>
+              <div class="border"></div>
+            </div>
+          </div>
         </section>
 
-        <section id="key_site0" class="hide">
-            <section id="key_site">
-                <div class="arrow_wrap">
-                    <div class="arrow_right"></div>
-                </div>
-                <div class="container">
-                    <article class="enhancing">
-                        <h1>Enhancing the solutions</h1>
-                        <p><span>Business Central</span> can be enhanced only with “apps” purchased through Microsoft
-                            AppSource. There is no custom development. All apps are approved and published by Microsoft.
-                            It is possible to customize Business Central through tenant- or customer-specific extensions
-                            created and uploaded to the tenant by partners.</p>
-                        <p><span>Dynamics NAV</span> can be enhanced through “extensions” purchased through the partner
-                            channel (pre-built enhancements that are approvedby Microsoft) and through custom
-                            development. Customers can also skill-up and manage their own development. Features for menu
-                            design, creating reports, etc. are included as standard in both solutions.</p>
-                    </article>
-                    <article class="image-container">
-                        <div class="image image1"></div>
-                    </article>
-                    <article class="licensing">
-                        <h2>Licensing</h2>
-                        <p><span>Business Central</span> uses subscription licensing that includes the application,
-                            hosting and maintenance in one per-user monthly fee.</p>
-                        <p><span>Dynamics NAV</span> is available with perpetual or subscription-based licensing for the
-                            application (for subscription, the monthly fee includes maintenance); hosting is an
-                            additional cost.</p>
-                        <h1>Hosting Options</h1>
-                        <p><span>Business Central</span> is hosted by Microsoft on Azure in a public cloud.</p>
-                        <p><span>Dynamics NAV</span> can be deployed on Azure, in a private data center or on premises.
-                        </p>
-                    </article>
-                    <div class="learn-more">
-                        <div class="lcontainer">
-                            <div class="tekst">
-                                <p>Learn more at:</p>
-                                <h3><a href="#" target="_blank">www.dxc.technology</a></h3>
-                            </div>
-                        </div>
-                        <div class="border"></div>
-                    </div>
-                </div>
-            </section>
+        <section id="key_site2">
+          <div class="container">
+            <div class="image-container">
+              <div class="image image2"></div>
+            </div>
+            <div class="tekst-container">
+              <h1>Which is the <span>right </span>solution for you?</h1>
 
-            <section id="key_site2">
-                <div class="container">
-                    <div class="image-container">
-                        <div class="image image2"></div>
-                    </div>
-                    <div class="tekst-container">
-                        <h1>Which is the <span>right </span>solution for you?</h1>
+              <div class="childs">
+                <article class="first">
+                  <p>Both solutions are aimed at the midsize market.</p>
 
-                        <div class="childs">
-                            <article class="first">
-                                <p>Both solutions are aimed at the midsize market.</p>
+                  <p>Business Central is priced to be attractive to larger SMBs and smaller organizations as they outgrow their entry-level accounting solutions and look for their first ERP solution.</p>
+                </article>
 
-                                <p>Business Central is priced to be attractive to larger SMBs and smaller organizations
-                                    as they outgrow their entry-level accounting solutions and look for their first ERP
-                                    solution.</p>
-                            </article>
+                <article>
+                  <p><span>Business Central</span> is aimed primarily at new users whose needs are well met by standard software. As the AppSource offerings mature and increase, more complex users will see this solution as a viable option.</p>
+                  <p><span> Dynamics NAV</span> is aimed at users with complex needs (where enhancements are required) and for those who require an on-premises solution.</p>
+                </article>
+              </div>
+            </div>
+          </div>
 
-                            <article>
-                                <p><span>Business Central</span> is aimed primarily at new users whose needs are well
-                                    met by standard software. As the AppSource offerings mature and increase, more
-                                    complex users will see this solution as a viable option.</p>
-                                <p><span> Dynamics NAV</span> is aimed at users with complex needs (where enhancements
-                                    are required) and for those who require an on-premises solution.</p>
-                            </article>
-                        </div>
-                    </div>
-                </div>
-
-                <footer>
-                    <a href="mailto:info@dxc.technology">
-                        <p class="contact">info@dxc.technology</p>
-                    </a>
-                    <a href="https://www.dxc.technology/dk" target="_blank">
-                        <div class="footerImg"></div>
-                    </a>
-                </footer>
-            </section>
+          <footer>
+            <a href="mailto:info@dxc.technology">
+              <p class="contact">info@dxc.technology</p>
+            </a>
+            <a href="https://www.dxc.technology/dk" target="_blank">
+              <div class="footerImg"></div>
+            </a>
+          </footer>
         </section>
+      </section>
     </div>
     <div class="button_wrap">
-        <button class="signUp">SIGN UP FOR FULL ACCESS</button>
+      <button class="signUp">SIGN UP FOR FULL ACCESS</button>
     </div>
     <script src="main.js"></script>
     <script src="https://kea-alt-del.dk/dxc/login.js"></script>
-</body>
-
+  </body>
 </html>
