@@ -24,7 +24,7 @@ body {
     align-items: center;
   }
 
-  footer > div {
+  footer>div {
     padding: 2rem;
   }
 
@@ -39,11 +39,13 @@ body {
       background-image: url("/static/billeder/dxc-sort.png");
     }
   }
+
   .bc-footer a {
     color: black;
     text-decoration: none;
   }
-  .bc-footer > a:nth-child(1) {
+
+  .bc-footer>a:nth-child(1) {
     grid-column: 1;
   }
 
@@ -55,7 +57,7 @@ body {
     grid-template-rows: 1fr;
     justify-content: center;
     align-items: baseline;
-    margin-bottom: 6rem;
+
   }
 
   article p {
@@ -86,8 +88,7 @@ body {
   .box2,
   .box3 {
     max-width: 59rem;
-    padding: 6rem;
-    margin-top: -120px;
+
     align-content: center;
     align-items: baseline;
     justify-items: center;
@@ -171,23 +172,58 @@ body {
   #footerarea {
     width: 100vw;
     background-color: black;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
     /*    transform: translate(-4rem, 0px); */
   }
 
   .info {
+    grid-column: 1 / span 2;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: baseline;
+    justify-items: center;
+    padding: 4rem;
   }
 
   .infobox1 {
     color: white;
-    padding: 4rem;
+    border-right: 1.5px solid white;
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+
+  }
+
+  #info1ul,
+  #info2ul {
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+
+    justify-items: baseline;
+  }
+
+  #info2ul {
+    padding-left: 3rem;
+  }
+
+  #info1ul>.item-container,
+  #info2ul>.item-container {
+    border-top: 3px solid white;
+    width: 100%;
   }
 
   .infobox1 h1 {
     color: white;
     font-size: 20px;
-    width: 80%;
+
+
   }
 
   .info ul {
@@ -203,19 +239,30 @@ body {
     color: white;
     font-size: 15px;
 
-    margin-bottom: -15px;
-    margin-top: 15px;
   }
 
   .infobox2 {
     color: white;
-    padding-top: 60px;
+    grid-column: 2;
+    justify-self: end;
+    height: 100%;
+    width: 100%;
+    border-left: 1.5px solid white;
+
+  }
+
+  .item-container h3 {
+    color: white
+  }
+
+  .item-container p {
+    color: white;
   }
 
   .infobox2 h1 {
     color: white;
     font-size: 20px;
-    width: 80%;
+
   }
 
   .infobox2 li {
@@ -233,37 +280,6 @@ body {
 
   // footer area list paddings
 
-  #info2ul > ul:nth-child(3) {
-    padding: 0.5rem 0 6rem;
-  }
-
-  #info2ul > ul:nth-child(5) {
-    padding: 0.5rem 0 17.43rem;
-  }
-
-  #info2ul > ul:nth-child(7) {
-    padding: 0.5rem 0 5rem;
-  }
-
-  #info1ul > ul:nth-child(3) {
-    padding: 0.5rem 0 2.5rem;
-  }
-
-  #info1ul > ul:nth-child(9) {
-    padding: 0.5rem 0 2.5rem;
-  }
-
-  #info1ul > ul:nth-child(5) {
-    padding: 0.5rem 0 3rem;
-  }
-
-  #info1ul > ul:nth-child(9) {
-    padding: 0.5rem 0 4rem;
-  }
-
-  #info1ul > ul:nth-child(7) {
-    padding: 0.5rem 0 4rem;
-  }
 
   .key_heading {
     font-size: 2.5rem;
@@ -333,20 +349,30 @@ body {
     font-size: 1rem;
   }
 
-  #blackcircle ul {
+  #blackcircle ul {}
+
+  .theInfos {
+    grid-row: 1;
+    grid-column: 1 /span 2;
   }
 
   .picturebanner2 {
+    grid-column: 3 /span 2;
+    grid-row: 1;
+
+    transform: translateX(15%);
     background-image: url(/static/billeder/computer_man.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 115% 50%;
-    width: 55rem;
-    border-radius: 100% 50% 50% 100%;
-    height: 55rem;
+    min-height: 22rem;
+    min-width: 22rem;
+    height: 100%;
+    width: 100%;
+    border-radius: 50% 0px 0px 50%;
 
-    position: absolute;
-    right: -27rem;
+
+
   }
 
   #picturebanner2 img {
@@ -362,16 +388,7 @@ body {
   }
 
   @media only screen and (max-width: 1500px) {
-    .picturebanner2 {
-      background-image: url(/static/billeder/computer_man.jpg);
-      background-repeat: no-repeat;
-      background-position: 110% 50%;
-      background-size: cover;
-      width: 55rem;
-      border-radius: 100% 50% 50% 100%;
-
-      position: absolute;
-    }
+    .picturebanner2 {}
 
     .box1,
     .box2,
@@ -400,15 +417,8 @@ body {
     }
 
     .picturebanner2 {
-      background-image: url(/static/billeder/computer_man.jpg);
-      background-repeat: no-repeat;
-      background-position: 110% 50%;
-      background-size: cover;
-      width: 55rem;
-      border-radius: 100% 50% 50% 100%;
-      height: 55rem;
+
       /*       transform: translate(25vw, -6rem); */
-      position: absolute;
     }
 
     .vs,
@@ -428,29 +438,7 @@ body {
       width: 42%;
     }
 
-    #info2ul > ul:nth-child(3) {
-      padding: 0.5rem 0 2rem;
-    }
 
-    #info2ul > ul:nth-child(5) {
-      padding: 0.5rem 0 2rem;
-    }
-
-    #info2ul > ul:nth-child(7) {
-      padding: 0.5rem 0 2rem;
-    }
-
-    #info1ul > ul:nth-child(3) {
-      padding: 0.5rem 0 2rem;
-    }
-
-    #info1ul > ul:nth-child(7) {
-      padding: 0.5rem 0 2rem;
-    }
-
-    #info1ul > ul:nth-child(9) {
-      padding: 0.5rem 0 2rem;
-    }
   }
 
   @media only screen and (max-width: 1000px) {
@@ -464,6 +452,7 @@ body {
       flex-basis: 500px;
       flex-grow: 1;
     }
+
     .vs,
     .vs_text {
       width: 40%;
@@ -477,15 +466,8 @@ body {
     }
 
     .picturebanner2 {
-      background-image: url(/static/billeder/computer_man.jpg);
-      background-repeat: no-repeat;
-      background-position: 110% 50%;
-      background-size: cover;
-      width: 60rem;
-      border-radius: 100% 50% 50% 100%;
-      height: 60rem;
+
       /*  transform: translate(45vw, -50rem); */
-      position: absolute;
     }
   }
 
@@ -584,17 +566,7 @@ body {
       position: static;
     }
 
-    .picturebanner2 {
-      background-image: url(/static/billeder/computer_man.jpg);
-      background-repeat: no-repeat;
-      background-position: 80% 50%;
-      background-size: cover;
-      width: 45rem;
-      border-radius: 100% 50% 50% 100%;
-      height: 52rem;
-      transform: translate(6rem, -1rem);
-      position: static;
-    }
+    .picturebanner2 {}
 
     .infobox1 {
       display: flex;
@@ -637,7 +609,7 @@ body {
       margin-top: 0;
     }
 
-    article > h2.key_heading {
+    article>h2.key_heading {
       padding-top: 0;
     }
 
@@ -689,6 +661,7 @@ body {
     .artikel {
       padding: 2rem;
     }
+
     article:nth-child(2) {
       padding: 2rem;
     }
@@ -709,7 +682,7 @@ body {
       position: static;
     }
 
-    #footerarea > div > div.infobox2 > div.picturebanner2 {
+    #footerarea>div>div.infobox2>div.picturebanner2 {
       margin-bottom: 60px;
     }
 
@@ -728,17 +701,7 @@ body {
       justify-items: left;
     }
 
-    .picturebanner2 {
-      background-image: url(/static/billeder/computer_man.jpg);
-      background-repeat: no-repeat;
-      background-position: 120% 50%;
-      background-size: cover;
-      width: 40rem;
-      border-radius: 100% 50% 50% 100%;
-      height: 40rem;
-      transform: translate(0rem, 0rem);
-      position: static;
-    }
+    .picturebanner2 {}
 
     .key_heading {
       width: 100%;
