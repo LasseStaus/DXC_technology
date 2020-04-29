@@ -12,13 +12,23 @@
   box-sizing: border-box;
 }
 
-html {
-}
+html {}
 
 body {
+
   font-family: "GT-Walsheim-Pro-Regular";
   width: 100vw;
+  background: black;
+
 }
+
+.container1 {
+  margin: 0 auto;
+  max-width: 1920px;
+  background: black;
+  overflow-x: hidden;
+}
+
 
 .hide {
   display: none;
@@ -29,7 +39,9 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 0.2rem;
+  width: 0.0rem;
+
+
   height: 0;
 }
 
@@ -49,6 +61,7 @@ body {
 ::-moz-selection {
   background: #fcf8bc;
 }
+
 .container1 {
   overflow: scroll;
   scroll-behavior: smooth;
@@ -56,7 +69,9 @@ body {
   height: 100vh;
   width: 100%;
 }
+
 @media (min-width: 700px) {
+
   .arrow_left,
   .arrow_right {
     margin: 0 4rem;

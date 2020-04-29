@@ -69,25 +69,52 @@ body {
     font-family: "GT-Walsheim-Pro-Regular";
     padding-left: 0px;
     color: black;
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 3rem;
-    width: 42%;
+    width: 125%;
+
   }
 
-  .artikel {
-    padding: 4rem;
-    padding-top: 0rem;
+  .artikelGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    max-width: 100vw;
     overflow-x: hidden;
+  }
+
+  .tekst-container {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+  }
+
+  .tekst-container2 {
+    grid-column: 1/ span 2;
+    grid-row: 3;
+    padding-left: 4rem;
+  }
+
+  .tekst-container {
+
+    h1,
+    p,
+    h2,
+    h3 {
+      padding-left: 4rem;
+    }
   }
 
   .box1,
   .box2,
   .box3 {
-    display: grid;
+    /*     display: grid;
     grid-template-rows: repeat(3, 1fr);
     justify-content: center;
     justify-items: baseline;
-    align-items: center;
+    align-items: center; */
 
 
   }
@@ -132,7 +159,8 @@ body {
   }
 
   .vs_text {
-    width: 50%;
+
+    margin-bottom: 5rem;
   }
 
   p {
@@ -151,6 +179,7 @@ body {
     grid-template-rows: auto;
     justify-items: center;
     align-items: center;
+    overflow-x: hidden;
     /*    transform: translate(-4rem, 0px); */
   }
 
@@ -263,8 +292,9 @@ body {
 
   .key_heading {
     font-size: 2.5rem;
-    padding-top: 4rem;
+
     line-height: 2.5rem;
+    width: 140%;
   }
 
   .picturebanner {
@@ -272,20 +302,32 @@ body {
     background-repeat: no-repeat;
     background-position: 110% 50%;
     background-size: cover;
-    width: 62rem;
-    border-radius: 100% 50% 50% 100%;
-    height: 55rem;
-    /*transform: translate(60vw, -10rem); */
-    position: absolute;
-    right: -22rem;
+    min-width: 22rem;
+    min-height: 22rem;
+    width: 100%;
+    border-radius: 100% 0% 0% 100%;
+    height: calc(100% - 10%);
+    width: calc(100% - 15%);
+    /* transform: translate(60vw, -10rem); */
+    /* position: absolute; */
+    grid-row: 1/span 5;
+    grid-column: 3/span 3;
+    /* top: 20%; */
+    transform: translateX(15%);
+    min-height: 22rem;
+    min-width: 22rem;
+    border-radius: 50% 0px 0px 50%;
+    justify-self: end;
+    /* position: relative; */
+
+
   }
 
-  .key_heading {
-    width: 65%;
-  }
+  .key_heading {}
 
   .key_text {
-    width: 60%;
+    width: 125%;
+
   }
 
   #picturebanner img {
@@ -294,26 +336,34 @@ body {
   }
 
   #blackcircle {
-    width: 35.1rem;
-    height: 30rem;
+    width: 60%;
+
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     border-radius: 0 40rem 40rem 0;
     background-color: black;
     display: grid;
     justify-content: center;
     justify-self: center;
     align-items: center;
+    grid-column: 1/span 3;
+    grid-row: 4;
+    justify-self: left;
   }
 
   .circletext {
     width: 100%;
-    padding-left: 2rem;
+    padding-left: 4rem;
     padding-right: 2rem;
+
   }
 
   #blackcircle h1 {
     color: white;
-    width: 83%;
-    padding: 2rem;
+
+    padding: 0;
+
+
   }
 
   #blackcircle span {
@@ -321,15 +371,20 @@ body {
   }
 
   #blackcircle li {
-    list-style: none;
+
+    list-style: bullets;
     color: white;
     line-height: 2rem;
     /* padding: 0rem; */
-    padding-left: 2rem;
+    padding-left: 0rem;
+    margin-left: 2rem;
+
     font-size: 1rem;
   }
 
-  #blackcircle ul {}
+  #blackcircle ul {
+    padding-top: 1rem;
+  }
 
   .theInfos {
     grid-row: 1;
@@ -353,6 +408,8 @@ body {
 
 
 
+
+
   }
 
   #picturebanner2 img {
@@ -362,13 +419,51 @@ body {
   }
 
   .explainedtitle {
-    margin-top: 60px;
+    text-align: center;
+    font-family: "GT-Walsheim-Pro-Bold";
     font-size: 3.5rem;
     padding: 2rem;
   }
 
+  @media only screen and (max-width: 1700px) {
+
+    .picturebanner {}
+  }
+
   @media only screen and (max-width: 1500px) {
-    .picturebanner2 {}
+    .picturebanner {
+      height: calc(100% - 20%);
+      grid-row: 1 / span 4;
+      width: 100%;
+
+    }
+
+    .artikelGrid {
+      grid-template-rows: repeat(4, 1fr);
+    }
+
+    .tekst-container {
+      grid-row: 1;
+
+    }
+
+    .tekst-container2 {
+      grid-row: 2;
+    }
+
+    #blackcircle {
+      grid-row: 3 /span 2;
+    }
+
+    .key_text {
+      width: 135%;
+    }
+
+    .key_heading {
+      width: 145%;
+    }
+
+    .picturebanner {}
 
     .box1,
     .box2,
@@ -385,16 +480,37 @@ body {
 
   @media only screen and (max-width: 1260px) {
     .picturebanner {
-      background-image: url(/static/billeder/working.jpg);
-      background-repeat: no-repeat;
-      background-position: 110% 50%;
-      background-size: cover;
-      width: 50rem;
-      border-radius: 100% 50% 50% 100%;
-      height: 50rem;
-      /* transform: translate(50vw, 0rem); */
-      position: absolute;
+      grid-row: 1 / span 4;
+
     }
+
+    .picturebanner {
+      height: calc(100% - 20%);
+      grid-row: 2 / span 3;
+      width: 100%;
+
+    }
+
+    .key_text {
+      width: 225%;
+    }
+
+    .key_heading {
+      width: 225%;
+    }
+
+    h1.vs {
+      width: 200%;
+    }
+
+    .vs_text {
+      width: 150%;
+    }
+
+    #blackcircle {
+      width: 65%;
+    }
+
 
     .picturebanner2 {
 
@@ -411,6 +527,9 @@ body {
       }
 
 
+
+
+
       .picturebanner2 {
         grid-row: 2;
         grid-column: 1 / span 2;
@@ -420,35 +539,100 @@ body {
       }
     }
 
-    .vs,
-    .vs_text {
-      width: 60%;
-    }
 
-    .key_heading {
-      width: 100%;
-    }
-
-    .key_text {
-      width: 100%;
-    }
-
-    #blackcircle {
-      width: 42%;
-    }
 
 
   }
 
   @media only screen and (max-width: 1000px) {
+
+    #footerarea {
+      .picturebanner2 {
+        transform: translateX(15%);
+      }
+    }
+
+    .tekst-container,
+    .tekst-container2 {
+      grid-column: 1;
+      padding-left: 2rem;
+      padding-right: 2rem;
+
+      h1,
+      p,
+      h2,
+      h3 {
+        padding: 0rem;
+        padding-bottom: 1rem;
+      }
+    }
+
+    .artikelGrid {
+      grid-template-rows: auto;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 2rem;
+    }
+
+    .tekst-container1 {
+      grid-column: 1;
+      grid-row: 1;
+
+    }
+
+
+
+    .tekst-container2 {
+      grid-column: 1;
+      grid-row: 2;
+
+    }
+
+    .picturebanner {
+      grid-row: 3;
+      grid-column: 1;
+    }
+
+    #blackcircle {
+      grid-row: 4;
+      grid-column: 1;
+    }
+
+    .key_text {
+      width: 100%;
+
+    }
+
+    .key_heading {
+      width: 100%;
+
+
+    }
+
+    h1.vs {
+      width: 100%;
+
+    }
+
+    .vs_text {
+      width: 100%;
+
+    }
+
+    .tekst-container2 h3 {}
+
+    #blackcircle {
+      width: 65%;
+    }
+
+    .picturebanner {
+      min-height: 40rem;
+    }
+
     .info {}
 
     .infobox1 {}
 
-    .vs,
-    .vs_text {
-      width: 40%;
-    }
+
 
     .infobox2 {}
 
@@ -511,10 +695,7 @@ body {
       font-size: 2rem;
     }
 
-    #bc_site {
-      padding-left: 2rem;
-      padding-right: 2rem;
-    }
+    #bc_site {}
 
     .picturebanner {}
 
@@ -579,9 +760,11 @@ body {
   @media only screen and (max-width: 500px) {
     #blackcircle {
       background-color: black;
-      width: 87%;
+
       margin-top: 0;
     }
+
+    .picturebanner {}
 
     article>h2.key_heading {
       padding-top: 0;
@@ -632,29 +815,15 @@ body {
       overflow-x: hidden;
     }
 
-    .artikel {
-      padding: 2rem;
-    }
+    .artikel {}
 
-    article:nth-child(2) {
-      padding: 2rem;
-    }
+    article:nth-child(2) {}
 
     article p {
       margin-top: 0px;
     }
 
-    .picturebanner {
-      background-image: url(/static/billeder/working.jpg);
-      background-repeat: no-repeat;
-      background-position: 100% 50%;
-      background-size: cover;
-      width: 40rem;
-      border-radius: 100% 50% 50% 100%;
-      height: 40rem;
-      /*       transform: translate(1rem, 0rem); */
-      position: static;
-    }
+    .picturebanner {}
 
     #footerarea>div>div.infobox2>div.picturebanner2 {
       margin-bottom: 60px;
