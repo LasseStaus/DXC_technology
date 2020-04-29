@@ -4,7 +4,6 @@ let formIsValid;
 let data;
 let position;
 let count = 0;
-let counter = 0;
 
 export function formDelegation() {
   console.log("formDelegation");
@@ -13,33 +12,12 @@ export function formDelegation() {
     document.querySelector("#the_form").style.alignItems = "initial";
   }
   document.querySelector(".signUp").addEventListener("click", readMore);
+  document.querySelector("#bc_site").style.position = "fixed";
 }
 
 function setPosition() {
   const container = document.querySelector(".container1");
   position = container.scrollTop / (container.scrollHeight - container.clientHeight);
-  //console.log(position);
-  /*   if (innerWidth < 500) {
-    console.log("<500");
-    if (position >= 0.15) {
-      stopScroll();
-    }
-  } else if (innerWidth < 900) {
-    console.log("<1000");
-    if (position >= 0.16) {
-      stopScroll();
-    }
-  } else if (innerWidth < 1300) {
-    console.log("<1000");
-    if (position >= 0.2) {
-      stopScroll();
-    }
-  } else if (innerWidth < 2500) {
-    console.log("<1500");
-    if (position >= 0.18) {
-      stopScroll();
-    }
-  } */
 }
 
 function readMore() {
@@ -48,23 +26,8 @@ function readMore() {
   document.querySelector("#the_form").classList.add("flex");
   document.querySelector("#the_form").classList.remove("hide");
   document.querySelector(".theFormText").scrollIntoView();
-  //document.querySelector(".container1").removeEventListener("scroll", setPosition);
+  document.querySelector("#bc_site").style.position = "static";
 }
-
-/* function stopScroll() {
-  console.log("scrollintoview");
-  document.querySelector("#bc_site").classList.add("hide");
-  document.querySelector("header").classList.add("hide");
-  document.querySelector(".container1").style.overflow = "hidden";
-  setTimeout(() => {
-    document.querySelector(".container1").style.overflow = "scroll";
-  }, 500);
-  document.querySelector(".theFormText").style.marginTop = "0";
-  document.querySelector(".initial_form").style.marginTop = "0";
-  document.querySelector("#the_form").style.transform = "translateY(0px)";
-  document.querySelector("#the_form_check").style.transform = "translateY(0px)";
-  document.querySelector(".theFormText").scrollIntoView();
-} */
 
 export function checkIfValid(formElements) {
   if (form.checkValidity()) {
