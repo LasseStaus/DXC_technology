@@ -53,21 +53,17 @@ body {
 
   .boxes {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-template-rows: 1fr;
     justify-content: center;
     align-items: baseline;
-
-  }
-
-  article p {
-    font-family: "GT-Walsheim-Pro-Regular";
-    padding-left: 0px;
-    color: black;
-    line-height: 1.6rem;
-    font-size: 0.95rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
     margin-bottom: 4rem;
+
   }
+
+  article p {}
 
   h1.vs {
     font-family: "GT-Walsheim-Pro-Regular";
@@ -87,59 +83,37 @@ body {
   .box1,
   .box2,
   .box3 {
-    max-width: 59rem;
-
-    align-content: center;
-    align-items: baseline;
-    justify-items: center;
     display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    justify-items: baseline;
+    align-items: center;
+
+
   }
 
-  .box1 h1 {
-    font-size: 3.4rem;
+  .boxes h1 {
+
+    font-size: 2.4rem;
     margin-bottom: 1rem;
+    padding-left: 4rem;
+
   }
 
-  .box2 h1 {
-    font-size: 3.4rem;
-    margin-bottom: 1rem;
+  .boxes h2 {
+    padding-left: 4rem;
+
   }
 
-  .box3 h1 {
-    font-size: 3.4rem;
-    margin-bottom: 1rem;
-  }
-
-  .box1 p {
+  .boxes p {
     font-size: 0.95rem;
-    width: 18rem;
-    margin-left: 2.2rem;
-  }
-
-  .box2 p {
-    font-size: 0.95rem;
-
-    width: 18rem;
-    margin-left: 2.2rem;
-  }
-
-  .box3 p {
-    font-size: 0.95rem;
-    width: 18rem;
-    margin-left: 2.2rem;
-  }
-
-  .box1 h2 {
+    padding-left: 4rem;
+    padding-right: 4rem;
     justify-self: center;
+
+
   }
 
-  .box2 h2 {
-    justify-self: center;
-  }
-
-  .box3 h2 {
-    justify-self: center;
-  }
 
   h1 {
     font-family: "GT-Walsheim-Pro-Regular";
@@ -204,7 +178,7 @@ body {
 
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
 
     justify-items: baseline;
   }
@@ -213,13 +187,17 @@ body {
     padding-left: 3rem;
   }
 
-  #info1ul>.item-container,
-  #info2ul>.item-container {
-    border-top: 3px solid white;
+  .infobox1 h1,
+  .infobox2 h1 {
+    min-height: 110px;
+    border-bottom: 3px solid white;
+
     width: 100%;
   }
 
   .infobox1 h1 {
+    padding-bottom: 2rem;
+    padding-right: 2rem;
     color: white;
     font-size: 20px;
 
@@ -262,6 +240,8 @@ body {
   .infobox2 h1 {
     color: white;
     font-size: 20px;
+    padding-bottom: 2rem;
+    padding-left: 3rem;
 
   }
 
@@ -393,13 +373,13 @@ body {
     .box1,
     .box2,
     .box3 {
-      max-width: 59rem;
+      /*   max-width: 59rem;
       padding: 2rem;
       margin-top: -120px;
       align-content: center;
       align-items: baseline;
       justify-items: center;
-      display: grid;
+      display: grid; */
     }
   }
 
@@ -419,6 +399,25 @@ body {
     .picturebanner2 {
 
       /*       transform: translate(25vw, -6rem); */
+    }
+
+    #footerarea {
+      grid-template-columns: repeat(2, 1fr);
+
+      .info {
+        grid-template-columns: repeat(2, 1fr);
+
+
+      }
+
+
+      .picturebanner2 {
+        grid-row: 2;
+        grid-column: 1 / span 2;
+        min-height: 50rem;
+        max-width: 70rem;
+        transform: translateX(40%);
+      }
     }
 
     .vs,
@@ -442,28 +441,16 @@ body {
   }
 
   @media only screen and (max-width: 1000px) {
-    .info {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-    }
+    .info {}
 
-    .infobox1 {
-      flex-basis: 500px;
-      flex-grow: 1;
-    }
+    .infobox1 {}
 
     .vs,
     .vs_text {
       width: 40%;
     }
 
-    .infobox2 {
-      flex-basis: 500px;
-      flex-grow: 1;
-      width: 100%;
-      padding: 0 4rem;
-    }
+    .infobox2 {}
 
     .picturebanner2 {
 
@@ -480,18 +467,9 @@ body {
       grid-column: 1;
     }
 
-    .info {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-    }
+    .info {}
 
-    .infobox2 {
-      color: white;
-      padding: 50px;
-      padding-top: 0px;
-      margin-right: 0px;
-    }
+    .infobox2 {}
 
     p {
       font-size: 0.9em;
@@ -513,29 +491,13 @@ body {
       font-size: 2rem;
     }
 
-    .infobox1 h1 {
-      color: white;
+    .infobox1 h1 {}
 
-      width: 100%;
-    }
+    .key_heading {}
 
-    .key_heading {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      line-height: 2rem;
-    }
+    .infobox2 h1 {}
 
-    .infobox2 h1 {
-      color: white;
-      font-size: 26px;
-      width: 100%;
-    }
-
-    #blackcircle {
-      background-color: black;
-
-      width: 61%;
-    }
+    #blackcircle {}
 
     #blackcircle h1 {
       font-size: 2rem;
@@ -554,51 +516,63 @@ body {
       padding-right: 2rem;
     }
 
-    .picturebanner {
-      background-image: url(/static/billeder/working.jpg);
-      background-repeat: no-repeat;
-      background-position: 100% 50%;
-      background-size: cover;
-      width: 55rem;
-      border-radius: 100% 50% 50% 100%;
-      height: 50rem;
-      transform: translate(0rem, 0rem);
-      position: static;
-    }
+    .picturebanner {}
 
     .picturebanner2 {}
 
-    .infobox1 {
-      display: flex;
-      flex-direction: column;
-      color: white;
-      // padding: 1rem;
-      margin: 0 auto;
-    }
+    .infobox1 {}
 
-    .infobox2 {
-      display: flex;
-      flex-direction: column;
-      color: white;
-      margin: 0 auto;
-      width: 100%;
-      overflow-x: hidden;
-    }
+    .infobox2 {}
 
     .key_heading {
       width: 100%;
     }
 
-    .key_text {
-      width: 100%;
-    }
 
-    .infobox1 {
-      padding: 3rem;
-    }
+  }
 
-    .inforbox2 {
-      padding: 3rem;
+  @media only screen and (max-width: 650px) {
+
+    #footerarea {
+      grid-template-columns: repeat(1, 1fr);
+
+      .info {
+        grid-template-columns: repeat(1, 1fr);
+
+      }
+
+      .infobox1 {
+        grid-column: 1;
+        grid-row: 1;
+        border: none;
+        padding: 0;
+
+      }
+
+      .infobox2 {
+        grid-column: 1;
+        grid-row: 2;
+        border: none;
+
+      }
+
+      #info1ul,
+      #info2ul {
+        grid-template-rows: auto;
+        padding: 0;
+      }
+
+      .infobox1 h1,
+      .infobox2 h1 {
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+        font-size: 2rem;
+        padding: 0;
+      }
+
+      .picturebanner2 {
+        grid-row: 3;
+      }
     }
   }
 
