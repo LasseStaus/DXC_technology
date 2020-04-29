@@ -88,7 +88,7 @@ header {
     height: 100px; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 300px;
+    grid-template-rows: 200px;
     justify-content: center;
     align-items: center;
   }
@@ -180,7 +180,7 @@ header {
       width: 70px;
       height: auto;
       position: absolute;
-      top: 225px;
+      top: 120px;
       left: calc(50% - 35px);
       z-index: 2;
       transition: 0.3s;
@@ -188,16 +188,16 @@ header {
 
     .desktop {
       display: block;
-      font-size: 4vw;
+      font-size: 3vw;
       font-weight: 600;
     }
 
     .wrap_desktop {
-      height: 300px;
+      height: 200px;
     }
 
     .menu_kasse {
-      height: 300px;
+      height: 200px;
     }
 
     .hjorne {
@@ -207,15 +207,15 @@ header {
 
     .hjorne2 {
       //transform: rotate(-90deg);
-      border-bottom: 300px solid transparent;
-      border-right: 300px solid black;
+      border-bottom: 200px solid transparent;
+      border-right: 200px solid black;
       border-top: 0;
       border-left: 0;
     }
 
     .hjorne1 {
-      border-bottom: 300px solid black;
-      border-left: 300px solid transparent;
+      border-bottom: 200px solid black;
+      border-left: 200px solid transparent;
     }
 
     .wrap_desktop {
@@ -244,7 +244,7 @@ header {
   }
   @media (min-width: 1450px) {
     .desktop {
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
   }
   @media (min-width: 1850px) {
