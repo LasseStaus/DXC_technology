@@ -24,7 +24,7 @@ body {
     align-items: center;
   }
 
-  footer > div {
+  footer>div {
     padding: 2rem;
   }
 
@@ -39,11 +39,13 @@ body {
       background-image: url("/static/billeder/dxc-sort.png");
     }
   }
+
   .bc-footer a {
     color: black;
     text-decoration: none;
   }
-  .bc-footer > a:nth-child(1) {
+
+  .bc-footer>a:nth-child(1) {
     grid-column: 1;
   }
 
@@ -55,7 +57,7 @@ body {
     grid-template-rows: 1fr;
     justify-content: center;
     align-items: baseline;
-    margin-bottom: 6rem;
+
   }
 
   article p {
@@ -86,7 +88,7 @@ body {
   .box2,
   .box3 {
     max-width: 59rem;
-    padding: 6rem;
+
     margin-top: -120px;
     align-content: center;
     align-items: baseline;
@@ -233,35 +235,35 @@ body {
 
   // footer area list paddings
 
-  #info2ul > ul:nth-child(3) {
+  #info2ul>ul:nth-child(3) {
     padding: 0.5rem 0 6rem;
   }
 
-  #info2ul > ul:nth-child(5) {
+  #info2ul>ul:nth-child(5) {
     padding: 0.5rem 0 17.43rem;
   }
 
-  #info2ul > ul:nth-child(7) {
+  #info2ul>ul:nth-child(7) {
     padding: 0.5rem 0 5rem;
   }
 
-  #info1ul > ul:nth-child(3) {
+  #info1ul>ul:nth-child(3) {
     padding: 0.5rem 0 2.5rem;
   }
 
-  #info1ul > ul:nth-child(9) {
+  #info1ul>ul:nth-child(9) {
     padding: 0.5rem 0 2.5rem;
   }
 
-  #info1ul > ul:nth-child(5) {
+  #info1ul>ul:nth-child(5) {
     padding: 0.5rem 0 3rem;
   }
 
-  #info1ul > ul:nth-child(9) {
+  #info1ul>ul:nth-child(9) {
     padding: 0.5rem 0 4rem;
   }
 
-  #info1ul > ul:nth-child(7) {
+  #info1ul>ul:nth-child(7) {
     padding: 0.5rem 0 4rem;
   }
 
@@ -333,8 +335,7 @@ body {
     font-size: 1rem;
   }
 
-  #blackcircle ul {
-  }
+  #blackcircle ul {}
 
   .picturebanner2 {
     background-image: url(/static/billeder/computer_man.jpg);
@@ -428,27 +429,27 @@ body {
       width: 42%;
     }
 
-    #info2ul > ul:nth-child(3) {
+    #info2ul>ul:nth-child(3) {
       padding: 0.5rem 0 2rem;
     }
 
-    #info2ul > ul:nth-child(5) {
+    #info2ul>ul:nth-child(5) {
       padding: 0.5rem 0 2rem;
     }
 
-    #info2ul > ul:nth-child(7) {
+    #info2ul>ul:nth-child(7) {
       padding: 0.5rem 0 2rem;
     }
 
-    #info1ul > ul:nth-child(3) {
+    #info1ul>ul:nth-child(3) {
       padding: 0.5rem 0 2rem;
     }
 
-    #info1ul > ul:nth-child(7) {
+    #info1ul>ul:nth-child(7) {
       padding: 0.5rem 0 2rem;
     }
 
-    #info1ul > ul:nth-child(9) {
+    #info1ul>ul:nth-child(9) {
       padding: 0.5rem 0 2rem;
     }
   }
@@ -464,6 +465,7 @@ body {
       flex-basis: 500px;
       flex-grow: 1;
     }
+
     .vs,
     .vs_text {
       width: 40%;
@@ -637,7 +639,7 @@ body {
       margin-top: 0;
     }
 
-    article > h2.key_heading {
+    article>h2.key_heading {
       padding-top: 0;
     }
 
@@ -689,6 +691,7 @@ body {
     .artikel {
       padding: 2rem;
     }
+
     article:nth-child(2) {
       padding: 2rem;
     }
@@ -709,7 +712,7 @@ body {
       position: static;
     }
 
-    #footerarea > div > div.infobox2 > div.picturebanner2 {
+    #footerarea>div>div.infobox2>div.picturebanner2 {
       margin-bottom: 60px;
     }
 
