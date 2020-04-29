@@ -207,9 +207,18 @@ body {
 
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 160px);
 
     justify-items: baseline;
+  }
+
+  .fourth {
+    grid-row: 4;
+
+  }
+
+  .fifth {
+    grid-row: 5;
   }
 
   #info2ul {
@@ -259,7 +268,8 @@ body {
   }
 
   .item-container h3 {
-    color: white
+    color: white;
+    font-family: "GT-Walsheim-Pro-bold";
   }
 
   .item-container p {
@@ -336,7 +346,7 @@ body {
   }
 
   #blackcircle {
-    width: 60%;
+    width: 65%;
 
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -419,10 +429,11 @@ body {
   }
 
   .explainedtitle {
-    text-align: center;
+    text-align: left;
     font-family: "GT-Walsheim-Pro-Bold";
     font-size: 3.5rem;
     padding: 2rem;
+    padding-left: 6rem;
   }
 
   @media only screen and (max-width: 1700px) {
@@ -552,6 +563,11 @@ body {
       }
     }
 
+    .boxes {
+      grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+      grid-gap: 3rem;
+    }
+
     .tekst-container,
     .tekst-container2 {
       grid-column: 1;
@@ -647,13 +663,32 @@ body {
       grid-template-columns: repeat(1, 1fr);
     }
 
+    .boxes {
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      grid-gap: 3rem;
+    }
+
+    .boxes {
+      grid-gap: 1rem;
+    }
+
+    .boxes {
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+    }
+
+    #blackcircle {
+      width: 80%;
+    }
+
     footer a {
       grid-column: 1;
     }
-
-    .info {}
-
-    .infobox2 {}
 
     p {
       font-size: 0.9em;
@@ -664,24 +699,26 @@ body {
       width: 100%;
     }
 
-    h1,
-    h2,
-    h3,
-    p {
-      padding-bottom: 1rem;
+    .info {
+      padding: 2rem;
+    }
+
+    .boxes {
+
+      h1,
+      h2,
+      h3,
+      p {
+        padding-bottom: 1rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+      }
     }
 
     h1 {
       font-size: 2rem;
     }
 
-    .infobox1 h1 {}
-
-    .key_heading {}
-
-    .infobox2 h1 {}
-
-    #blackcircle {}
 
     #blackcircle h1 {
       font-size: 2rem;
@@ -695,15 +732,6 @@ body {
       font-size: 2rem;
     }
 
-    #bc_site {}
-
-    .picturebanner {}
-
-    .picturebanner2 {}
-
-    .infobox1 {}
-
-    .infobox2 {}
 
     .key_heading {
       width: 100%;
@@ -779,23 +807,12 @@ body {
     }
 
     .explainedtitle {
-      margin: 60px 0;
+
       font-size: 3.5rem;
-      padding: 0rem;
+      padding: 3rem;
       justify-content: left;
     }
 
-    .box1 h2 {
-      justify-self: left;
-    }
-
-    .box2 h2 {
-      justify-self: left;
-    }
-
-    .box3 h2 {
-      justify-self: left;
-    }
 
     .box1 p {
       margin-left: 0rem;
@@ -825,20 +842,9 @@ body {
 
     .picturebanner {}
 
-    #footerarea>div>div.infobox2>div.picturebanner2 {
-      margin-bottom: 60px;
-    }
+    #footerarea>div>div.infobox2>div.picturebanner2 {}
 
-    .box1,
-    .box2,
-    .box3 {
-      max-width: 59rem;
-      padding: 4rem;
-      align-content: left;
-      align-items: baseline;
-      justify-items: left;
-      display: grid;
-    }
+
 
     .box1 {
       justify-items: left;
@@ -871,9 +877,7 @@ body {
       line-height: 2rem;
     }
 
-    .boxes {
-      grid-template-columns: repeat(auto-fit, minmax(251px, 1fr));
-    }
+    .boxes {}
   }
 
   @media only screen and (max-width: 430px) {
@@ -881,7 +885,11 @@ body {
       font-size: 1.5rem;
       line-height: 1.5rem;
 
-      width: 81%;
+
+    }
+
+    #blackcircle {
+      width: 95%;
     }
   }
 }

@@ -67,6 +67,11 @@ body {
   }
 }
 
+.contact {
+  text-align: center;
+}
+
+
 .licensing,
 .enhancing,
 #key_site2 .tekst-container {
@@ -244,6 +249,7 @@ footer a {
     }
   }
 
+
   .image {
     height: 45rem;
     width: 45rem;
@@ -317,7 +323,7 @@ footer a {
 
     .image {
       margin: 0;
-      height: 45rem;
+      height: 50rem;
       width: 45rem;
       /* transform: translateX(-25rem); */
       position: absolute;
@@ -411,7 +417,10 @@ footer a {
   #key_site>div.container>article.image-container>div {
     background-position: 110% 50%;
     transform: translateX(-50px);
+    margin-top: 3rem;
   }
+
+
 }
 
 @media only screen and (min-width: 1500px) {
