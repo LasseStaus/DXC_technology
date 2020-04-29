@@ -36,7 +36,7 @@
   transition: 0.3s;
 }
 
-#bc_site>#block {
+#bc_site > #block {
   display: block;
 }
 
@@ -252,12 +252,6 @@ header {
   @media (min-width: 1450px) {
     .desktop {
       font-size: 2.5rem;
-    }
-  }
-
-  @media (min-width: 1850px) {
-    .desktop {
-      font-size: 4rem;
     }
   }
 }
