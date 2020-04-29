@@ -2,6 +2,7 @@
 ////////////DEFAULT///////////
 ////////*/
 #forms {
+
   input,
   button {
     -webkit-appearance: none;
@@ -24,6 +25,7 @@
     font-family: var(--font-8);
     font-size: 1rem;
     padding: 2rem;
+    max-width: 1920px;
   }
 
   #the_form_check {
@@ -39,6 +41,7 @@
     font-family: var(--font-8);
     font-size: 1rem;
     padding: 2rem;
+    max-width: 1920px;
   }
 
   .theConsent #consent {
@@ -112,9 +115,11 @@
   .theConsent {
     margin: 1rem 0;
   }
+
   fieldset div {
     padding-top: 0.5rem;
   }
+
   label {
     font-size: 0.9rem;
     font-family: var(--font-7);
@@ -123,8 +128,10 @@
   button {
     width: 49%;
   }
+
   button[data-action="delete"] {
     cursor: pointer;
+
     &:hover {
       border: 2px solid red;
     }
@@ -138,43 +145,52 @@
     color: #cb9800;
     display: inline;
   }
-  fieldset.personal > div:nth-child(1) > span,
-  fieldset.personal > div:nth-child(1) > p {
+
+  fieldset.personal>div:nth-child(1)>span,
+  fieldset.personal>div:nth-child(1)>p {
     transform: translateX(78px) translateY(-57px);
   }
-  fieldset.personal > div:nth-child(2) > span,
-  fieldset.personal > div:nth-child(2) > p {
+
+  fieldset.personal>div:nth-child(2)>span,
+  fieldset.personal>div:nth-child(2)>p {
     transform: translateX(77px) translateY(-57px);
   }
 
-  fieldset.personal > div:nth-child(3) > span,
-  fieldset.personal > div:nth-child(3) > p {
+  fieldset.personal>div:nth-child(3)>span,
+  fieldset.personal>div:nth-child(3)>p {
     transform: translateX(62px) translateY(-57px);
   }
-  fieldset.company > div:nth-child(1) > span,
-  fieldset.company > div:nth-child(1) > p {
+
+  fieldset.company>div:nth-child(1)>span,
+  fieldset.company>div:nth-child(1)>p {
     transform: translateX(73px) translateY(-56px);
   }
-  fieldset.company > div:nth-child(2) > span,
-  fieldset.company > div:nth-child(2) > p {
+
+  fieldset.company>div:nth-child(2)>span,
+  fieldset.company>div:nth-child(2)>p {
     transform: translateX(62px) translateY(-57px);
   }
-  fieldset.company > div:nth-child(3) > span,
-  fieldset.company > div:nth-child(3) > p {
+
+  fieldset.company>div:nth-child(3)>span,
+  fieldset.company>div:nth-child(3)>p {
     transform: translateX(84px) translateY(-56px);
   }
-  fieldset.signIn > div:nth-child(1) > span,
-  fieldset.signIn > div:nth-child(1) > p {
+
+  fieldset.signIn>div:nth-child(1)>span,
+  fieldset.signIn>div:nth-child(1)>p {
     transform: translateX(84px) translateY(-56px);
   }
-  fieldset.theConsent > span {
+
+  fieldset.theConsent>span {
     transform: translateX(0px) translateY(-55px);
     padding-right: 1rem;
   }
-  fieldset.theConsent > p {
+
+  fieldset.theConsent>p {
     transform: translateX(60px) translateY(-17px);
   }
-  fieldset.theConsent > label {
+
+  fieldset.theConsent>label {
     position: relative;
     top: 1.8rem;
     left: 2rem;
@@ -190,16 +206,18 @@
     display: none;
   }
 
-  input.invalid + .invalid_text {
+  input.invalid+.invalid_text {
     display: inline;
   }
 
-  input ~ span {
+  input~span {
     display: inline;
   }
-  input.invalid ~ span:not(.checkSpan) {
+
+  input.invalid~span:not(.checkSpan) {
     display: none;
   }
+
   input {
     width: 100%;
     min-width: 100px;
@@ -225,6 +243,7 @@
     box-shadow: 1px 1px 5px rgba(75, 75, 75, 0.509);
     cursor: pointer;
   }
+
   .secondary {
     color: var(--color-2);
     background-color: var(--color-1);
@@ -241,6 +260,7 @@
 
   #consent:checked {
     background-color: var(--color-3);
+
     &:after {
       content: "✓";
       font-size: 1.3rem;
@@ -258,6 +278,7 @@
   button:disabled {
     filter: opacity(0.3) grayscale(0.6);
   }
+
   button.disabled {
     pointer-events: none;
     filter: opacity(0.7) grayscale(0.6);
@@ -320,10 +341,12 @@
   }
 
   @media (min-width: 330px) {
+
     .primary,
     .secondary {
       font-size: 0.7rem;
     }
+
     form span,
     .invalid_text {
       font-size: 0.8rem;
@@ -335,45 +358,56 @@
       display: inline-block;
       float: left;
     }
-    fieldset.theConsent > span {
+
+    fieldset.theConsent>span {
       transform: translateX(8px) translateY(12px);
     }
-    fieldset.theConsent > label {
+
+    fieldset.theConsent>label {
       top: 0.6rem;
       left: 0.3rem;
       // transform: translateX(100px) translateY(200px);
     }
-    fieldset.theConsent > p {
+
+    fieldset.theConsent>p {
       transform: translateX(12px) translateY(30px);
     }
   }
+
   @media (min-width: 500px) {
     form {
       width: 80%;
     }
+
     #the_form {
       transform: translateY(300px);
     }
+
     .persuasive_text {
       line-height: 1.6rem;
       padding: 0;
       font-size: 1rem;
     }
+
     input::placeholder {
       font-size: 0.7rem;
     }
   }
+
   @media (min-width: 700px) {
     form {
       width: 60%;
     }
+
     #the_form {
       flex-direction: row;
     }
+
     #the_form {
       transform: translateY(200px);
       padding: 4rem;
     }
+
     .persuasive_header {
       line-height: 2.7rem;
       font-size: 3rem;
@@ -383,6 +417,7 @@
       font-size: 3vw;
     }
   }
+
   @media (min-width: 800px) {
     .initial_form {
       margin-top: 6rem;
@@ -395,6 +430,7 @@
     .theFormText {
       padding: 3rem 2rem 2rem 0;
     }
+
     .persuasive_header {
       line-height: 2rem;
       font-size: 2rem;
@@ -407,11 +443,13 @@
       font-size: 2.5rem;
     }
   }
+
   @media (min-width: 1150px) {
     .persuasive_header {
       line-height: 3.1rem;
       font-size: 3.1rem;
     }
+
     .welcome {
       font-size: 2vw;
     }
@@ -432,13 +470,16 @@
   .hide {
     display: none;
   }
+
   .flex {
     display: flex;
   }
+
   .hidden {
     visibility: hidden;
   }
 }
+
 button {
   width: 49%;
 }
@@ -473,6 +514,7 @@ button {
   opacity: 0.9;
   transform: scale(1.01);
 }
+
 /*////////
 ////////////RED MORE BUTTON///////////
 ////////*/
@@ -481,7 +523,7 @@ button {
   height: 30vh;
   background-color: #fff;
   background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 70%, rgba(255, 255, 255, 0.7217261904761905) 90%, rgba(255, 255, 255, 0) 100%);
-
+  max-width: 1920px;
   display: flex;
   align-items: flex-start;
   position: fixed;
