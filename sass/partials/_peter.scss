@@ -282,6 +282,7 @@ body {
     border-radius: 100% 50% 50% 100%;
     height: 55rem;
     /*transform: translate(60vw, -10rem); */
+    transform: translate(5vw, -20rem);
     position: absolute;
     right: -22rem;
   }
@@ -396,7 +397,7 @@ body {
       width: 50rem;
       border-radius: 100% 50% 50% 100%;
       height: 50rem;
-      /* transform: translate(50vw, 0rem); */
+      transform: translate(0vw, 0rem);
       position: absolute;
     }
 
@@ -408,6 +409,7 @@ body {
       width: 55rem;
       border-radius: 100% 50% 50% 100%;
       height: 55rem;
+
       /*       transform: translate(25vw, -6rem); */
       position: absolute;
     }

@@ -97,7 +97,7 @@ function loopData(data) {
       first_name: form.elements.first_name.value,
       last_name: form.elements.last_name.value,
       work_email: form.elements.work_email.value,
-      phone_number: form.elements.phone_number.value,
+      company: form.elements.company.value,
       country: form.elements.country.value,
       job_title: form.elements.job_title.value,
       login_amount: 1,
@@ -218,7 +218,7 @@ function checkData(data) {
         first_name: data.first_name.value,
         last_name: data.last_name.value,
         work_email: data.work_email.value,
-        phone_number: data.phone_number.value,
+        company: data.company.value,
         country: data.country.value,
         job_title: data.job_title.value,
         //login_amount: amount,
@@ -227,11 +227,6 @@ function checkData(data) {
       //id sendes videre til put, så vi redigerer i det korrekte objekt.
       data._id
     );
-    /*     if (innerWidth > 1000) {
-      document.querySelector(".desktop").classList.remove("hide");
-    } else {
-      document.querySelector(".mobile").classList.remove("hide");
-    } */
   } else {
     console.log(email);
     console.log("does not match");

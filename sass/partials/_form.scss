@@ -139,27 +139,33 @@
     display: inline;
   }
   fieldset.personal > div:nth-child(1) > span,
-  fieldset.personal > div:nth-child(1) > p,
+  fieldset.personal > div:nth-child(1) > p {
+    transform: translateX(78px) translateY(-57px);
+  }
   fieldset.personal > div:nth-child(2) > span,
   fieldset.personal > div:nth-child(2) > p {
-    transform: translateX(80px) translateY(-57px);
+    transform: translateX(77px) translateY(-57px);
   }
 
   fieldset.personal > div:nth-child(3) > span,
   fieldset.personal > div:nth-child(3) > p {
-    transform: translateX(107px) translateY(-57px);
-  }
-  fieldset.personal > div:nth-child(4) > span,
-  fieldset.personal > div:nth-child(4) > p {
-    transform: translateX(63px) translateY(-56px);
+    transform: translateX(62px) translateY(-57px);
   }
   fieldset.company > div:nth-child(1) > span,
   fieldset.company > div:nth-child(1) > p {
-    transform: translateX(84px) translateY(-57px);
+    transform: translateX(73px) translateY(-56px);
   }
   fieldset.company > div:nth-child(2) > span,
   fieldset.company > div:nth-child(2) > p {
-    transform: translateX(62px) translateY(-56px);
+    transform: translateX(62px) translateY(-57px);
+  }
+  fieldset.company > div:nth-child(3) > span,
+  fieldset.company > div:nth-child(3) > p {
+    transform: translateX(84px) translateY(-56px);
+  }
+  fieldset.signIn > div:nth-child(1) > span,
+  fieldset.signIn > div:nth-child(1) > p {
+    transform: translateX(84px) translateY(-56px);
   }
   fieldset.theConsent > span {
     transform: translateX(0px) translateY(-55px);
@@ -326,7 +332,7 @@
       float: left;
     }
     fieldset.theConsent > span {
-      transform: translateX(12px) translateY(12px);
+      transform: translateX(8px) translateY(12px);
     }
     fieldset.theConsent > label {
       top: 0.6rem;

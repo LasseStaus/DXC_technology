@@ -1,3 +1,4 @@
+let counter;
 export function menuDelegation() {
   console.log("menuDelegation");
 
@@ -11,10 +12,12 @@ export function menuDelegation() {
     button.addEventListener("click", () => {
       setTimeout(() => {
         activateSecondLink();
-        document.querySelector("header").scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
+        if (counter == 0) {
+          document.querySelector("header").scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
       }, 3000);
     });
   });
