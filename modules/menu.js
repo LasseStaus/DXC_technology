@@ -12,6 +12,7 @@ export function menuDelegation() {
     button.addEventListener("click", () => {
       setTimeout(() => {
         activateSecondLink();
+        document.querySelector("#bc_site").style.position = "static";
         if (counter == 0) {
           document.querySelector("header").scrollIntoView({
             behavior: "smooth",

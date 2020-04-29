@@ -184,10 +184,9 @@ function checkData(data) {
         company: data.company.value,
         country: data.country.value,
         job_title: data.job_title.value,
-        //login_amount: amount,
         $inc: { login_amount: 1 },
       },
-      //id sendes videre til put, så vi redigerer i det korrekte objekt.
+      //id is send to put, so it's the right object that is edited.
       data._id
     );
   } else {
