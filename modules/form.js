@@ -73,7 +73,7 @@ function loopData(data) {
     document.querySelector(".container1").style.overflow = "scroll";
     document.querySelector(".container1").removeEventListener("scroll", setPosition);
     document.querySelector("#bc_site").classList.remove("hide");
-    document.querySelector(".theFormText").classList.add("hide");
+    document.querySelector(".theFormText").classList.add("hpostide");
     document.querySelector("header").classList.remove("hide");
   }
   count = 0;

@@ -2,7 +2,6 @@
 ////////////DEFAULT///////////
 ////////*/
 #forms {
-
   input,
   button {
     -webkit-appearance: none;
@@ -146,51 +145,51 @@
     display: inline;
   }
 
-  fieldset.personal>div:nth-child(1)>span,
-  fieldset.personal>div:nth-child(1)>p {
+  fieldset.personal > div:nth-child(1) > span,
+  fieldset.personal > div:nth-child(1) > p {
     transform: translateX(78px) translateY(-57px);
   }
 
-  fieldset.personal>div:nth-child(2)>span,
-  fieldset.personal>div:nth-child(2)>p {
+  fieldset.personal > div:nth-child(2) > span,
+  fieldset.personal > div:nth-child(2) > p {
     transform: translateX(77px) translateY(-57px);
   }
 
-  fieldset.personal>div:nth-child(3)>span,
-  fieldset.personal>div:nth-child(3)>p {
+  fieldset.personal > div:nth-child(3) > span,
+  fieldset.personal > div:nth-child(3) > p {
     transform: translateX(62px) translateY(-57px);
   }
 
-  fieldset.company>div:nth-child(1)>span,
-  fieldset.company>div:nth-child(1)>p {
+  fieldset.company > div:nth-child(1) > span,
+  fieldset.company > div:nth-child(1) > p {
     transform: translateX(73px) translateY(-56px);
   }
 
-  fieldset.company>div:nth-child(2)>span,
-  fieldset.company>div:nth-child(2)>p {
+  fieldset.company > div:nth-child(2) > span,
+  fieldset.company > div:nth-child(2) > p {
     transform: translateX(62px) translateY(-57px);
   }
 
-  fieldset.company>div:nth-child(3)>span,
-  fieldset.company>div:nth-child(3)>p {
+  fieldset.company > div:nth-child(3) > span,
+  fieldset.company > div:nth-child(3) > p {
     transform: translateX(84px) translateY(-56px);
   }
 
-  fieldset.signIn>div:nth-child(1)>span,
-  fieldset.signIn>div:nth-child(1)>p {
+  fieldset.signIn > div:nth-child(1) > span,
+  fieldset.signIn > div:nth-child(1) > p {
     transform: translateX(84px) translateY(-56px);
   }
 
-  fieldset.theConsent>span {
+  fieldset.theConsent > span {
     transform: translateX(0px) translateY(-55px);
     padding-right: 1rem;
   }
 
-  fieldset.theConsent>p {
+  fieldset.theConsent > p {
     transform: translateX(60px) translateY(-17px);
   }
 
-  fieldset.theConsent>label {
+  fieldset.theConsent > label {
     position: relative;
     top: 1.8rem;
     left: 2rem;
@@ -206,15 +205,15 @@
     display: none;
   }
 
-  input.invalid+.invalid_text {
+  input.invalid + .invalid_text {
     display: inline;
   }
 
-  input~span {
+  input ~ span {
     display: inline;
   }
 
-  input.invalid~span:not(.checkSpan) {
+  input.invalid ~ span:not(.checkSpan) {
     display: none;
   }
 
@@ -341,7 +340,6 @@
   }
 
   @media (min-width: 330px) {
-
     .primary,
     .secondary {
       font-size: 0.7rem;
@@ -359,17 +357,17 @@
       float: left;
     }
 
-    fieldset.theConsent>span {
+    fieldset.theConsent > span {
       transform: translateX(8px) translateY(12px);
     }
 
-    fieldset.theConsent>label {
+    fieldset.theConsent > label {
       top: 0.6rem;
       left: 0.3rem;
       // transform: translateX(100px) translateY(200px);
     }
 
-    fieldset.theConsent>p {
+    fieldset.theConsent > p {
       transform: translateX(12px) translateY(30px);
     }
   }
